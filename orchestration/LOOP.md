@@ -21,10 +21,10 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 | 15 | 19-update-badge | js/update-badge.js | **accepted** | 0 | d5cfb75 | task-15 |
 | 16 | 18-app-init | js/app.js | **accepted** | 0 | f9984f4 | task-16 |
 | 17 | 16-scraper | updater/scraper.py + config.yaml + requirements.txt | **accepted** | 0 | 1dd1260 | task-17 |
-| 18 | 17-merge-update | updater/merge.py + validate.py + README.md | **queued (in inbox)** | 0 | — | — |
+| 18 | 17-merge-update | updater/merge.py + validate.py + README.md | **accepted** | 0 | 07994ba | task-18 |
 
 **Status legend:** pending → queued → codex_working → awaiting_review → **accepted** (assembled+committed+tagged+pushed) / rejected (fix re-issued, ≤3 rounds) / BLOCKED (escalate to user).
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `18` (updater/merge.py + validate.py + README.md queued — final task). Milestones: m2-assets, m3-shell, m4-views, m5-features. App v1.0.0 runtime smoke PASSED. Data gap (task-09 references) + live-scrape (task-17) escalate in final report.
+**Current pointer:** ALL 18 TASKS ACCEPTED. Milestones: m2-assets, m3-shell, m4-views, m5-features, m6-pipeline. App v1.0.0 smoke PASSED. Finalizing: app-v1.0.0 tag + FINAL-REPORT. Deferred (final report): task-09 references data gap; task-17 live scrape.
