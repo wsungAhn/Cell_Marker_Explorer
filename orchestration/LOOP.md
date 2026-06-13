@@ -16,9 +16,9 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 | 10 | 10-search | js/search.js | **accepted** | 0 | df79fdd | task-10 |
 | 11 | 11-compare | js/compare.js | **accepted** | 0 | 7f8ef40 | task-11 |
 | 12 | 12-export | js/export.js | **accepted** | 0 | 1558243 | task-12 |
-| 13 | 13-species-toggle | js/species-toggle.js | **accepted** | 0 | 3c8c9ae | task-13 |
-| 14 | 14-links | js/links.js | **queued (in inbox)** | 0 | — | — |
-| 15 | 19-update-badge | js/update-badge.js | pending | 0 | — | — |
+| 13 | 13-species-toggle | js/species-toggle.js | **accepted** | 0 | a6f9e0a | task-13 |
+| 14 | 14-links | js/links.js | **accepted** | 0 | 852bebc | task-14 |
+| 15 | 19-update-badge | js/update-badge.js | **queued (in inbox)** | 0 | — | — |
 | 16 | 18-app-init | js/app.js | pending | 0 | — | — |
 | 17 | 16-scraper | updater/scraper.py + config.yaml + requirements.txt | pending | 0 | — | — |
 | 18 | 17-merge-update | updater/merge.py + validate.py + README.md | pending | 0 | — | — |
@@ -27,4 +27,4 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `14` (js/links.js queued in inbox, awaiting Codex). Data gap flagged (task-09): cellType.references (1–157) lack a citation table; only 6 metadata.sources — see progress/09, escalate in final report. Milestones reached: `m2-assets` (after task-03), `m3-shell` (after task-05). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
+**Current pointer:** `15` (js/update-badge.js queued in inbox, awaiting Codex). Data gap flagged (task-09): cellType.references (1–157) lack a citation table; only 6 metadata.sources — see progress/09, escalate in final report. Milestones reached: `m2-assets` (after task-03), `m3-shell` (after task-05), `m4-views` (after task-14). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
