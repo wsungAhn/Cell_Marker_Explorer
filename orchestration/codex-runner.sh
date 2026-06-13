@@ -25,17 +25,36 @@ STOP="orchestration/STOP"
 
 # ---- CONFIG: adjust for your Codex CLI version -------------------------------
 # CODEX_CMD receives the prompt on stdin and must run fully non-interactively
-# (no approval prompts) so the loop never blocks. Tune flags to your version.
-#   Typical:  codex exec --cd "$ROOT" --full-auto -
-#   Older:    codex exec --ask-for-approval never --sandbox workspace-write -
+# (no approval prompts) so the loop never blocks.
+#
+# Codex CLI 0.137+ : `codex exec -C <dir> -s <sandbox> -`  (no more --full-auto)
+#   sandbox modes: read-only | workspace-write | danger-full-access
+#   workspace-write = can write inside <root>, no network/outside writes (safe default).
+# Override either via env: CODEX_BIN=/path/to/codex  SANDBOX_MODE=workspace-write
 POLL_SECONDS="${POLL_SECONDS:-15}"
-CODEX_CMD=(codex exec --cd "$ROOT" --full-auto -)
+SANDBOX_MODE="${SANDBOX_MODE:-workspace-write}"
+
+# Resolve a *working* codex binary: prefer PATH, fall back to the bundled CLI
+# inside Codex.app (Homebrew cask link may be broken).
+CODEX_BIN="${CODEX_BIN:-}"
+if [ -z "$CODEX_BIN" ]; then
+  if command -v codex >/dev/null 2>&1 && codex --version >/dev/null 2>&1; then
+    CODEX_BIN="$(command -v codex)"
+  elif [ -x "/Applications/Codex.app/Contents/Resources/codex" ]; then
+    CODEX_BIN="/Applications/Codex.app/Contents/Resources/codex"
+  else
+    echo "FATAL: no working codex CLI found on PATH or in Codex.app." >&2
+    exit 1
+  fi
+fi
+CODEX_CMD=("$CODEX_BIN" exec -C "$ROOT" -s "$SANDBOX_MODE" -)
 
 log() { printf '[%s] %s\n' "$(date -u +%H:%M:%S)" "$*"; }
 
 mkdir -p "$INBOX" "$PROCESSED" "$OUTBOX" "$LOGS"
 
-log "codex-runner started. Watching $INBOX (poll ${POLL_SECONDS}s). Create $STOP to halt."
+log "codex-runner started. Codex: $CODEX_BIN  (sandbox=$SANDBOX_MODE)"
+log "Watching $INBOX (poll ${POLL_SECONDS}s). Create $STOP to halt."
 
 while true; do
   [ -f "$STOP" ] && { log "STOP file found — exiting."; rm -f "$STOP"; exit 0; }
