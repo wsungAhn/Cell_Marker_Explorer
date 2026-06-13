@@ -106,7 +106,7 @@ Surfacing a blocker is success, not failure. A wrong guess that the supervisor m
 
 ## 7. Execution order (supervisor drives this — for context only)
 
-Phase 1 data ✅ (already compiled). Then, per MASTER-PLAN §7:
-`02 body-map.svg → 03 microanatomy svgs → 04 index.html → 15 styles.css → 05 datastore.js → 06 router.js → 07 body-map.js → 08 organ-view.js → 09 cell-view.js → 10 search.js → 11 compare.js → 12 export.js → 13 species-toggle.js → 14 links.js → (18 app.js, spec pending) → 16 scraper → 17 merge/validate.`
+Phase 1 data ✅ (already compiled). Supervisor handoff order (v3.1, auditability-first):
+`05 datastore.js → 02 body-map.svg → 03 microanatomy svgs (27) → 04 index.html → 15 styles.css → 06 router.js → 07 body-map.js → 08 organ-view.js → 09 cell-view.js → 10 search.js → 11 compare.js → 12 export.js → 13 species-toggle.js → 14 links.js → 19 update-badge.js → 18 app.js → 16 scraper → 17 merge/validate.`
 
-You will be handed **one** of these at a time. Wait for it.
+You will be handed **one** task at a time as a `codex-tasks/TASK-*.md` prompt. Wait for it. **First task: `codex-tasks/TASK-01-datastore.md`.**

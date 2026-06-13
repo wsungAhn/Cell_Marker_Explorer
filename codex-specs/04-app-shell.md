@@ -118,6 +118,8 @@ Create the main HTML application shell — the single-page app entry point that 
   <script src="js/export.js" defer></script>
   <script src="js/species-toggle.js" defer></script>
   <script src="js/links.js" defer></script>
+  <script src="js/update-badge.js" defer></script>
+  <!-- app.js MUST be last: it instantiates every class above (see spec 18-app-init) -->
   <script src="js/app.js" defer></script>
 </body>
 </html>

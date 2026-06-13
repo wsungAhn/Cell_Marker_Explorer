@@ -16,8 +16,8 @@ The original plan (v3) and the `codex-specs/` drifted apart in a few places. The
 | R1 | Microanatomy SVG count | ~15 files (§1) | **27 files** — one per organ in the dataset, incl. `blood.svg` + `cell-lines.svg`. See updated `03-microanatomy-svgs.md`. |
 | R2 | CSS architecture | 9 separate CSS files (§1) | **Single `css/styles.css`** (no imports), per specs 04 + 15. The 9-file list in §1 is superseded. |
 | R3 | JS module system | "ES modules via `<script type=module>`" (§6.1/6.3) | **Global classes loaded with `<script defer>`** in dependency order, instantiated by `js/app.js`, per spec 04. No `import`/`export`. |
-| R4 | `js/app.js` | Listed as central init/event-bus, but **no spec exists** | **Open item — spec `18-app-init.md` to be written** before Phase 4 (shell). Defines load order, datastore→router→view wiring, event bus, loading/error states, and data-driven version/update badges. |
-| R5 | `js/update-badge.js` + changelog modal | Listed in §1/§3.6/§5.6, omitted from spec 04 script list, no spec | **Deferred for v1.** Minimal data-driven badges (version + last-updated, read from `metadata`) fold into `app.js` (R4). The clickable changelog modal is a v1.1 enhancement unless re-scoped. |
+| R4 | `js/app.js` | Listed as central init/event-bus, but **no spec exists** | **Resolved — spec `18-app-init.md` written.** Defines boot order, datastore→router→view wiring, event bus, global state, loading/error states, keyboard shortcuts, and data-driven version badge. In v1 scope. |
+| R5 | `js/update-badge.js` + changelog modal | Listed in §1/§3.6/§5.6, omitted from spec 04 script list, no spec | **Resolved — in v1 scope, spec `19-update-badge.md` written** (includes the clickable changelog modal). Data-driven badge + accessible modal reading `metadata` + `changelog.json`. Added to spec 04 script list. |
 | R6 | Tissue system count | "11" in several headings | **12** — the dataset adds `circulating-immune`. Spec 01/02 already use 12; treat 12 as correct. |
 | R7 | Marker symbol casing in spec examples | examples show e.g. `ALB` | Cosmetic only — **real data wins** (dataset uses `Albumin`). Do not "correct" the data to match examples. |
 | R8 | Search example path (spec 10) | `#/circulating-immune/blood/blood-leukocytes/...` | Microstructure id is **`leukocytes`**, so the real path is `#/circulating-immune/blood/leukocytes/<cell>`. Example text only; routing derives from data. |
@@ -630,8 +630,12 @@ All modules import from `datastore.js` for data and `app.js` for event bus.
 | 13 | 12-export.md | `js/export.js` | 05 |
 | 14 | 13-species-toggle.md | `js/species-toggle.js` | 05 |
 | 15 | 14-links.md | `js/links.js` | — |
-| 16 | 16-scraper.md | `updater/scraper.py` + `config.yaml` + `requirements.txt` | 01 |
-| 17 | 17-merge-update.md | `updater/merge.py` + `validate.py` + `README.md` | 01, 16 |
+| 16 | 19-update-badge.md | `js/update-badge.js` (badge + changelog modal) | 04, 05 |
+| 17 | 18-app-init.md | `js/app.js` (boot, wiring, event bus) | 04–14, 19 |
+| 18 | 16-scraper.md | `updater/scraper.py` + `config.yaml` + `requirements.txt` | 01 |
+| 19 | 17-merge-update.md | `updater/merge.py` + `validate.py` + `README.md` | 01, 16 |
+
+> **Supervisor handoff order (v3.1):** for auditability we lead with `05-datastore.md` (pure logic, verifiable against the data), then SVG assets (`02`, `03`), then shell/CSS (`04`, `15`), then the view/feature modules (`06`–`14`), then `19` + `18`, then the Python pipeline (`16`–`17`). `app.js` (18) is built last because it wires everything.
 
 ---
 
