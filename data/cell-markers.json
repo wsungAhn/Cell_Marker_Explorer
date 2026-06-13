@@ -1,0 +1,5444 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2024-06-27",
+    "next_scheduled_update": "2024-12-27",
+    "sources": [
+      {
+        "title": "Cell Markers",
+        "url": "https://www.labome.com/method/Cell-Markers.html",
+        "doi": "10.13070/mm.en.3.183",
+        "last_scraped": "2024-06-27"
+      },
+      {
+        "title": "T Cell Markers and B Cell Markers",
+        "url": "https://www.labome.com/method/T-Cell-Markers-and-B-Cell-Markers.html",
+        "last_scraped": "2024-06-27"
+      },
+      {
+        "title": "Macrophage Markers",
+        "url": "https://www.labome.com/method/Macrophage-Markers.html",
+        "last_scraped": "2024-06-27"
+      },
+      {
+        "title": "Stem Cell Markers",
+        "url": "https://www.labome.com/review/stemcells.html",
+        "last_scraped": "2024-06-27"
+      },
+      {
+        "title": "CellMarker 2.0",
+        "url": "http://bio-bigdata.hrbmu.edu.cn/CellMarker/",
+        "last_scraped": null
+      },
+      {
+        "title": "PanglaoDB",
+        "url": "https://panglaodb.se/",
+        "last_scraped": null
+      }
+    ]
+  },
+  "tissue_systems": [
+    {
+      "id": "integumentary",
+      "name": "Integumentary System",
+      "body_map_region": "skin",
+      "color": "#F5D5C8",
+      "description": "The organ system that protects the body from damage, comprising the skin and its appendages.",
+      "organs": [
+        {
+          "id": "skin",
+          "name": "Skin",
+          "icon": "svg/icons/organ-icons/skin.svg",
+          "microanatomy_svg": "svg/microanatomy/skin.svg",
+          "description": "The largest organ, serving as a barrier between the internal and external environment.",
+          "microstructures": [
+            {
+              "id": "epidermis",
+              "name": "Epidermis",
+              "svg_region_id": "epidermis",
+              "description": "The outermost layer of the skin, composed of stratified squamous epithelium.",
+              "cell_types": [
+                {
+                  "id": "keratinocyte",
+                  "name": "Keratinocyte",
+                  "description": "Predominant epidermal cells that differentiate from epidermal stem cells and produce keratin.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "KRT1",
+                        "KRT5",
+                        "KRT10",
+                        "KRT14",
+                        "KRT15",
+                        "KRT16",
+                        "E-cadherin",
+                        "EpCAM"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Krt1",
+                        "Krt5",
+                        "Krt10",
+                        "Krt14",
+                        "Krt15",
+                        "Krt16"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Epidermal cell"
+                  ],
+                  "references": [
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "epidermal-stem-cell",
+                  "name": "Epidermal Stem Cell",
+                  "description": "Slow-cycling stem cells in the basal layer and hair follicle bulge, responsible for epidermal renewal.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "KRT15",
+                        "ITGA6",
+                        "CD34",
+                        "NGFR",
+                        "LGR5",
+                        "LGR6",
+                        "SOX9",
+                        "TP63"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Krt15",
+                        "Itga6",
+                        "Cd34",
+                        "Lgr5",
+                        "Lgr6",
+                        "Sox9",
+                        "Trp63",
+                        "P-cadherin"
+                      ],
+                      "negative": [
+                        "CD45",
+                        "Sca-1"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "Skin stem cell",
+                    "Hair follicle stem cell"
+                  ],
+                  "references": [
+                    88,
+                    89,
+                    90,
+                    91,
+                    92
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "langerhans-cell",
+                  "name": "Langerhans Cell",
+                  "description": "Epidermal dendritic cells identified by Birbeck granules, involved in immune surveillance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD1a",
+                        "CD45",
+                        "Langerin/CD207",
+                        "HLA-DR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "CD1a",
+                        "CD45",
+                        "Langerin/CD207"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Epidermal DC"
+                  ],
+                  "references": [
+                    46,
+                    51,
+                    52
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "dermis",
+              "name": "Dermis",
+              "svg_region_id": "dermis",
+              "description": "The thick inner layer of skin containing connective tissue, blood vessels, and nerve endings.",
+              "cell_types": [
+                {
+                  "id": "dermal-fibroblast",
+                  "name": "Dermal Fibroblast",
+                  "description": "Connective tissue cells producing collagen and extracellular matrix in the dermis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Vimentin",
+                        "Fibronectin",
+                        "PDGFRalpha",
+                        "FAP"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Vim",
+                        "Fn1",
+                        "Pdgfra"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Fibroblast"
+                  ],
+                  "references": [
+                    105,
+                    106
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "dermal-macrophage",
+                  "name": "Dermal Macrophage",
+                  "description": "Tissue-resident macrophages in the dermis involved in clearance and immune homeostasis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD163",
+                        "CD14",
+                        "CD68",
+                        "CD45",
+                        "HLA-DR"
+                      ],
+                      "negative": [
+                        "CD1a",
+                        "CD1c"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "CD163",
+                        "F4/80",
+                        "CD11b",
+                        "MHC-II"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    110,
+                    111,
+                    116
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "dermal-dc",
+                  "name": "Dermal Dendritic Cell",
+                  "description": "Antigen-presenting cells in the dermis, distinct from Langerhans cells.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD1c",
+                        "CD14",
+                        "CD11c",
+                        "HLA-DR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "CD11b",
+                        "MHC-II"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    46,
+                    51
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "hypodermis",
+              "name": "Hypodermis (Subcutaneous Adipose)",
+              "svg_region_id": "hypodermis",
+              "description": "The deepest layer of skin composed primarily of adipose tissue.",
+              "cell_types": [
+                {
+                  "id": "white-adipocyte",
+                  "name": "White Adipocyte",
+                  "description": "Adipocytes that store energy as lipids. Express leptin and HOXC markers.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Leptin/LEP",
+                        "HOXC8",
+                        "HOXC9",
+                        "Perilipin/PLIN1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Lep",
+                        "Hoxc8",
+                        "Hoxc9",
+                        "Plin1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "White fat cell"
+                  ],
+                  "references": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "brown-adipocyte",
+                  "name": "Brown Adipocyte",
+                  "description": "Thermogenic adipocytes expressing UCP1, involved in heat production.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "UCP1",
+                        "CIDEA",
+                        "PRDM16",
+                        "ZIC1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ucp1",
+                        "Cidea",
+                        "Prdm16",
+                        "Zic1",
+                        "Lhx8",
+                        "Eva1",
+                        "Epsti1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Brown fat cell"
+                  ],
+                  "references": [
+                    2,
+                    4,
+                    5,
+                    6,
+                    7
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "beige-adipocyte",
+                  "name": "Beige Adipocyte",
+                  "description": "UCP1-expressing adipocytes that develop within white adipose tissue.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "UCP1",
+                        "CD137/TNFRSF9",
+                        "TMEM26",
+                        "TBX1",
+                        "CITED1",
+                        "SHOX2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ucp1",
+                        "Cd137",
+                        "Tmem26",
+                        "Tbx1",
+                        "Cited1",
+                        "Shox2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Brite adipocyte",
+                    "Beige fat cell"
+                  ],
+                  "references": [
+                    2,
+                    4,
+                    6,
+                    7,
+                    8
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "adipose-derived-stem-cell",
+                  "name": "Adipose-Derived Stem Cell",
+                  "description": "Pluripotent progenitor cells from adipose tissue.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD44",
+                        "ICAM-1/CD54",
+                        "CD34",
+                        "CD73",
+                        "CD90",
+                        "CD105"
+                      ],
+                      "negative": [
+                        "CD14",
+                        "CD45"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd44",
+                        "Icam1",
+                        "Cd73",
+                        "Cd90",
+                        "Cd105"
+                      ],
+                      "negative": [
+                        "Cd14"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "ASC",
+                    "ADSC"
+                  ],
+                  "references": [
+                    93
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous System",
+      "body_map_region": "head+spine",
+      "color": "#F5E6A3",
+      "description": "The complex network of nerves and cells that transmit signals throughout the body.",
+      "organs": [
+        {
+          "id": "brain",
+          "name": "Brain",
+          "icon": "svg/icons/organ-icons/brain.svg",
+          "microanatomy_svg": "svg/microanatomy/brain.svg",
+          "description": "The central organ of the nervous system, responsible for processing sensory information and controlling motor functions.",
+          "microstructures": [
+            {
+              "id": "cerebral-cortex",
+              "name": "Cerebral Cortex",
+              "svg_region_id": "cortex",
+              "description": "The outer layer of the cerebrum involved in higher-order brain functions.",
+              "cell_types": [
+                {
+                  "id": "pyramidal-cell",
+                  "name": "Pyramidal Cell",
+                  "description": "Neurons in the cerebral cortex, hippocampus, and amygdala important for cognitive functions.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CaMKII",
+                        "Neurogranin/RC3",
+                        "SMI-32",
+                        "MATH-2",
+                        "SCIP",
+                        "EMX1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Camk2",
+                        "Nrgn",
+                        "SMI-32",
+                        "Math-2",
+                        "Scip",
+                        "Emx1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Pyramidal neuron"
+                  ],
+                  "references": [
+                    140,
+                    141,
+                    142,
+                    143,
+                    144,
+                    145,
+                    146,
+                    147,
+                    148
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "astrocyte-type1",
+                  "name": "Type 1 Astrocyte",
+                  "description": "Protoplasmic astrocytes with specific marker expression.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Ran2",
+                        "GFAP",
+                        "FGFR3"
+                      ],
+                      "negative": [
+                        "A2B5"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ran2",
+                        "Gfap",
+                        "Fgfr3"
+                      ],
+                      "negative": [
+                        "A2b5"
+                      ]
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    74
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "astrocyte-type2",
+                  "name": "Type 2 Astrocyte",
+                  "description": "Fibrous astrocytes with distinct marker expression from type 1.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "A2B5",
+                        "GFAP"
+                      ],
+                      "negative": [
+                        "FGFR3",
+                        "Ran2"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "A2b5",
+                        "Gfap"
+                      ],
+                      "negative": [
+                        "Fgfr3",
+                        "Ran2"
+                      ]
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    74
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "cerebellum",
+              "name": "Cerebellum",
+              "svg_region_id": "cerebellum",
+              "description": "The brain region responsible for motor coordination and balance.",
+              "cell_types": [
+                {
+                  "id": "purkinje-cell",
+                  "name": "Purkinje Cell",
+                  "description": "Large neurons in the cerebellar cortex that output to deep cerebellar nuclei.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "cGMP-dependent protein kinase",
+                        "Zebrin I",
+                        "Zebrin II",
+                        "CAR8",
+                        "HFB-16/KIAA0864",
+                        "IP3R"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "cGMP-dependent protein kinase",
+                        "Zebrin I",
+                        "Zebrin II",
+                        "Car8",
+                        "Hfb-16",
+                        "Ip3r"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Purkinje neuron"
+                  ],
+                  "references": [
+                    130,
+                    131,
+                    132,
+                    133,
+                    134,
+                    135,
+                    136,
+                    137,
+                    138,
+                    139
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "choroid-plexus",
+              "name": "Choroid Plexus",
+              "svg_region_id": "choroid-plexus",
+              "description": "Structure in the ventricles that produces cerebrospinal fluid.",
+              "cell_types": [
+                {
+                  "id": "choroid-plexus-cell",
+                  "name": "Choroid Plexus Epithelial Cell",
+                  "description": "Epithelial cells of the choroid plexus that produce CSF.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "TTR/Transthyretin",
+                        "CLIC6",
+                        "HTR2C"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ttr",
+                        "Clic6",
+                        "Htr2c"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    98
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "brain-microglia",
+              "name": "Brain Microglia",
+              "svg_region_id": "microglia",
+              "description": "Resident macrophages of the central nervous system derived from yolk sac progenitors.",
+              "cell_types": [
+                {
+                  "id": "microglia",
+                  "name": "Microglia",
+                  "description": "Resident immune cells of the CNS derived from yolk sac macrophages, involved in synaptic pruning and neuroinflammation.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CX3CR1",
+                        "TMEM119",
+                        "Iba1/AIF1",
+                        "CD68",
+                        "CD11b",
+                        "P2RY12"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cx3cr1",
+                        "Tmem119",
+                        "Iba1",
+                        "Cd68",
+                        "Cd11b",
+                        "P2ry12",
+                        "F4/80"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Brain macrophage"
+                  ],
+                  "references": [
+                    71,
+                    72,
+                    73,
+                    74,
+                    83,
+                    84
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spinal-cord",
+          "name": "Spinal Cord",
+          "icon": "svg/icons/organ-icons/spinal-cord.svg",
+          "microanatomy_svg": "svg/microanatomy/spinal-cord.svg",
+          "description": "A long tube of nervous tissue extending from the brain, carrying signals between brain and body.",
+          "microstructures": [
+            {
+              "id": "spinal-cord-white-matter",
+              "name": "White Matter",
+              "svg_region_id": "white-matter",
+              "description": "Myelinated nerve fiber tracts in the spinal cord.",
+              "cell_types": [
+                {
+                  "id": "oligodendrocyte",
+                  "name": "Oligodendrocyte",
+                  "description": "Myelinating glial cells of the CNS that wrap axons with myelin sheaths.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "OLIG2",
+                        "MBP",
+                        "MOG",
+                        "SOX10",
+                        "PDGFRalpha"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Olig2",
+                        "Mbp",
+                        "Mog",
+                        "Sox10",
+                        "Pdgfra"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "CNS myelinating glia"
+                  ],
+                  "references": [
+                    70,
+                    74
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "spinal-cord-gray-matter",
+              "name": "Gray Matter",
+              "svg_region_id": "gray-matter",
+              "description": "Neuronal cell bodies and synapses in the spinal cord.",
+              "cell_types": [
+                {
+                  "id": "ependymal-cell",
+                  "name": "Ependymal Cell",
+                  "description": "Epithelial cells lining the ventricles and central canal of the spinal cord.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "S-100",
+                        "Vimentin",
+                        "GFAP",
+                        "BLBP",
+                        "3A7",
+                        "3CB2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "S100b",
+                        "Vim",
+                        "Gfap",
+                        "Blbp"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    71
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "peripheral-nerve",
+          "name": "Peripheral Nerves",
+          "icon": "svg/icons/organ-icons/peripheral-nerve.svg",
+          "microanatomy_svg": "svg/microanatomy/peripheral-nerve.svg",
+          "description": "Nerves outside the brain and spinal cord connecting the CNS to limbs and organs.",
+          "microstructures": [
+            {
+              "id": "peripheral-nerve-sheath",
+              "name": "Nerve Sheath",
+              "svg_region_id": "nerve-sheath",
+              "description": "Connective tissue and glial cell layers surrounding peripheral nerve fibers.",
+              "cell_types": [
+                {
+                  "id": "schwann-cell-myelinating",
+                  "name": "Myelinating Schwann Cell",
+                  "description": "Glial cells that wrap around peripheral axons forming myelin sheaths.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "S-100",
+                        "MBP",
+                        "MPZ/P0"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "S100b",
+                        "Mbp",
+                        "Mpz"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Myelinating Schwann cell"
+                  ],
+                  "references": [
+                    152,
+                    153
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "schwann-cell-nonmyelinating",
+                  "name": "Non-myelinating Schwann Cell",
+                  "description": "Schwann cells that surround but do not myelinate small-diameter axons.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "S-100",
+                        "GFAP"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "S100b",
+                        "Gfap"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Non-myelinating Schwann cell"
+                  ],
+                  "references": [
+                    152,
+                    153
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "satellite-cell",
+                  "name": "Satellite Glial Cell",
+                  "description": "Glial cells surrounding neuronal cell bodies in peripheral ganglia.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD45",
+                        "CD14",
+                        "CD68",
+                        "CD11b"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd45",
+                        "Cd14",
+                        "Cd68",
+                        "Cd11b"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    72
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "enteric-glial-cell",
+                  "name": "Enteric Glial Cell",
+                  "description": "Glial cells of the enteric nervous system that support gut neurons.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "S-100",
+                        "Neurofilament protein",
+                        "PGP9.5"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "S100b",
+                        "Nefl",
+                        "Pgp9.5"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    73
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular System",
+      "body_map_region": "chest",
+      "color": "#E8A0A0",
+      "description": "The organ system that circulates blood throughout the body, comprising the heart and blood vessels.",
+      "organs": [
+        {
+          "id": "heart",
+          "name": "Heart",
+          "icon": "svg/icons/organ-icons/heart.svg",
+          "microanatomy_svg": "svg/microanatomy/heart.svg",
+          "description": "A muscular organ that pumps blood through the circulatory system.",
+          "microstructures": [
+            {
+              "id": "myocardium",
+              "name": "Myocardium",
+              "svg_region_id": "myocardium",
+              "description": "The muscular tissue of the heart wall responsible for contraction.",
+              "cell_types": [
+                {
+                  "id": "cardiomyocyte",
+                  "name": "Cardiomyocyte",
+                  "description": "Muscle cells of the heart responsible for contractile function.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PCM1",
+                        "cTnI/TNNI3",
+                        "cTnT/TNNT2",
+                        "Connexin-43/GJA1",
+                        "MF20/MYH"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Pcm1",
+                        "Tnni3",
+                        "Tnnt2",
+                        "Gja1",
+                        "Myh"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Cardiac muscle cell"
+                  ],
+                  "references": [
+                    99,
+                    100,
+                    101,
+                    102,
+                    103
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "cardiac-macrophage",
+                  "name": "Cardiac Macrophage",
+                  "description": "Tissue-resident macrophages in the heart with subsets defined by CCR2, TIMD4, LYVE1, and MHC-II.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CCR2",
+                        "TIMD4",
+                        "LYVE1",
+                        "MHC-II",
+                        "CD68",
+                        "CD11b"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ccr2",
+                        "Timd4",
+                        "Lyve1",
+                        "Mhc2",
+                        "Cd68",
+                        "Cd11b"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Myocardial macrophage"
+                  ],
+                  "references": [
+                    65
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blood-vessels",
+          "name": "Blood Vessels",
+          "icon": "svg/icons/organ-icons/blood-vessels.svg",
+          "microanatomy_svg": "svg/microanatomy/blood-vessels.svg",
+          "description": "Tubular structures that carry blood throughout the body.",
+          "microstructures": [
+            {
+              "id": "vessel-intima",
+              "name": "Vessel Intima (Endothelium)",
+              "svg_region_id": "intima",
+              "description": "The inner lining of blood vessels composed of endothelial cells.",
+              "cell_types": [
+                {
+                  "id": "vascular-endothelial-cell",
+                  "name": "Vascular Endothelial Cell",
+                  "description": "Cells forming the interior surface of blood vessels.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "VWF",
+                        "VE-cadherin/CD144",
+                        "Thrombomodulin/CD141",
+                        "PAL-E",
+                        "PECAM-1/CD31",
+                        "CD146/MUC18",
+                        "VEGFR1/FLT1",
+                        "VEGFR2/KDR",
+                        "eNOS/NOS3",
+                        "Endomucin"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Vwf",
+                        "Cdh5/VE-cadherin",
+                        "Thbd",
+                        "Pecam1",
+                        "Cd146",
+                        "Flt1",
+                        "Kdr",
+                        "Nos3",
+                        "Endomucin"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Endothelial cell"
+                  ],
+                  "references": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    20,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "lymphatic-endothelial-cell",
+                  "name": "Lymphatic Endothelial Cell",
+                  "description": "Endothelial cells lining lymphatic vessels, distinct from vascular endothelium.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "LYVE-1",
+                        "PROX1",
+                        "Podoplanin/PDPN",
+                        "VEGFR3/FLT4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Lyve1",
+                        "Prox1",
+                        "Pdpn",
+                        "Flt4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "vessel-media",
+              "name": "Vessel Media",
+              "svg_region_id": "media",
+              "description": "The middle layer of blood vessels containing smooth muscle cells.",
+              "cell_types": [
+                {
+                  "id": "smooth-muscle-cell",
+                  "name": "Smooth Muscle Cell",
+                  "description": "Muscle cells in the walls of hollow organs and blood vessels.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Alpha-smooth muscle actin/ACTA2",
+                        "Integrin alpha 8/ITGA8"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Acta2",
+                        "Itga8"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Vascular smooth muscle cell"
+                  ],
+                  "references": [
+                    30,
+                    157
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "vessel-adventitia",
+              "name": "Vessel Adventitia",
+              "svg_region_id": "adventitia",
+              "description": "The outer connective tissue layer of blood vessels.",
+              "cell_types": [
+                {
+                  "id": "pericyte",
+                  "name": "Pericyte",
+                  "description": "Cells located around capillaries and venules that help maintain vascular homeostasis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "NG2/CSPG4",
+                        "PDGFRB",
+                        "CD146"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ng2/Cspg4",
+                        "Pdgfrb",
+                        "Cd146"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    25,
+                    129
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory System",
+      "body_map_region": "chest",
+      "color": "#D5E8F0",
+      "description": "The organ system responsible for gas exchange, comprising the lungs and airways.",
+      "organs": [
+        {
+          "id": "lung",
+          "name": "Lung",
+          "icon": "svg/icons/organ-icons/lung.svg",
+          "microanatomy_svg": "svg/microanatomy/lung.svg",
+          "description": "Paired organs responsible for gas exchange between air and blood.",
+          "microstructures": [
+            {
+              "id": "alveoli",
+              "name": "Alveoli",
+              "svg_region_id": "alveoli",
+              "description": "Tiny air sacs where gas exchange occurs between air and blood.",
+              "cell_types": [
+                {
+                  "id": "alveolar-type1-cell",
+                  "name": "Type I Alveolar Epithelial Cell",
+                  "description": "Thin squamous cells covering most of the alveolar surface for gas exchange.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "AGER",
+                        "PDPN",
+                        "CAV1",
+                        "HTII-280"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ager",
+                        "Pdpn",
+                        "Cav1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "AT1 cell",
+                    "Pneumocyte type I"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "alveolar-type2-cell",
+                  "name": "Type II Alveolar Epithelial Cell",
+                  "description": "Cuboidal cells producing surfactant and serving as progenitors for AT1 cells.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "SFTPA1",
+                        "SFTPB",
+                        "SFTPC",
+                        "SFTPD",
+                        "Pro-SFTPC",
+                        "LAMP3"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Sftpa1",
+                        "Sftpb",
+                        "Sftpc",
+                        "Sftpd"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "AT2 cell",
+                    "Pneumocyte type II"
+                  ],
+                  "references": [
+                    43
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "alveolar-macrophage",
+                  "name": "Alveolar Macrophage",
+                  "description": "Resident macrophages on the alveolar surface that phagocytose surfactant and pathogens.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD11b",
+                        "F4/80",
+                        "PPAR-g",
+                        "CD68",
+                        "MARCO"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd11b",
+                        "F4/80",
+                        "Pparg",
+                        "Cd68",
+                        "Marco"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Dust cell"
+                  ],
+                  "references": [
+                    85,
+                    86,
+                    87,
+                    88
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "bronchi",
+              "name": "Bronchi",
+              "svg_region_id": "bronchi",
+              "description": "Large airways conducting air into the lungs.",
+              "cell_types": [
+                {
+                  "id": "bronchial-epithelial-cell",
+                  "name": "Bronchial Epithelial Cell",
+                  "description": "Epithelial cells lining the bronchi, involved in mucociliary clearance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "EpCAM",
+                        "KRT5",
+                        "MUC5AC",
+                        "SCGB1A1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Epcam",
+                        "Krt5",
+                        "Muc5ac",
+                        "Scgb1a1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Airway epithelial cell"
+                  ],
+                  "references": [
+                    36
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "neuroendocrine-cell-pulmonary",
+                  "name": "Pulmonary Neuroendocrine Cell",
+                  "description": "Rare epithelial cells in the airways activated by neurotransmitters, releasing hormones.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "GRP",
+                        "CGRP",
+                        "SYP",
+                        "CHGA",
+                        "NCAM1/CD56"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Grp",
+                        "Cgrp",
+                        "Syp",
+                        "Chga",
+                        "Ncam1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "PNEC"
+                  ],
+                  "references": [
+                    128
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive System",
+      "body_map_region": "abdomen",
+      "color": "#D4A574",
+      "description": "The organ system responsible for food processing and nutrient absorption.",
+      "organs": [
+        {
+          "id": "stomach",
+          "name": "Stomach",
+          "icon": "svg/icons/organ-icons/stomach.svg",
+          "microanatomy_svg": "svg/microanatomy/stomach.svg",
+          "description": "A muscular organ that breaks down food using acid and enzymes.",
+          "microstructures": [
+            {
+              "id": "gastric-glands",
+              "name": "Gastric Glands",
+              "svg_region_id": "gastric-glands",
+              "description": "Glands in the stomach lining that produce acid, enzymes, and hormones.",
+              "cell_types": [
+                {
+                  "id": "parietal-cell",
+                  "name": "Parietal Cell",
+                  "description": "Stomach cells that secrete hydrochloric acid and intrinsic factor.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "ATP4A",
+                        "ATP4B",
+                        "GIF"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Atp4a",
+                        "Atp4b",
+                        "Gif"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Oxyntic cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "chief-cell",
+                  "name": "Chief Cell",
+                  "description": "Stomach cells that secrete pepsinogen.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PGA3",
+                        "PGA4",
+                        "PGC",
+                        "MIST1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Pga3",
+                        "Pga4",
+                        "Pgc",
+                        "Mist1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Zymogenic cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "small-intestine",
+          "name": "Small Intestine",
+          "icon": "svg/icons/organ-icons/small-intestine.svg",
+          "microanatomy_svg": "svg/microanatomy/small-intestine.svg",
+          "description": "The primary site of nutrient absorption, divided into duodenum, jejunum, and ileum.",
+          "microstructures": [
+            {
+              "id": "intestinal-villi",
+              "name": "Intestinal Villi",
+              "svg_region_id": "villi",
+              "description": "Finger-like projections that increase the absorptive surface area.",
+              "cell_types": [
+                {
+                  "id": "enterocyte",
+                  "name": "Enterocyte",
+                  "description": "Intestinal absorptive cells responsible for absorption of water, ions, and nutrients.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "ALDOB",
+                        "VIL1",
+                        "SI",
+                        "KRT20"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Aldob",
+                        "Vil1",
+                        "Si",
+                        "Krt20"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Intestinal absorptive cell"
+                  ],
+                  "references": [
+                    104
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "intestinal-crypt",
+              "name": "Intestinal Crypt (Crypt of Lieberkuhn)",
+              "svg_region_id": "crypt",
+              "description": "Glands at the base of villi containing stem cells and secretory cells.",
+              "cell_types": [
+                {
+                  "id": "paneth-cell",
+                  "name": "Paneth Cell",
+                  "description": "Cells at the crypt base that secrete antimicrobial peptides and lysozyme.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "LYZ",
+                        "DEFA5",
+                        "DEFA6",
+                        "MMP7"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Lyz",
+                        "Defa5",
+                        "Defa6",
+                        "Mmp7"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    104
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "intestinal-stem-cell",
+                  "name": "Intestinal Stem Cell",
+                  "description": "Multipotent stem cells in the crypt base that continuously replenish the intestinal epithelium.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "LGR5",
+                        "BMI1",
+                        "TERT",
+                        "LRIG1",
+                        "OLFM4",
+                        "SMOC2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Lgr5",
+                        "Bmi1",
+                        "Tert",
+                        "Lrig1",
+                        "Olfm4",
+                        "Smoc2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Crypt stem cell",
+                    "LGR5+ stem cell"
+                  ],
+                  "references": [
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "tuft-cell",
+                  "name": "Tuft Cell",
+                  "description": "Specialized epithelial cells using taste receptors to detect pathogens, found in digestive and respiratory tracts.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "DCLK1",
+                        "KRT18",
+                        "TRPM5",
+                        "Villin",
+                        "Fimbrin",
+                        "Alpha-gustducin",
+                        "SOX9"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Dclk1",
+                        "Krt18",
+                        "Trpm5",
+                        "Vil1",
+                        "Sox9"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Brush cell"
+                  ],
+                  "references": [
+                    37,
+                    38,
+                    42,
+                    44,
+                    45
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "goblet-cell",
+                  "name": "Goblet Cell",
+                  "description": "Mucus-secreting epithelial cells in the intestinal lining.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "MUC2",
+                        "TFF3",
+                        "SPDEF"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Muc2",
+                        "Tff3",
+                        "Spdef"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "large-intestine",
+          "name": "Large Intestine (Colon)",
+          "icon": "svg/icons/organ-icons/large-intestine.svg",
+          "microanatomy_svg": "svg/microanatomy/large-intestine.svg",
+          "description": "The final section of the digestive tract, responsible for water absorption and waste formation.",
+          "microstructures": [
+            {
+              "id": "colonic-epithelium",
+              "name": "Colonic Epithelium",
+              "svg_region_id": "colonic-epithelium",
+              "description": "The lining of the colon composed of absorptive and secretory cells.",
+              "cell_types": [
+                {
+                  "id": "colonocyte",
+                  "name": "Colonocyte",
+                  "description": "Absorptive epithelial cells of the colon.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "KRT20",
+                        "CDX2",
+                        "VIL1",
+                        "MUC2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Krt20",
+                        "Cdx2",
+                        "Vil1",
+                        "Muc2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Colonic enterocyte"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "liver",
+          "name": "Liver",
+          "icon": "svg/icons/organ-icons/liver.svg",
+          "microanatomy_svg": "svg/microanatomy/liver.svg",
+          "description": "The largest internal organ, responsible for metabolism, detoxification, and protein synthesis.",
+          "microstructures": [
+            {
+              "id": "hepatic-lobule",
+              "name": "Hepatic Lobule",
+              "svg_region_id": "lobule",
+              "description": "The functional unit of the liver, hexagonal in shape with a central vein.",
+              "cell_types": [
+                {
+                  "id": "hepatocyte",
+                  "name": "Hepatocyte",
+                  "description": "Parenchymal cells of the liver responsible for metabolism, detoxification, and protein synthesis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "HP",
+                        "ASGR1",
+                        "Albumin/ALB",
+                        "CYP3A4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Alb",
+                        "Asgr1",
+                        "Cyp3a11"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Liver parenchymal cell"
+                  ],
+                  "references": [
+                    21
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "kupffer-cell",
+                  "name": "Kupffer Cell",
+                  "description": "Liver-resident macrophages derived from yolk sac progenitors, maintaining immunological tolerance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD68",
+                        "CD163L",
+                        "CLEC4G",
+                        "CD163"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd68",
+                        "Cd163l",
+                        "Clec4g",
+                        "Cd163",
+                        "F4/80"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Hepatic macrophage"
+                  ],
+                  "references": [
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "hepatic-sinusoids",
+              "name": "Hepatic Sinusoids",
+              "svg_region_id": "sinusoids",
+              "description": "Specialized capillaries in the liver connecting portal triads to the central vein.",
+              "cell_types": [
+                {
+                  "id": "liver-sinusoidal-endothelial-cell",
+                  "name": "Liver Sinusoidal Endothelial Cell",
+                  "description": "Specialized endothelial cells with fenestrations allowing plasma passage.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "LYVE-1",
+                        "CD32b/FCGR2B",
+                        "STAB2",
+                        "CLEC4G"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Lyve1",
+                        "Fcgr2b",
+                        "Stab2",
+                        "Clec4g"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "LSEC"
+                  ],
+                  "references": [
+                    21
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "hepatic-stellate-cell",
+                  "name": "Hepatic Stellate Cell",
+                  "description": "Pericyte-like cells in the space of Disse that store vitamin A and regulate fibrosis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "GFAP",
+                        "Desmin",
+                        "Alpha-SMA/ACTA2",
+                        "PDGFRB",
+                        "Vimentin"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Gfap",
+                        "Desmin",
+                        "Acta2",
+                        "Pdgfrb",
+                        "Vim"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Ito cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pancreas",
+          "name": "Pancreas",
+          "icon": "svg/icons/organ-icons/pancreas.svg",
+          "microanatomy_svg": "svg/microanatomy/pancreas.svg",
+          "description": "A dual-function organ with exocrine and endocrine components.",
+          "microstructures": [
+            {
+              "id": "pancreatic-acini",
+              "name": "Pancreatic Acini",
+              "svg_region_id": "acini",
+              "description": "Exocrine units producing digestive enzymes.",
+              "cell_types": [
+                {
+                  "id": "acinar-cell",
+                  "name": "Pancreatic Acinar Cell",
+                  "description": "Exocrine cells producing digestive enzymes like amylase, trypsinogen, and lipase.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PRSS1",
+                        "AMY2A",
+                        "PNLIP",
+                        "CPA1",
+                        "PRSS2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Prss1",
+                        "Amy2a",
+                        "Pnlip",
+                        "Cpa1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "islets-of-langerhans",
+              "name": "Islets of Langerhans",
+              "svg_region_id": "islets",
+              "description": "Endocrine cell clusters producing insulin, glucagon, and other hormones.",
+              "cell_types": [
+                {
+                  "id": "beta-cell",
+                  "name": "Pancreatic Beta Cell",
+                  "description": "Endocrine cells producing insulin, critical for glucose homeostasis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Insulin/INS",
+                        "PDX1",
+                        "NKX6-1",
+                        "MAFA",
+                        "IAPP"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ins1",
+                        "Ins2",
+                        "Pdx1",
+                        "Nkx6-1",
+                        "Mafa"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Insulin-producing cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "alpha-cell",
+                  "name": "Pancreatic Alpha Cell",
+                  "description": "Endocrine cells producing glucagon to raise blood glucose.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Glucagon/GCG",
+                        "ARX",
+                        "MAFB"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Gcg",
+                        "Arx",
+                        "Mafb"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "delta-cell",
+                  "name": "Pancreatic Delta Cell",
+                  "description": "Endocrine cells producing somatostatin.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Somatostatin/SST",
+                        "HHEX"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Sst",
+                        "Hhex"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic/Immune System",
+      "body_map_region": "lymph-nodes+spleen",
+      "color": "#C8D5E0",
+      "description": "The organ system responsible for immune defense and lymph circulation.",
+      "organs": [
+        {
+          "id": "bone-marrow",
+          "name": "Bone Marrow",
+          "icon": "svg/icons/organ-icons/bone-marrow.svg",
+          "microanatomy_svg": "svg/microanatomy/bone-marrow.svg",
+          "description": "The soft tissue inside bones where blood cell production (hematopoiesis) occurs.",
+          "microstructures": [
+            {
+              "id": "hematopoietic-niche",
+              "name": "Hematopoietic Niche",
+              "svg_region_id": "hematopoietic-niche",
+              "description": "The microenvironment supporting hematopoietic stem cell maintenance and differentiation.",
+              "cell_types": [
+                {
+                  "id": "hematopoietic-stem-cell",
+                  "name": "Hematopoietic Stem Cell",
+                  "description": "Stem cells giving rise to all blood cell lineages.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD34",
+                        "CD38low",
+                        "CD59",
+                        "Thy1/CD90",
+                        "c-Kit/CD117",
+                        "Lin-",
+                        "CD93",
+                        "CD105",
+                        "CD110",
+                        "SCA-1/Ly-6A/E",
+                        "CD111",
+                        "CD135/FLT3",
+                        "CD150/SLAM",
+                        "CD184/CXCR4",
+                        "CD202b",
+                        "CD243/MDR-1",
+                        "CD271/NGFR",
+                        "CD309/VEGFR2",
+                        "CD338"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd34low",
+                        "Cd38",
+                        "Thy1/Cd90",
+                        "c-Kit/Cd117",
+                        "Lin-",
+                        "Sca-1/Ly6a",
+                        "Cd111",
+                        "Cd135",
+                        "Cd150",
+                        "Cd184/Cxcr4",
+                        "Cd202b",
+                        "Cd243",
+                        "Cd271",
+                        "Cd309",
+                        "Cd338"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "HSC"
+                  ],
+                  "references": [
+                    75
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "neutrophil",
+                  "name": "Neutrophil",
+                  "description": "The most abundant granulocyte, first responders to bacterial infection.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "Ly-6G",
+                        "CD11b",
+                        "FcεRI",
+                        "CD123",
+                        "CD49b/DX-5",
+                        "CD69",
+                        "Thy-1.2",
+                        "2B4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Ly6g",
+                        "Cd11b",
+                        "Fcer1g",
+                        "Cd123",
+                        "Cd49b",
+                        "Cd69",
+                        "Thy1.2",
+                        "2b4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    79,
+                    80
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "eosinophil",
+                  "name": "Eosinophil",
+                  "description": "Granulocytes involved in allergic reactions and anti-parasitic defense.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "IL3RA/CD123",
+                        "CCR3",
+                        "SIGLEC8",
+                        "EPX",
+                        "MBP"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Il3ra/Cd123",
+                        "Ccr3",
+                        "Siglec-f",
+                        "Epx",
+                        "Mbp"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    76,
+                    77,
+                    78
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "basophil",
+                  "name": "Basophil",
+                  "description": "The rarest granulocyte, involved in allergic responses and parasitic defense.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "FcεRI",
+                        "CD123",
+                        "CD203c",
+                        "ENPP3"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Fcer1g",
+                        "Cd123",
+                        "Cd203c"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "monocyte-classical",
+                  "name": "Classical Monocyte",
+                  "description": "Inflammatory monocytes that patrol extravascular tissues and transport antigens.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD14++",
+                        "CD16-",
+                        "CCR2",
+                        "CD36",
+                        "HLA-DR",
+                        "CD11c"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd14",
+                        "Ly6chi",
+                        "Cd11b",
+                        "Cx3cr1",
+                        "Cd115"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Inflammatory monocyte"
+                  ],
+                  "references": [
+                    58,
+                    62,
+                    63
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "monocyte-nonclassical",
+                  "name": "Non-classical Monocyte",
+                  "description": "Patrolling monocytes that maintain vascular integrity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD14dim",
+                        "CD16++",
+                        "CX3CR1",
+                        "LFA-1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd14dim",
+                        "Ly6clo",
+                        "Cx3cr1",
+                        "Cd11b"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Patrolling monocyte"
+                  ],
+                  "references": [
+                    56,
+                    57,
+                    58,
+                    59,
+                    60
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "mast-cell-bone-marrow",
+                  "name": "Mast Cell",
+                  "description": "Granulated cells of hematopoietic origin containing histamine and heparin, key in allergy.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD9",
+                        "CD29",
+                        "CD33",
+                        "CD43",
+                        "CD44",
+                        "CD49d",
+                        "CD49e",
+                        "CD51",
+                        "CD71",
+                        "CD117/c-Kit",
+                        "FcεRI"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd9",
+                        "Cd29",
+                        "Cd33",
+                        "Cd43",
+                        "Cd44",
+                        "Cd49d",
+                        "Cd49e",
+                        "Cd51",
+                        "Cd71",
+                        "Cd117",
+                        "Fcer1g"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    81
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "thymus",
+          "name": "Thymus",
+          "icon": "svg/icons/organ-icons/thymus.svg",
+          "microanatomy_svg": "svg/microanatomy/thymus.svg",
+          "description": "A primary lymphoid organ where T cells mature.",
+          "microstructures": [
+            {
+              "id": "thymic-cortex",
+              "name": "Thymic Cortex",
+              "svg_region_id": "cortex",
+              "description": "The outer region of the thymus where T cell positive selection occurs.",
+              "cell_types": [
+                {
+                  "id": "dn-thymocyte",
+                  "name": "Double-Negative Thymocyte",
+                  "description": "Early T cell precursors lacking both CD4 and CD8, progressing through DN1-DN4 stages.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD44",
+                        "CD25",
+                        "CD34",
+                        "CD45RA"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd44",
+                        "Cd25",
+                        "Cd34",
+                        "Cd45ra"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "DN thymocyte"
+                  ],
+                  "references": [
+                    5
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "dp-thymocyte",
+                  "name": "Double-Positive Thymocyte",
+                  "description": "Immature T cells expressing both CD4 and CD8, undergoing positive and negative selection.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD4",
+                        "CD8",
+                        "TCRalpha/beta"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd4",
+                        "Cd8",
+                        "Tcrab"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "DP thymocyte"
+                  ],
+                  "references": [
+                    5
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "thymic-medulla",
+              "name": "Thymic Medulla",
+              "svg_region_id": "medulla",
+              "description": "The inner region where negative selection of T cells occurs.",
+              "cell_types": [
+                {
+                  "id": "thymic-tuft-cell",
+                  "name": "Thymic Tuft Cell",
+                  "description": "Rare epithelial cells in the thymus similar to intestinal tuft cells.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "DCLK1",
+                        "KRT18",
+                        "KRT8"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Dclk1",
+                        "Krt18",
+                        "Krt8"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    37
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spleen",
+          "name": "Spleen",
+          "icon": "svg/icons/organ-icons/spleen.svg",
+          "microanatomy_svg": "svg/microanatomy/spleen.svg",
+          "description": "A secondary lymphoid organ filtering blood and mounting immune responses.",
+          "microstructures": [
+            {
+              "id": "white-pulp",
+              "name": "White Pulp",
+              "svg_region_id": "white-pulp",
+              "description": "Lymphoid tissue of the spleen containing T and B cell zones.",
+              "cell_types": [
+                {
+                  "id": "splenic-macrophage",
+                  "name": "Splenic Macrophage",
+                  "description": "Macrophages in the spleen involved in filtering blood and immune responses.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "F4/80",
+                        "CD68",
+                        "CD11b"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "F4/80",
+                        "Cd68",
+                        "Cd11b"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    66,
+                    67,
+                    68
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lymph-nodes",
+          "name": "Lymph Nodes",
+          "icon": "svg/icons/organ-icons/lymph-nodes.svg",
+          "microanatomy_svg": "svg/microanatomy/lymph-nodes.svg",
+          "description": "Secondary lymphoid organs filtering lymph and coordinating immune responses.",
+          "microstructures": [
+            {
+              "id": "germinal-center",
+              "name": "Germinal Center",
+              "svg_region_id": "germinal-center",
+              "description": "Sites within lymph node follicles where B cells undergo affinity maturation.",
+              "cell_types": [
+                {
+                  "id": "tfh-cell",
+                  "name": "Follicular Helper T Cell",
+                  "description": "CD4+ T cells that assist B cells in germinal centers with CXCR5-mediated homing.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CXCR5",
+                        "ICOS",
+                        "PD-1/PDCD1",
+                        "BCL6",
+                        "IL-21",
+                        "IL-4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cxcr5",
+                        "Icos",
+                        "Pdcd1",
+                        "Bcl6",
+                        "Il21",
+                        "Il4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Tfh"
+                  ],
+                  "references": [
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "tfr-cell",
+                  "name": "Follicular Regulatory T Cell",
+                  "description": "Foxp3+ T cells in germinal centers that suppress B cell proliferation and TFH activity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "FOXP3",
+                        "CXCR5",
+                        "ICOS",
+                        "PD-1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Foxp3",
+                        "Cxcr5",
+                        "Icos",
+                        "Pdcd1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Tfr"
+                  ],
+                  "references": [
+                    38,
+                    39,
+                    40
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "follicular-dc",
+                  "name": "Follicular Dendritic Cell",
+                  "description": "Non-hematopoietic cells in germinal centers that retain antigens for B cell selection.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD21",
+                        "CD35/CR1",
+                        "Clusterin/CLU",
+                        "FDC-M1",
+                        "FDC-M2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd21",
+                        "Cd35",
+                        "Clu"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "FDC"
+                  ],
+                  "references": [
+                    57,
+                    58
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endocrine",
+      "name": "Endocrine System",
+      "body_map_region": "neck+abdomen",
+      "color": "#E0C8E8",
+      "description": "The organ system of glands that secrete hormones directly into the bloodstream.",
+      "organs": [
+        {
+          "id": "thyroid",
+          "name": "Thyroid",
+          "icon": "svg/icons/organ-icons/thyroid.svg",
+          "microanatomy_svg": "svg/microanatomy/thyroid.svg",
+          "description": "A butterfly-shaped gland in the neck producing thyroid hormones.",
+          "microstructures": [
+            {
+              "id": "thyroid-follicle",
+              "name": "Thyroid Follicle",
+              "svg_region_id": "follicle",
+              "description": "Spherical structures that produce and store thyroid hormones.",
+              "cell_types": [
+                {
+                  "id": "thyrocyte",
+                  "name": "Thyroid Follicular Cell",
+                  "description": "Epithelial cells of thyroid follicles that produce T3 and T4.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "TG",
+                        "TPO",
+                        "NIS/SLC5A5",
+                        "PAX8",
+                        "TSHR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Tg",
+                        "Tpo",
+                        "Slc5a5",
+                        "Pax8",
+                        "Tshr"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Follicular epithelial cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adrenal",
+          "name": "Adrenal Gland",
+          "icon": "svg/icons/organ-icons/adrenal.svg",
+          "microanatomy_svg": "svg/microanatomy/adrenal.svg",
+          "description": "Paired glands above the kidneys producing cortisol, aldosterone, and adrenaline.",
+          "microstructures": [
+            {
+              "id": "adrenal-cortex",
+              "name": "Adrenal Cortex",
+              "svg_region_id": "cortex",
+              "description": "The outer layer producing steroid hormones (cortisol, aldosterone).",
+              "cell_types": [
+                {
+                  "id": "zona-glomerulosa-cell",
+                  "name": "Zona Glomerulosa Cell",
+                  "description": "Cortical cells producing aldosterone for salt balance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CYP11B2",
+                        "ATR1",
+                        "KCNJ5"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cyp11b2",
+                        "Atr1",
+                        "Kcnj5"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "zona-fasciculata-cell",
+                  "name": "Zona Fasciculata Cell",
+                  "description": "Cortical cells producing cortisol in response to ACTH.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CYP11B1",
+                        "CYP17A1",
+                        "MC2R"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cyp11b1",
+                        "Cyp17a1",
+                        "Mc2r"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "adrenal-medulla",
+              "name": "Adrenal Medulla",
+              "svg_region_id": "medulla",
+              "description": "The inner layer producing catecholamines (adrenaline, noradrenaline).",
+              "cell_types": [
+                {
+                  "id": "chromaffin-cell",
+                  "name": "Chromaffin Cell",
+                  "description": "Neuroendocrine cells of the adrenal medulla that secrete epinephrine and norepinephrine.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CHGA",
+                        "CHGB",
+                        "PNMT",
+                        "DBH",
+                        "TH"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Chga",
+                        "Chgb",
+                        "Pnmt",
+                        "Dbh",
+                        "Th"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musculoskeletal",
+      "name": "Musculoskeletal System",
+      "body_map_region": "limbs+trunk",
+      "color": "#D5C8B8",
+      "description": "The organ system providing support, movement, and protection to the body.",
+      "organs": [
+        {
+          "id": "skeletal-muscle",
+          "name": "Skeletal Muscle",
+          "icon": "svg/icons/organ-icons/skeletal-muscle.svg",
+          "microanatomy_svg": "svg/microanatomy/skeletal-muscle.svg",
+          "description": "Voluntary muscles attached to bones responsible for body movement.",
+          "microstructures": [
+            {
+              "id": "muscle-fiber",
+              "name": "Muscle Fiber",
+              "svg_region_id": "muscle-fiber",
+              "description": "Multinucleated contractile cells forming skeletal muscle tissue.",
+              "cell_types": [
+                {
+                  "id": "myocyte-skeletal",
+                  "name": "Skeletal Myocyte",
+                  "description": "Multinucleated contractile cells of skeletal muscle.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "MYH1",
+                        "MYH2",
+                        "ACTA1",
+                        "MHC",
+                        "FABP3",
+                        "ITGA7"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Myh1",
+                        "Myh2",
+                        "Acta1",
+                        "Mhc",
+                        "Fabp3",
+                        "Itga7"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Skeletal muscle fiber"
+                  ],
+                  "references": [
+                    76,
+                    77,
+                    78
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "muscle-satellite-cell",
+                  "name": "Muscle Satellite Cell",
+                  "description": "Stem cells located between the basal lamina and sarcolemma of muscle fibers, responsible for muscle regeneration.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PAX7",
+                        "PAX3",
+                        "VCAM1/CD106",
+                        "CD56/NCAM1",
+                        "M-cadherin"
+                      ],
+                      "negative": [
+                        "CD31",
+                        "CD45",
+                        "Sca-1"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Pax7",
+                        "Pax3",
+                        "Vcam1",
+                        "Cd56",
+                        "M-cadherin"
+                      ],
+                      "negative": [
+                        "Cd31",
+                        "Cd45",
+                        "Sca1"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "Myogenic precursor",
+                    "Muscle stem cell"
+                  ],
+                  "references": [
+                    76,
+                    77,
+                    78
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bone",
+          "name": "Bone",
+          "icon": "svg/icons/organ-icons/bone.svg",
+          "microanatomy_svg": "svg/microanatomy/bone.svg",
+          "description": "Rigid organs forming the skeleton, providing structure and protecting internal organs.",
+          "microstructures": [
+            {
+              "id": "bone-marrow-cavity",
+              "name": "Bone Marrow Cavity",
+              "svg_region_id": "marrow-cavity",
+              "description": "The central cavity of bones containing hematopoietic and stromal cells.",
+              "cell_types": [
+                {
+                  "id": "mesenchymal-stem-cell",
+                  "name": "Mesenchymal Stem Cell",
+                  "description": "Multipotent stromal cells capable of differentiating into bone, cartilage, and fat.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD10",
+                        "CD13",
+                        "CD73",
+                        "CD105",
+                        "CD271",
+                        "CD140b",
+                        "HER-2/CD340",
+                        "Frizzled-9/CD349",
+                        "STRO-1",
+                        "CD29",
+                        "CD90",
+                        "CD146"
+                      ],
+                      "negative": [
+                        "CD14",
+                        "CD34"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd10",
+                        "Cd13",
+                        "Cd73",
+                        "Cd105",
+                        "Cd271",
+                        "Cd140b",
+                        "Stro-1",
+                        "Cd29",
+                        "Cd90",
+                        "Cd146"
+                      ],
+                      "negative": [
+                        "Cd14",
+                        "Cd34"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "MSC",
+                    "BM-MSC"
+                  ],
+                  "references": [
+                    15,
+                    73,
+                    85,
+                    86,
+                    87
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "osteoblast",
+                  "name": "Osteoblast",
+                  "description": "Bone-forming cells that secrete bone matrix.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "RUNX2",
+                        "ALPP",
+                        "Osteocalcin/BGLAP",
+                        "Osterix/SP7",
+                        "Collagen I/COL1A1",
+                        "SPARC",
+                        "Fibronectin/FN1",
+                        "IGFBP-3",
+                        "SCUBE3"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Runx2",
+                        "Alpp",
+                        "Bglap",
+                        "Sp7",
+                        "Col1a1",
+                        "Sparc",
+                        "Fn1",
+                        "Igfbp3",
+                        "Scube3"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    70,
+                    71,
+                    72,
+                    73
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "osteoclast",
+                  "name": "Osteoclast",
+                  "description": "Large multinucleated cells that resorb bone tissue.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "TRAP/ACP5",
+                        "CATK",
+                        "RANK/TFFRSF11A",
+                        "Calcitonin receptor/CALCR",
+                        "CD68",
+                        "V-ATPase"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Acp5",
+                        "Ctsk",
+                        "Tnfrsf11a",
+                        "Calcr",
+                        "Cd68"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reproductive",
+      "name": "Reproductive System",
+      "body_map_region": "pelvis",
+      "color": "#F0C8D8",
+      "description": "The organ system responsible for reproduction.",
+      "organs": [
+        {
+          "id": "ovary",
+          "name": "Ovary",
+          "icon": "svg/icons/organ-icons/ovary.svg",
+          "microanatomy_svg": "svg/microanatomy/ovary.svg",
+          "description": "The female reproductive organ producing oocytes and hormones.",
+          "microstructures": [
+            {
+              "id": "ovarian-follicle",
+              "name": "Ovarian Follicle",
+              "svg_region_id": "follicle",
+              "description": "Structures containing an oocyte surrounded by granulosa and theca cells.",
+              "cell_types": [
+                {
+                  "id": "granulosa-cell",
+                  "name": "Granulosa Cell",
+                  "description": "Cells forming a barrier around ovarian oocyte follicles, producing estradiol and progesterone.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "AMH",
+                        "FRP",
+                        "Inhibin/INHBA",
+                        "MCAM/CD146",
+                        "Fibronectin/FN1",
+                        "FSHR",
+                        "CYP19A1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Amh",
+                        "Frp",
+                        "Inhba",
+                        "Cd146",
+                        "Fn1",
+                        "Fshr",
+                        "Cyp19a1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    115,
+                    116,
+                    117,
+                    118,
+                    119,
+                    120
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "large-luteal-cell",
+                  "name": "Large Luteal Cell",
+                  "description": "Cells in the corpus luteum producing progesterone and oxytocin, derived from granulosa cells.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CYP11A1",
+                        "LHCGR",
+                        "Phosphorylated Akt/AKT1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cyp11a1",
+                        "Lhcgr",
+                        "pAkt"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    122,
+                    123,
+                    124
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "germ-cell-ovary",
+                  "name": "Germ Cell (Ovary)",
+                  "description": "Cells involved in reproduction including oocytes and gonocytes.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "4C9",
+                        "GCNA1",
+                        "DAZL1",
+                        "VASA/DDX4",
+                        "ZAR1",
+                        "TEX101",
+                        "RBM",
+                        "TESMIN"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "4c9",
+                        "Gcna1",
+                        "Dazl1",
+                        "Vasa/Ddx4",
+                        "Zar1",
+                        "Tex101",
+                        "Rbm",
+                        "Tesmin"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112,
+                    113,
+                    114
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "testis",
+          "name": "Testis",
+          "icon": "svg/icons/organ-icons/testis.svg",
+          "microanatomy_svg": "svg/microanatomy/testis.svg",
+          "description": "The male reproductive organ producing sperm and testosterone.",
+          "microstructures": [
+            {
+              "id": "seminiferous-tubule",
+              "name": "Seminiferous Tubule",
+              "svg_region_id": "seminiferous-tubule",
+              "description": "Coiled tubes in the testis where spermatogenesis occurs.",
+              "cell_types": [
+                {
+                  "id": "sertoli-cell",
+                  "name": "Sertoli Cell",
+                  "description": "Nurse cells of the testis that support spermatogenesis and control hormone transport.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "ABP/SHBG",
+                        "DHH",
+                        "GATA-1",
+                        "SOX9",
+                        "WT1",
+                        "AMH"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Abp/Shbg",
+                        "Dhh",
+                        "Gata1",
+                        "Sox9",
+                        "Wt1",
+                        "Amh"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    154,
+                    155,
+                    156
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "germ-cell-testis",
+                  "name": "Germ Cell (Testis)",
+                  "description": "Cells involved in sperm production including spermatogonia and spermatocytes.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "4C9",
+                        "GCNA1",
+                        "DAZL1",
+                        "VASA/DDX4",
+                        "ZAR1",
+                        "TEX101",
+                        "RBM",
+                        "TESMIN"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "4c9",
+                        "Gcna1",
+                        "Dazl1",
+                        "Vasa/Ddx4",
+                        "Zar1",
+                        "Tex101",
+                        "Rbm",
+                        "Tesmin"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    107,
+                    108,
+                    109,
+                    110,
+                    111,
+                    112,
+                    113,
+                    114
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prostate",
+          "name": "Prostate",
+          "icon": "svg/icons/organ-icons/prostate.svg",
+          "microanatomy_svg": "svg/microanatomy/prostate.svg",
+          "description": "A gland in males producing seminal fluid.",
+          "microstructures": [
+            {
+              "id": "prostate-epithelium",
+              "name": "Prostate Epithelium",
+              "svg_region_id": "prostate-epithelium",
+              "description": "The glandular epithelium of the prostate.",
+              "cell_types": [
+                {
+                  "id": "prostate-epithelial-cell",
+                  "name": "Prostate Epithelial Cell",
+                  "description": "Epithelial cells of the prostate gland producing prostate-specific antigen.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PSA/KLK3",
+                        "PSAP",
+                        "EpCAM",
+                        "KRT8",
+                        "KRT18",
+                        "AR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Klk3",
+                        "Psap",
+                        "Epcam",
+                        "Krt8",
+                        "Krt18",
+                        "Ar"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    43
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary System",
+      "body_map_region": "flank+pelvis",
+      "color": "#E8D5A0",
+      "description": "The organ system responsible for filtering blood and excreting waste as urine.",
+      "organs": [
+        {
+          "id": "kidney",
+          "name": "Kidney",
+          "icon": "svg/icons/organ-icons/kidney.svg",
+          "microanatomy_svg": "svg/microanatomy/kidney.svg",
+          "description": "Paired organs that filter blood, regulate electrolytes, and produce urine.",
+          "microstructures": [
+            {
+              "id": "glomerulus",
+              "name": "Glomerulus",
+              "svg_region_id": "glomerulus",
+              "description": "The filtering unit of the kidney consisting of Bowman's capsule and capillary tuft.",
+              "cell_types": [
+                {
+                  "id": "podocyte",
+                  "name": "Podocyte",
+                  "description": "Specialized epithelial cells with foot processes wrapping around glomerular capillaries.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "WT1",
+                        "NPHS1/Podocin",
+                        "NPHS2/Nephrin",
+                        "SYNPO",
+                        "PODXL"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Wt1",
+                        "Nphs1",
+                        "Nphs2",
+                        "Synpo",
+                        "Podxl"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Visceral epithelial cell"
+                  ],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "mesangial-cell",
+                  "name": "Mesangial Cell",
+                  "description": "Specialized pericytes in the glomerulus providing structural support.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PDGFRB",
+                        "ACTA2",
+                        "Desmin"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Pdgfrb",
+                        "Acta2",
+                        "Desmin"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            },
+            {
+              "id": "nephron-tubules",
+              "name": "Nephron Tubules",
+              "svg_region_id": "tubules",
+              "description": "Tubular structures that process the glomerular filtrate.",
+              "cell_types": [
+                {
+                  "id": "proximal-tubule-cell",
+                  "name": "Proximal Tubule Cell",
+                  "description": "Epithelial cells of the proximal tubule responsible for reabsorption.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "SLC5A2",
+                        "SLC34A1",
+                        "LRP2",
+                        "CUBN",
+                        "GGT1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Slc5a2",
+                        "Slc34a1",
+                        "Lrp2",
+                        "Cubn",
+                        "Ggt1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "distal-tubule-cell",
+                  "name": "Distal Tubule Cell",
+                  "description": "Epithelial cells of the distal tubule involved in fine-tuning electrolyte balance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "SLC12A1",
+                        "SLC12A3",
+                        "CASR",
+                        "CALB1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Slc12a1",
+                        "Slc12a3",
+                        "Casr",
+                        "Calb1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sensory",
+      "name": "Sensory System",
+      "body_map_region": "head",
+      "color": "#C8E8D8",
+      "description": "The organ system responsible for detecting sensory stimuli from the environment.",
+      "organs": [
+        {
+          "id": "eye",
+          "name": "Eye",
+          "icon": "svg/icons/organ-icons/eye.svg",
+          "microanatomy_svg": "svg/microanatomy/eye.svg",
+          "description": "The organ of vision.",
+          "microstructures": [
+            {
+              "id": "retina",
+              "name": "Retina",
+              "svg_region_id": "retina",
+              "description": "The light-sensitive layer at the back of the eye.",
+              "cell_types": [
+                {
+                  "id": "retinal-ganglion-cell",
+                  "name": "Retinal Ganglion Cell",
+                  "description": "Output neurons of the retina that transmit visual information through the optic nerve.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "RBPMS",
+                        "NGF",
+                        "NSCL2",
+                        "PKC",
+                        "Hu",
+                        "BRN3B/POU4F2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Rbpms",
+                        "Ngf",
+                        "Nscl2",
+                        "Pkc",
+                        "Hu",
+                        "Pou4f2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    149,
+                    150,
+                    151
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circulating-immune",
+      "name": "Circulating Immune Cells",
+      "body_map_region": "blood",
+      "color": "#C8D5E0",
+      "description": "Immune cells circulating in blood and lymph, not confined to a single tissue.",
+      "organs": [
+        {
+          "id": "blood",
+          "name": "Blood",
+          "icon": "svg/icons/organ-icons/blood.svg",
+          "microanatomy_svg": "svg/microanatomy/blood.svg",
+          "description": "Circulating fluid carrying cells, nutrients, and waste throughout the body.",
+          "microstructures": [
+            {
+              "id": "blood-leukocytes",
+              "name": "Blood Leukocytes",
+              "svg_region_id": "leukocytes",
+              "description": "White blood cells involved in immune defense.",
+              "cell_types": [
+                {
+                  "id": "naive-cd4-t-cell",
+                  "name": "Naive CD4+ T Cell",
+                  "description": "Mature CD4+ T cells that have not yet encountered their specific antigen.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD4",
+                        "CD45RA",
+                        "CCR7",
+                        "CD62L",
+                        "CD27"
+                      ],
+                      "negative": [
+                        "CD95"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd4",
+                        "Cd45ra",
+                        "Ccr7",
+                        "Cd62l",
+                        "Cd27"
+                      ],
+                      "negative": [
+                        "Cd95"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "Naive helper T cell"
+                  ],
+                  "references": [
+                    5,
+                    13,
+                    20
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "naive-cd8-t-cell",
+                  "name": "Naive CD8+ T Cell",
+                  "description": "Mature CD8+ T cells that have not yet encountered their specific antigen.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD8",
+                        "CD45RA",
+                        "CCR7",
+                        "CD62L"
+                      ],
+                      "negative": [
+                        "CD95"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd8",
+                        "Cd45ra",
+                        "Ccr7",
+                        "Cd62l"
+                      ],
+                      "negative": [
+                        "Cd95"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "Naive cytotoxic T cell"
+                  ],
+                  "references": [
+                    20,
+                    21,
+                    22
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "th1-cell",
+                  "name": "TH1 Cell",
+                  "description": "CD4+ helper T cells producing IFN-gamma, activating macrophages against intracellular pathogens.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "T-bet/TBX21",
+                        "IL-12RB2",
+                        "IFNG",
+                        "CXCR3",
+                        "CCR5"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Tbx21",
+                        "Il12rb2",
+                        "Ifng",
+                        "Cxcr3",
+                        "Ccr5"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Type 1 helper T cell"
+                  ],
+                  "references": [
+                    13,
+                    14
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "th2-cell",
+                  "name": "TH2 Cell",
+                  "description": "CD4+ helper T cells producing IL-4, IL-5, IL-13, mediating allergic and anti-parasitic responses.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "GATA3",
+                        "IL4",
+                        "IL5",
+                        "IL13",
+                        "CCR4",
+                        "CRTH2/PTGDR2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Gata3",
+                        "Il4",
+                        "Il5",
+                        "Il13",
+                        "Ccr4",
+                        "Ptgdr2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Type 2 helper T cell"
+                  ],
+                  "references": [
+                    13
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "th17-cell",
+                  "name": "TH17 Cell",
+                  "description": "CD4+ helper T cells producing IL-17, involved in autoimmunity and anti-fungal defense.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "RORgt/RORC",
+                        "IL17A",
+                        "IL17F",
+                        "IL22",
+                        "CCR6",
+                        "IL23R"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Rorc",
+                        "Il17a",
+                        "Il17f",
+                        "Il22",
+                        "Ccr6",
+                        "Il23r"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Type 17 helper T cell"
+                  ],
+                  "references": [
+                    13,
+                    15,
+                    16
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "treg-cell",
+                  "name": "Regulatory T Cell",
+                  "description": "CD4+ T cells that suppress immune responses, maintaining self-tolerance.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "FOXP3",
+                        "CD25/IL2RA",
+                        "CTLA-4",
+                        "GITR/TNFRSF18",
+                        "PD-1/PDCD1",
+                        "LAG3",
+                        "OX40/TNFRSF4",
+                        "ICOS",
+                        "CCR4",
+                        "CXCR4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Foxp3",
+                        "Cd25",
+                        "Ctla4",
+                        "Gitr",
+                        "Pdcd1",
+                        "Lag3",
+                        "Ox40",
+                        "Icos",
+                        "Ccr4",
+                        "Cxcr4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Treg",
+                    "CD4+CD25+ Treg"
+                  ],
+                  "references": [
+                    13,
+                    17,
+                    18,
+                    19,
+                    46,
+                    47,
+                    48
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "th2a-cell",
+                  "name": "TH2A Cell",
+                  "description": "A subset of TH2 cells associated with allergic disease.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD45RBlow",
+                        "CD27-",
+                        "CRTH2/PTGDR2",
+                        "CD161",
+                        "CD49d"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd45rblow",
+                        "Cd27-",
+                        "Crth2",
+                        "Cd161",
+                        "Cd49d"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Allergic TH2 cell"
+                  ],
+                  "references": [
+                    6
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "th9-cell",
+                  "name": "TH9 Cell",
+                  "description": "CD4+ T cells secreting IL-9 and IL-10, with anti-tumor properties.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "PU.1/SPI1",
+                        "IL9",
+                        "IL10",
+                        "IRF4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Spi1",
+                        "Il9",
+                        "Il10",
+                        "Irf4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    45
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "memory-cd4-central",
+                  "name": "Central Memory CD4+ T Cell",
+                  "description": "Memory T cells expressing CD62L and CCR7 for lymph node homing.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD4",
+                        "CD45RO",
+                        "CD62L",
+                        "CCR7",
+                        "CD27"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd4",
+                        "Cd45ro",
+                        "Cd62l",
+                        "Ccr7",
+                        "Cd27"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "TCM"
+                  ],
+                  "references": [
+                    7,
+                    20
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "memory-cd4-effector",
+                  "name": "Effector Memory CD4+ T Cell",
+                  "description": "Memory T cells lacking CCR7, ready for rapid effector function in tissues.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD4",
+                        "CD45RO",
+                        "CD27-",
+                        "CCR7-"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd4",
+                        "Cd45ro",
+                        "CCR7-"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "TEM"
+                  ],
+                  "references": [
+                    20
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "memory-cd8-effector",
+                  "name": "Effector Memory CD8+ T Cell",
+                  "description": "Cytotoxic memory T cells with immediate killing capacity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD8",
+                        "CD45RA-",
+                        "CCR7-",
+                        "CD95",
+                        "CD44"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd8",
+                        "Cd45ra-",
+                        "Ccr7-",
+                        "Cd95",
+                        "Cd44"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    20,
+                    21,
+                    22,
+                    51
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "tissue-resident-memory-t",
+                  "name": "Tissue-Resident Memory T Cell",
+                  "description": "Memory T cells permanently residing in non-lymphoid tissues.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD69",
+                        "CD103/ITGAE",
+                        "CD49a"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd69",
+                        "Cd103/Itgae",
+                        "Cd49a"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "TRM"
+                  ],
+                  "references": [
+                    21,
+                    22
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "gamma-delta-t-cell",
+                  "name": "Gamma-Delta T Cell",
+                  "description": "T cells with gamma-delta TCR, enriched in epithelia, bridging innate and adaptive immunity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "TCRgamma/delta",
+                        "BTN2A1",
+                        "BTN3A1",
+                        "Vdelta1",
+                        "Vgamma9Vdelta2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Tcrgd",
+                        "Btn2a1",
+                        "Btn3a1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "gd T cell"
+                  ],
+                  "references": [
+                    10,
+                    11,
+                    12,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "mait-cell",
+                  "name": "MAIT Cell",
+                  "description": "CD8+ mucosal-associated invariant T cells producing TH1 cytokines.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "TCRbeta",
+                        "MR1",
+                        "CD8",
+                        "CD161",
+                        "VA7.2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Tcrb",
+                        "Mr1",
+                        "Cd8",
+                        "Cd161"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Mucosal-associated invariant T cell"
+                  ],
+                  "references": [
+                    49,
+                    50
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "naive-follicular-b-cell",
+                  "name": "Naive Follicular B Cell",
+                  "description": "Mature B cells circulating through blood and lymph, residing in B cell follicles.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD19",
+                        "CD20/MS4A1",
+                        "CD22",
+                        "IgD",
+                        "IgM",
+                        "CD23",
+                        "CD79A"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd19",
+                        "Cd20",
+                        "Cd22",
+                        "Igd",
+                        "Igm",
+                        "Cd23",
+                        "Cd79a"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Follicular B2 cell"
+                  ],
+                  "references": [
+                    62
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "marginal-zone-b-cell",
+                  "name": "Marginal Zone B Cell",
+                  "description": "B cells in the splenic marginal sinus mediating T-independent antigen responses.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD19",
+                        "CD21",
+                        "CD23-",
+                        "CD24",
+                        "IgM"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd19",
+                        "Cd21",
+                        "Cd23-",
+                        "Cd24",
+                        "Igm"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "MZ B cell"
+                  ],
+                  "references": [
+                    62
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "b1-cell",
+                  "name": "B1 Cell",
+                  "description": "Self-renewing B cells producing natural IgM against T-independent antigens.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD19",
+                        "CD5",
+                        "CD43",
+                        "CD20/MS4A1",
+                        "IgM",
+                        "CD11b"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd19",
+                        "Cd5",
+                        "Cd43",
+                        "Cd20",
+                        "Igm",
+                        "Cd11b"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "B1a cell"
+                  ],
+                  "references": [
+                    62,
+                    68,
+                    69,
+                    70,
+                    77
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "memory-b-cell-preswitch",
+                  "name": "Pre-switch Memory B Cell",
+                  "description": "Memory B cells that have not undergone class switching.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "IgD+",
+                        "IgM+",
+                        "CD27+",
+                        "CD19",
+                        "CD1c",
+                        "CD21",
+                        "CD24"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Igd+",
+                        "Igm+",
+                        "Cd27+",
+                        "Cd19",
+                        "Cd1c",
+                        "Cd21",
+                        "Cd24"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    62
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "memory-b-cell-postswitch",
+                  "name": "Post-switch Memory B Cell",
+                  "description": "Memory B cells that have undergone class switching to IgG or IgA.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "IgM-",
+                        "IgD-",
+                        "CD27+",
+                        "IgG+",
+                        "IgA+",
+                        "CD21",
+                        "CD24",
+                        "CD95",
+                        "CXCR3"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Igm-",
+                        "Igd-",
+                        "Cd27+",
+                        "IgG+",
+                        "IgA+",
+                        "Cd21",
+                        "Cd24",
+                        "Cd95",
+                        "Cxcr3"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    62,
+                    63,
+                    78
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "plasmablast",
+                  "name": "Plasmablast",
+                  "description": "Recently activated B cells actively secreting antibodies but not yet fully differentiated.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "IgD-",
+                        "CD27high",
+                        "CD38high",
+                        "CD138-",
+                        "CD20",
+                        "HLA-DR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Igd-",
+                        "Cd27high",
+                        "Cd38high",
+                        "Cd138-",
+                        "Cd20",
+                        "Hla-dr"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    64
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "plasma-cell",
+                  "name": "Plasma Cell",
+                  "description": "Terminally differentiated antibody-secreting B cells.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "IgD-",
+                        "CD27high",
+                        "CD38high",
+                        "CD138/SDC1",
+                        "CD20-",
+                        "CD24-",
+                        "BLIMP1/PRDM1",
+                        "XBP1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Igd-",
+                        "Cd27high",
+                        "Cd38high",
+                        "Cd138",
+                        "Cd20-",
+                        "Cd24-",
+                        "Prdm1",
+                        "Xbp1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    64,
+                    78
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "regulatory-b-cell",
+                  "name": "Regulatory B Cell",
+                  "description": "IL-10-producing B cells that suppress immune responses.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD19",
+                        "CD24hi",
+                        "CD38hi",
+                        "CD25",
+                        "CD71",
+                        "CD274/PD-L1",
+                        "CD5",
+                        "CD43",
+                        "TIM-1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd19",
+                        "Cd24hi",
+                        "Cd38hi",
+                        "Cd25",
+                        "Cd71",
+                        "Cd274",
+                        "Cd5",
+                        "Cd43",
+                        "Tim1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Breg",
+                    "B10 cell",
+                    "BR1 cell"
+                  ],
+                  "references": [
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "nk-cell-cd56dim",
+                  "name": "CD56dim NK Cell",
+                  "description": "Major NK subset (~90%) with high CD16, potent cytotoxic activity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3-",
+                        "CD56dim",
+                        "CD16high",
+                        "NKp46/NCR1",
+                        "KIR",
+                        "CD57",
+                        "CD107a",
+                        "CD69",
+                        "NKG2D"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3-",
+                        "Cd49b/Dx5",
+                        "NKp46",
+                        "Ly49",
+                        "Cd107a",
+                        "Cd69",
+                        "Nkg2d"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Cytotoxic NK cell"
+                  ],
+                  "references": [
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "nk-cell-cd56bright",
+                  "name": "CD56bright NK Cell",
+                  "description": "Minor NK subset (~10%) with low CD16, high cytokine production.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3-",
+                        "CD56bright",
+                        "CD16-",
+                        "CD94",
+                        "NKp46",
+                        "CD117"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3-",
+                        "Cd56bright",
+                        "Cd16-",
+                        "Cd94",
+                        "NKp46",
+                        "Cd117"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Cytokine-producing NK cell"
+                  ],
+                  "references": [
+                    82,
+                    83,
+                    84,
+                    85
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "m1-macrophage",
+                  "name": "M1 Macrophage",
+                  "description": "Pro-inflammatory macrophages induced by IFN-gamma and LPS, producing TNF, IL-1, IL-6, IL-12.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD68",
+                        "CD86",
+                        "CD80",
+                        "MHC-II",
+                        "NOS2",
+                        "SOCS3",
+                        "CD64",
+                        "IDO",
+                        "CXCL10",
+                        "TLR2",
+                        "TLR4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd68",
+                        "Cd86",
+                        "Cd80",
+                        "Mhc2",
+                        "Nos2",
+                        "Socs3",
+                        "Cd64",
+                        "Ido",
+                        "Cxcl10",
+                        "Tlr2",
+                        "Tlr4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Classically activated macrophage"
+                  ],
+                  "references": [
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129,
+                    133,
+                    134
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "m2a-macrophage",
+                  "name": "M2a Macrophage",
+                  "description": "Alternatively activated macrophages induced by IL-4/IL-13, involved in tissue repair.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD163",
+                        "MHC-II",
+                        "CD206/MMR",
+                        "CD200R",
+                        "TGM2",
+                        "IL1R2",
+                        "CCL17",
+                        "CCL22",
+                        "CCL24"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd163",
+                        "Mhc2",
+                        "Cd206",
+                        "Cd200r",
+                        "Tgm2",
+                        "Il1r2",
+                        "Ccl17",
+                        "Ccl22",
+                        "Ccl24"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Wound-healing macrophage"
+                  ],
+                  "references": [
+                    124,
+                    125,
+                    126,
+                    128,
+                    132
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "m2b-macrophage",
+                  "name": "M2b Macrophage",
+                  "description": "Macrophages induced by immune complexes and LPS, with mixed pro/anti-inflammatory profile.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD86",
+                        "MHC-II",
+                        "IL-10",
+                        "IL-6",
+                        "IL-1",
+                        "TNF-alpha",
+                        "CCL1"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd86",
+                        "Mhc2",
+                        "Il10",
+                        "Il6",
+                        "Il1",
+                        "Tnfa",
+                        "Ccl1"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Type 2b macrophage"
+                  ],
+                  "references": [
+                    132
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "m2c-macrophage",
+                  "name": "M2c Macrophage",
+                  "description": "Deactivated macrophages induced by IL-10 and TGF-beta, involved in immunosuppression.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD163",
+                        "TLR1",
+                        "TLR8",
+                        "IL-10",
+                        "TGF-beta",
+                        "CCR2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd163",
+                        "Tlr1",
+                        "Tlr8",
+                        "Il10",
+                        "Tgfb",
+                        "Ccr2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Deactivated macrophage"
+                  ],
+                  "references": [
+                    132
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "m2d-macrophage",
+                  "name": "M2d Macrophage",
+                  "description": "Tumor-associated macrophage-like cells induced by IL-6 and adenosine.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "VEGF",
+                        "IL-10",
+                        "IL-12",
+                        "TNF-alpha",
+                        "TGF-beta",
+                        "CCL5",
+                        "CXCL10",
+                        "CXCL16"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Vegf",
+                        "Il10",
+                        "Il12",
+                        "Tnfa",
+                        "Tgfb",
+                        "Ccl5",
+                        "Cxcl10",
+                        "Cxcl16"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Tumor-associated macrophage"
+                  ],
+                  "references": [
+                    129,
+                    132
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "conventional-dc-cd8",
+                  "name": "Conventional CD8+ Dendritic Cell",
+                  "description": "Cross-presenting DCs activating CD8+ T cells toward TH1 differentiation.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD8+",
+                        "CD205/DEC-205",
+                        "SIRPa-",
+                        "CD11b-",
+                        "CD11chi",
+                        "MHC-II"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd8+",
+                        "Cd205",
+                        "Sirpa-",
+                        "Cd11b-",
+                        "Cd11chi",
+                        "Mhc2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "cDC1"
+                  ],
+                  "references": [
+                    47
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "conventional-dc-cd8neg",
+                  "name": "Conventional CD8- Dendritic Cell",
+                  "description": "DCs activating T cells toward TH2 differentiation.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD11c",
+                        "MHC-II",
+                        "CD11b",
+                        "SIRPa+"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd11c",
+                        "Mhc2",
+                        "Cd11b",
+                        "Sirpa+"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "cDC2"
+                  ],
+                  "references": [
+                    47
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "plasmacytoid-dc",
+                  "name": "Plasmacytoid Dendritic Cell",
+                  "description": "DC subset specializing in anti-viral immunity via IFN production.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "B220/CD45R",
+                        "CD11c",
+                        "TLR7",
+                        "TLR9",
+                        "IRF7",
+                        "IRF8",
+                        "BDCA2/CD303",
+                        "CD123/IL3RA",
+                        "CD4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "B220/Cd45r",
+                        "Cd11c",
+                        "Tlr7",
+                        "Tlr9",
+                        "Irf7",
+                        "Irf8",
+                        "Bdca2",
+                        "Cd123",
+                        "Cd4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "pDC"
+                  ],
+                  "references": [
+                    46,
+                    48,
+                    49,
+                    50
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "mature-dc",
+                  "name": "Mature Dendritic Cell",
+                  "description": "Fully differentiated DCs with high antigen-presenting capacity.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD83",
+                        "CD86",
+                        "CD80",
+                        "MHC-II",
+                        "CD1a",
+                        "CD1b",
+                        "CD1c",
+                        "DC-LAMP/CD208",
+                        "DC-SIGN/CD209",
+                        "DEC-205"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd83",
+                        "Cd86",
+                        "Cd80",
+                        "Mhc2",
+                        "Cd1a",
+                        "Cd1b",
+                        "Cd1c",
+                        "Cd208",
+                        "Cd209",
+                        "Dec205"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [],
+                  "references": [
+                    52,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "embryonic-stem-cell",
+                  "name": "Embryonic Stem Cell",
+                  "description": "Pluripotent stem cells derived from the inner cell mass of blastocysts.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "OCT4/POU5F1",
+                        "NANOG",
+                        "SOX2",
+                        "SSEA-3",
+                        "SSEA-4",
+                        "TRA-1-60",
+                        "TRA-1-81",
+                        "TRA-2-49/6E",
+                        "AP",
+                        "FZD1-10",
+                        "TDGF-1/CR1",
+                        "Nestin"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Oct4/Pou5f1",
+                        "Nanog",
+                        "Sox2",
+                        "Ssea-1",
+                        "Tra-1-60",
+                        "Tra-1-81",
+                        "Ap",
+                        "Fzd1-10",
+                        "Tdgf1",
+                        "Nestin"
+                      ],
+                      "negative": [
+                        "SSEA-3",
+                        "SSEA-4"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "ESC",
+                    "hESC",
+                    "mESC"
+                  ],
+                  "references": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "ipsc",
+                  "name": "Induced Pluripotent Stem Cell",
+                  "description": "Pluripotent cells generated by reprogramming somatic cells with OCT4, SOX2, KLF4, c-MYC.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "OCT4/POU5F1",
+                        "NANOG",
+                        "SOX2",
+                        "KLF4",
+                        "c-MYC",
+                        "SSEA-3",
+                        "SSEA-4",
+                        "TRA-1-60",
+                        "TRA-1-81",
+                        "TRA-2-49/6E"
+                      ],
+                      "negative": [
+                        "CD13"
+                      ]
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Oct4/Pou5f1",
+                        "Nanog",
+                        "Sox2",
+                        "Klf4",
+                        "c-Myc",
+                        "Ssea-1",
+                        "Tra-1-60",
+                        "Tra-1-81"
+                      ],
+                      "negative": [
+                        "Ssea-3",
+                        "Ssea-4",
+                        "Cd13"
+                      ]
+                    }
+                  },
+                  "aliases": [
+                    "iPSC",
+                    "iPS cell"
+                  ],
+                  "references": [
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "cancer-stem-cell",
+                  "name": "Cancer Stem Cell",
+                  "description": "Self-renewing cells within tumors that drive tumor growth and metastasis.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD44",
+                        "CD133/PROM1",
+                        "CD24",
+                        "CD90/THY1",
+                        "CD271/NGFR",
+                        "CD49f/ITGA6",
+                        "CD13",
+                        "CXCR4",
+                        "ALDH1",
+                        "ABCG2"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd44",
+                        "Cd133/Prom1",
+                        "Cd24",
+                        "Cd90",
+                        "Cd271",
+                        "Cd49f",
+                        "Cd13",
+                        "Cxcr4",
+                        "Aldh1",
+                        "Abcg2"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "CSC",
+                    "Tumor-initiating cell"
+                  ],
+                  "references": [
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                },
+                {
+                  "id": "neural-stem-cell",
+                  "name": "Neural Stem Cell",
+                  "description": "Self-renewing multipotent cells generating neurons, astrocytes, and oligodendrocytes.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD133/PROM1",
+                        "CD15/SSEA-1",
+                        "CD24",
+                        "Nestin",
+                        "SOX2",
+                        "ABCG2",
+                        "FGFR4",
+                        "FZD9/CD349",
+                        "GCTM-2",
+                        "Musashi-1/MSI1",
+                        "PSA-NCAM",
+                        "EGFR"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd133/Prom1",
+                        "Cd15",
+                        "Cd24",
+                        "Nestin",
+                        "Sox2",
+                        "Abcg2",
+                        "Fgfr4",
+                        "Fzd9",
+                        "Gctm-2",
+                        "Msi1",
+                        "Psa-Ncam",
+                        "Egfr"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "NSC"
+                  ],
+                  "references": [
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cell-lines",
+          "name": "Cell Lines / Other",
+          "icon": "svg/icons/organ-icons/cell-lines.svg",
+          "microanatomy_svg": "svg/microanatomy/cell-lines.svg",
+          "description": "Established cell lines and cell types not confined to a single tissue.",
+          "microstructures": [
+            {
+              "id": "cell-lines-misc",
+              "name": "Miscellaneous Cell Lines",
+              "svg_region_id": "cell-lines",
+              "description": "Cell lines and other cell types.",
+              "cell_types": [
+                {
+                  "id": "jurkat-cell",
+                  "name": "Jurkat Cell",
+                  "description": "CD4+ T cell leukemia line used extensively in T cell signaling research.",
+                  "markers": {
+                    "human": {
+                      "positive": [
+                        "CD3",
+                        "CD4",
+                        "CD45",
+                        "CCR1-10",
+                        "CXCR4"
+                      ],
+                      "negative": []
+                    },
+                    "mouse": {
+                      "positive": [
+                        "Cd3",
+                        "Cd4",
+                        "Cd45",
+                        "Ccr1-10",
+                        "Cxcr4"
+                      ],
+                      "negative": []
+                    }
+                  },
+                  "aliases": [
+                    "Jurkat T cell line"
+                  ],
+                  "references": [
+                    121
+                  ],
+                  "source": "labome",
+                  "added_in_version": "1.0.0",
+                  "last_modified_version": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

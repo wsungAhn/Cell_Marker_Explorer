@@ -1,0 +1,41 @@
+{
+  "updates": [
+    {
+      "version": "1.0.0",
+      "date": "2024-06-27",
+      "description": "Initial dataset compiled from Labome Cell Markers, T/B Cell Markers, Macrophage Markers, and Stem Cell Markers pages. 121 cell types across 12 tissue systems and 27 organs with 706 human markers.",
+      "sources_scraped": [
+        "labome_cell_markers",
+        "labome_tb_cell_markers",
+        "labome_macrophage_markers",
+        "labome_stem_cell_markers"
+      ],
+      "changes": {
+        "cell_types_added": 121,
+        "cell_types_modified": 0,
+        "cell_types_removed": 0,
+        "markers_added": 706,
+        "markers_modified": 0,
+        "markers_removed": 0
+      },
+      "details": {
+        "added_cell_types": [
+          "Integumentary: keratinocyte, epidermal-stem-cell, langerhans-cell, dermal-fibroblast, dermal-macrophage, dermal-dc, white-adipocyte, brown-adipocyte, beige-adipocyte, adipose-derived-stem-cell",
+          "Nervous: pyramidal-cell, astrocyte-type1, astrocyte-type2, purkinje-cell, choroid-plexus-cell, microglia, oligodendrocyte, ependymal-cell, schwann-cell-myelinating, schwann-cell-nonmyelinating, satellite-cell, enteric-glial-cell",
+          "Cardiovascular: cardiomyocyte, cardiac-macrophage, vascular-endothelial-cell, lymphatic-endothelial-cell, smooth-muscle-cell, pericyte",
+          "Respiratory: alveolar-type1-cell, alveolar-type2-cell, alveolar-macrophage, bronchial-epithelial-cell, neuroendocrine-cell-pulmonary",
+          "Digestive: parietal-cell, chief-cell, enterocyte, paneth-cell, intestinal-stem-cell, tuft-cell, goblet-cell, colonocyte, hepatocyte, kupffer-cell, liver-sinusoidal-endothelial-cell, hepatic-stellate-cell, acinar-cell, beta-cell, alpha-cell, delta-cell",
+          "Lymphatic/Immune: hematopoietic-stem-cell, neutrophil, eosinophil, basophil, monocyte-classical, monocyte-nonclassical, mast-cell-bone-marrow, dn-thymocyte, dp-thymocyte, thymic-tuft-cell, splenic-macrophage, tfh-cell, tfr-cell, follicular-dc",
+          "Endocrine: thyrocyte, zona-glomerulosa-cell, zona-fasciculata-cell, chromaffin-cell",
+          "Musculoskeletal: myocyte-skeletal, muscle-satellite-cell, mesenchymal-stem-cell, osteoblast, osteoclast",
+          "Reproductive: granulosa-cell, large-luteal-cell, germ-cell-ovary, sertoli-cell, germ-cell-testis, prostate-epithelial-cell",
+          "Urinary: podocyte, mesangial-cell, proximal-tubule-cell, distal-tubule-cell",
+          "Sensory: retinal-ganglion-cell",
+          "Circulating Immune: naive-cd4-t-cell, naive-cd8-t-cell, th1-cell, th2-cell, th17-cell, treg-cell, th2a-cell, th9-cell, memory-cd4-central, memory-cd4-effector, memory-cd8-effector, tissue-resident-memory-t, gamma-delta-t-cell, mait-cell, naive-follicular-b-cell, marginal-zone-b-cell, b1-cell, memory-b-cell-preswitch, memory-b-cell-postswitch, plasmablast, plasma-cell, regulatory-b-cell, nk-cell-cd56dim, nk-cell-cd56bright, m1-macrophage, m2a-macrophage, m2b-macrophage, m2c-macrophage, m2d-macrophage, conventional-dc-cd8, conventional-dc-cd8neg, plasmacytoid-dc, mature-dc, embryonic-stem-cell, ipsc, cancer-stem-cell, neural-stem-cell, jurkat-cell"
+        ],
+        "modified_cell_types": [],
+        "removed_cell_types": []
+      }
+    }
+  ]
+}

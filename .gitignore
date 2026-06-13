@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+.Rhistory
+Thumbs.db
+*~
+.idea/
+.vscode/
+
+# Python (updater pipeline)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Scraper intermediate output (raw, not served) — keep dir, ignore contents
+data/scraped/*
+!data/scraped/.gitkeep
+
+# Node (none expected; guard anyway)
+node_modules/
+npm-debug.log*
+
+# Logs / temp
+*.log
+tmp/
