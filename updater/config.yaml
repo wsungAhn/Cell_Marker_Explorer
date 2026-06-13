@@ -1,0 +1,46 @@
+schedule:
+  interval_months: 6
+  next_run: "2024-12-27"
+
+sources:
+  labome:
+    pages:
+      - name: "Cell Markers"
+        url: "https://www.labome.com/method/Cell-Markers.html"
+        output: "labome_cell_markers"
+      - name: "T Cell and B Cell Markers"
+        url: "https://www.labome.com/method/T-Cell-Markers-and-B-Cell-Markers.html"
+        output: "labome_tb_cell_markers"
+      - name: "Macrophage Markers"
+        url: "https://www.labome.com/method/Macrophage-Markers.html"
+        output: "labome_macrophage_markers"
+      - name: "Stem Cell Markers"
+        url: "https://www.labome.com/review/stemcells.html"
+        output: "labome_stem_cell_markers"
+    rate_limit_seconds: 2
+
+  cellmarker2:
+    url: "http://bio-bigdata.hrbmu.edu.cn/CellMarker/"
+    search_url: "http://bio-bigdata.hrbmu.edu.cn/CellMarker/search/"
+    output: "cellmarker2"
+    rate_limit_seconds: 1
+
+  panglaodb:
+    url: "https://panglaodb.se/"
+    api_url: "https://panglaodb.se/api/v1/"
+    output: "panglaodb"
+    rate_limit_seconds: 1
+
+output:
+  directory: "data/scraped"
+  date_format: "%Y%m%d"
+
+merge_rules:
+  conflict_resolution: "prefer_labome"  # When markers conflict, prefer Labome data
+  auto_add_new_markers: true             # Automatically add new markers to existing cell types
+  auto_add_new_cell_types: false         # Require manual review for new cell types
+  marker_match_threshold: 0.8            # Fuzzy match threshold for marker name variants
+
+logging:
+  level: "INFO"
+  file: "updater/scraper.log"
