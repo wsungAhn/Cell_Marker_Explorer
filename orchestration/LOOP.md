@@ -13,9 +13,9 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 | 07 | 07-body-map | js/body-map.js | **accepted** | 0 | d56491a | task-07 |
 | 08 | 08-organ-view | js/organ-view.js | **accepted** | 0 | f9d6470 | task-08 |
 | 09 | 09-cell-view | js/cell-view.js | **accepted** | 0 | 69b69ad | task-09 |
-| 10 | 10-search | js/search.js | **accepted** | 0 | 90ef725 | task-10 |
-| 11 | 11-compare | js/compare.js | **queued (in inbox)** | 0 | — | — |
-| 12 | 12-export | js/export.js | pending | 0 | — | — |
+| 10 | 10-search | js/search.js | **accepted** | 0 | df79fdd | task-10 |
+| 11 | 11-compare | js/compare.js | **accepted** | 0 | 0d24df2 | task-11 |
+| 12 | 12-export | js/export.js | **queued (in inbox)** | 0 | — | — |
 | 13 | 13-species-toggle | js/species-toggle.js | pending | 0 | — | — |
 | 14 | 14-links | js/links.js | pending | 0 | — | — |
 | 15 | 19-update-badge | js/update-badge.js | pending | 0 | — | — |
@@ -27,4 +27,4 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `11` (js/compare.js queued in inbox, awaiting Codex). Data gap flagged (task-09): cellType.references (1–157) lack a citation table; only 6 metadata.sources — see progress/09, escalate in final report. Milestones reached: `m2-assets` (after task-03), `m3-shell` (after task-05). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
+**Current pointer:** `12` (js/export.js queued in inbox, awaiting Codex). Data gap flagged (task-09): cellType.references (1–157) lack a citation table; only 6 metadata.sources — see progress/09, escalate in final report. Milestones reached: `m2-assets` (after task-03), `m3-shell` (after task-05). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
