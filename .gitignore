@@ -40,3 +40,6 @@ review/rejected/*
 !review/rejected/.gitkeep
 review/accepted/*
 !review/accepted/.gitkeep
+
+# Preview tooling (local only)
+.claude/
