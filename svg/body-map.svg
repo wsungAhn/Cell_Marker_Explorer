@@ -1,0 +1,354 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="body-map-title body-map-desc">
+  <title id="body-map-title">Interactive human body map</title>
+  <desc id="body-map-desc">Anatomical body map with twelve keyboard-accessible tissue system regions.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .body-region {
+      cursor: pointer;
+      outline: none;
+      pointer-events: all;
+    }
+
+    .region-path,
+    .hit-area {
+      pointer-events: all;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke: var(--body-outline);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hit-area {
+      fill: transparent;
+      stroke: transparent;
+    }
+
+    .body-region:hover .region-path,
+    .body-region:focus .region-path,
+    .body-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(0 0 8px var(--hover-glow));
+    }
+
+    .body-region:focus-visible .region-path,
+    .body-region.selected .region-path,
+    .body-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 3;
+    }
+
+    .surface-line {
+      fill: none;
+      stroke: var(--body-outline);
+      stroke-width: 1;
+      stroke-linecap: round;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .blood-line {
+      fill: none;
+      stroke: #C8D5E0;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.68;
+      pointer-events: none;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 12px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 4px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-line {
+      fill: none;
+      stroke: var(--text-muted);
+      stroke-width: 1;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    @media (max-width: 767px) {
+      .labels-layer {
+        display: none;
+      }
+    }
+  </style>
+
+  <rect class="bg" width="600" height="900" fill="var(--bg-primary)"/>
+
+  <g id="integumentary" class="body-region" data-tissue-system="integumentary" role="button" tabindex="0" aria-label="Integumentary System">
+    <title>Integumentary System</title>
+    <desc>Skin and body surface outline enclosing the full human figure.</desc>
+    <path class="region-path" fill="#F5D5C8" stroke-width="1.5" d="M300 48
+      C252 48 226 84 228 128
+      C229 158 241 179 258 194
+      C233 203 217 226 207 260
+      C195 302 190 349 181 404
+      C175 440 150 492 132 543
+      C122 572 132 589 151 590
+      C171 590 180 569 190 540
+      C204 500 220 454 228 418
+      C230 470 225 520 218 573
+      C210 630 194 702 187 790
+      C184 829 200 855 226 855
+      C252 855 261 833 264 795
+      C270 720 282 655 296 598
+      C299 587 301 587 304 598
+      C318 655 330 720 336 795
+      C339 833 348 855 374 855
+      C400 855 416 829 413 790
+      C406 702 390 630 382 573
+      C375 520 370 470 372 418
+      C380 454 396 500 410 540
+      C420 569 429 590 449 590
+      C468 589 478 572 468 543
+      C450 492 425 440 419 404
+      C410 349 405 302 393 260
+      C383 226 367 203 342 194
+      C359 179 371 158 372 128
+      C374 84 348 48 300 48 Z"/>
+    <path class="surface-line" d="M258 194 C278 209 322 209 342 194"/>
+    <path class="surface-line" d="M228 418 C245 448 278 462 300 462 C322 462 355 448 372 418"/>
+  </g>
+
+  <g id="musculoskeletal" class="body-region" data-tissue-system="musculoskeletal" role="button" tabindex="0" aria-label="Musculoskeletal System">
+    <title>Musculoskeletal System</title>
+    <desc>Trunk, limb, and shoulder muscle regions surrounding the torso.</desc>
+    <path class="region-path" fill="#D5C8B8" stroke-width="1" d="M216 258
+      C230 222 255 207 300 207
+      C345 207 370 222 384 258
+      C394 284 398 324 405 371
+      C414 438 441 501 458 550
+      C463 565 458 576 448 577
+      C436 578 431 562 424 543
+      C401 479 381 415 374 354
+      C370 322 360 296 344 279
+      C342 347 349 409 358 476
+      C366 539 374 600 385 668
+      C393 718 401 773 398 806
+      C397 825 389 837 376 838
+      C361 839 354 825 351 801
+      C341 713 329 646 313 574
+      C308 552 292 552 287 574
+      C271 646 259 713 249 801
+      C246 825 239 839 224 838
+      C211 837 203 825 202 806
+      C199 773 207 718 215 668
+      C226 600 234 539 242 476
+      C251 409 258 347 256 279
+      C240 296 230 322 226 354
+      C219 415 199 479 176 543
+      C169 562 164 578 152 577
+      C142 576 137 565 142 550
+      C159 501 186 438 195 371
+      C202 324 206 284 216 258 Z"/>
+  </g>
+
+  <g id="nervous" class="body-region" data-tissue-system="nervous" role="button" tabindex="0" aria-label="Nervous System">
+    <title>Nervous System</title>
+    <desc>Brain, brainstem, and spinal cord running from the head down the back.</desc>
+    <path class="region-path" fill="#F5E6A3" stroke-width="1" d="M300 73
+      C263 73 244 101 247 132
+      C249 157 267 176 292 181
+      L292 507
+      C292 516 297 522 300 522
+      C303 522 308 516 308 507
+      L308 181
+      C333 176 351 157 353 132
+      C356 101 337 73 300 73 Z
+      M265 127 C270 101 291 90 308 96
+      M335 127 C330 101 309 90 292 96"/>
+  </g>
+
+  <g id="sensory" class="body-region" data-tissue-system="sensory" role="button" tabindex="0" aria-label="Sensory System">
+    <title>Sensory System</title>
+    <desc>Eye and visual sensory structures on the face.</desc>
+    <circle class="hit-area" cx="300" cy="135" r="52"/>
+    <path class="region-path" fill="#C8E8D8" stroke-width="1" d="M268 134
+      C278 125 292 125 302 134
+      C292 143 278 143 268 134 Z
+      M298 134 C308 125 322 125 332 134
+      C322 143 308 143 298 134 Z"/>
+    <circle class="region-path" fill="#C8E8D8" stroke-width="0.75" cx="285" cy="134" r="4"/>
+    <circle class="region-path" fill="#C8E8D8" stroke-width="0.75" cx="315" cy="134" r="4"/>
+  </g>
+
+  <g id="endocrine" class="body-region" data-tissue-system="endocrine" role="button" tabindex="0" aria-label="Endocrine System">
+    <title>Endocrine System</title>
+    <desc>Thyroid in the neck with adrenal and pancreatic endocrine structures.</desc>
+    <circle class="hit-area" cx="300" cy="223" r="44"/>
+    <path class="region-path" fill="#E0C8E8" stroke-width="1" d="M283 205
+      C293 209 297 219 300 232
+      C303 219 307 209 317 205
+      C329 200 338 207 337 219
+      C336 235 321 243 309 237
+      C304 235 302 236 300 244
+      C298 236 296 235 291 237
+      C279 243 264 235 263 219
+      C262 207 271 200 283 205 Z"/>
+    <path class="region-path" fill="#E0C8E8" stroke-width="1" d="M246 469 C257 458 272 461 277 475 C265 482 253 481 246 469 Z"/>
+    <path class="region-path" fill="#E0C8E8" stroke-width="1" d="M354 469 C343 458 328 461 323 475 C335 482 347 481 354 469 Z"/>
+    <path class="region-path" fill="#E0C8E8" stroke-width="1" d="M258 390 C280 377 310 380 338 394 C313 408 282 407 258 390 Z"/>
+  </g>
+
+  <g id="respiratory" class="body-region" data-tissue-system="respiratory" role="button" tabindex="0" aria-label="Respiratory System">
+    <title>Respiratory System</title>
+    <desc>Lung and airway region on the right side of the chest.</desc>
+    <path class="region-path" fill="#D5E8F0" stroke-width="1" d="M306 238
+      C340 232 367 253 374 292
+      C384 348 361 386 321 379
+      C307 376 303 363 307 342
+      C313 312 315 278 306 238 Z"/>
+    <path class="region-path" fill="#D5E8F0" stroke-width="1" d="M294 238
+      C260 232 233 253 226 292
+      C216 348 239 386 279 379
+      C293 376 297 363 293 342
+      C287 312 285 278 294 238 Z"/>
+    <path class="surface-line" d="M300 190 L300 257 M300 257 C283 277 269 306 264 345 M300 257 C317 277 331 306 336 345"/>
+  </g>
+
+  <g id="cardiovascular" class="body-region" data-tissue-system="cardiovascular" role="button" tabindex="0" aria-label="Cardiovascular System">
+    <title>Cardiovascular System</title>
+    <desc>Heart and major vessels in the left chest.</desc>
+    <path class="region-path" fill="#E8A0A0" stroke-width="1" d="M278 302
+      C263 280 283 254 302 274
+      C321 252 349 275 337 303
+      C328 323 309 337 300 347
+      C291 337 286 323 278 302 Z"/>
+    <path class="region-path" fill="#E8A0A0" stroke-width="1" d="M299 274
+      C295 251 284 235 267 222
+      M305 274 C319 253 334 242 352 238
+      M300 347 C298 372 294 399 290 423"/>
+  </g>
+
+  <g id="lymphatic" class="body-region" data-tissue-system="lymphatic" role="button" tabindex="0" aria-label="Lymphatic and Immune System">
+    <title>Lymphatic/Immune System</title>
+    <desc>Thymus, lymph nodes, spleen, and marrow immune structures.</desc>
+    <path class="region-path" fill="#C8D5E0" stroke-width="1" d="M285 246
+      C294 239 306 239 315 246
+      C322 260 318 283 300 294
+      C282 283 278 260 285 246 Z"/>
+    <circle class="region-path" fill="#C8D5E0" stroke-width="1" cx="246" cy="254" r="10"/>
+    <circle class="region-path" fill="#C8D5E0" stroke-width="1" cx="354" cy="254" r="10"/>
+    <circle class="region-path" fill="#C8D5E0" stroke-width="1" cx="235" cy="348" r="9"/>
+    <circle class="region-path" fill="#C8D5E0" stroke-width="1" cx="365" cy="348" r="9"/>
+    <path class="region-path" fill="#C8D5E0" stroke-width="1" d="M342 407
+      C366 399 383 413 379 435
+      C374 459 347 462 335 445
+      C326 431 329 414 342 407 Z"/>
+    <path class="region-path" fill="#C8D5E0" stroke-width="1" d="M258 640 C274 630 294 633 305 648 C289 659 269 658 258 640 Z"/>
+    <path class="region-path" fill="#C8D5E0" stroke-width="1" d="M342 640 C326 630 306 633 295 648 C311 659 331 658 342 640 Z"/>
+  </g>
+
+  <g id="digestive" class="body-region" data-tissue-system="digestive" role="button" tabindex="0" aria-label="Digestive System">
+    <title>Digestive System</title>
+    <desc>Upper abdominal digestive organs including stomach, liver, intestine, and pancreas.</desc>
+    <path class="region-path" fill="#D4A574" stroke-width="1" d="M238 382
+      C262 354 318 352 357 378
+      C372 388 367 413 345 416
+      C312 421 276 411 250 403
+      C234 398 230 390 238 382 Z"/>
+    <path class="region-path" fill="#D4A574" stroke-width="1" d="M317 397
+      C347 396 363 418 350 444
+      C337 470 302 467 296 438
+      C291 415 301 400 317 397 Z"/>
+    <path class="region-path" fill="#D4A574" stroke-width="1" d="M246 456
+      C260 432 304 427 334 449
+      C358 467 356 508 329 526
+      C302 544 258 534 244 505
+      C236 488 237 472 246 456 Z
+      M275 459 C258 476 263 503 285 510
+      M318 463 C337 478 333 507 310 515"/>
+  </g>
+
+  <g id="urinary" class="body-region" data-tissue-system="urinary" role="button" tabindex="0" aria-label="Urinary System">
+    <title>Urinary System</title>
+    <desc>Kidneys, ureters, and bladder in the flank and lower pelvis.</desc>
+    <path class="region-path" fill="#E8D5A0" stroke-width="1" d="M238 470
+      C248 440 283 443 281 475
+      C279 505 247 516 237 491
+      C234 483 235 476 238 470 Z"/>
+    <path class="region-path" fill="#E8D5A0" stroke-width="1" d="M362 470
+      C352 440 317 443 319 475
+      C321 505 353 516 363 491
+      C366 483 365 476 362 470 Z"/>
+    <path class="region-path" fill="#E8D5A0" stroke-width="1" d="M281 491 C282 533 289 562 300 590 C311 562 318 533 319 491"/>
+    <path class="region-path" fill="#E8D5A0" stroke-width="1" d="M279 589
+      C290 575 310 575 321 589
+      C323 608 314 620 300 620
+      C286 620 277 608 279 589 Z"/>
+  </g>
+
+  <g id="reproductive" class="body-region" data-tissue-system="reproductive" role="button" tabindex="0" aria-label="Reproductive System">
+    <title>Reproductive System</title>
+    <desc>Pelvic reproductive organs in the lower torso.</desc>
+    <path class="region-path" fill="#F0C8D8" stroke-width="1" d="M263 592
+      C276 571 324 571 337 592
+      C346 620 328 648 300 651
+      C272 648 254 620 263 592 Z"/>
+    <circle class="region-path" fill="#F0C8D8" stroke-width="1" cx="272" cy="603" r="10"/>
+    <circle class="region-path" fill="#F0C8D8" stroke-width="1" cx="328" cy="603" r="10"/>
+    <path class="surface-line" d="M282 603 C291 613 309 613 318 603 M300 591 L300 637"/>
+  </g>
+
+  <g id="circulating-immune" class="body-region" data-tissue-system="circulating-immune" role="button" tabindex="0" aria-label="Circulating Immune Cells">
+    <title>Circulating Immune Cells</title>
+    <desc>Bloodstream overlay representing immune cells circulating through vessels.</desc>
+    <path class="blood-line" d="M300 204 C300 260 301 328 300 391 C299 466 297 539 300 612 C302 672 312 735 326 807"/>
+    <path class="blood-line" d="M300 282 C270 314 235 380 204 468 C191 506 178 548 156 574"/>
+    <path class="blood-line" d="M300 282 C330 314 365 380 396 468 C409 506 422 548 444 574"/>
+    <path class="blood-line" d="M300 612 C279 670 264 736 249 813"/>
+    <path class="blood-line" d="M300 612 C321 670 336 736 351 813"/>
+    <path class="region-path" fill="#C8D5E0" fill-opacity="0.28" stroke-width="1" d="M223 234
+      C257 216 343 216 377 234
+      C392 318 383 422 356 505
+      C341 552 324 596 300 646
+      C276 596 259 552 244 505
+      C217 422 208 318 223 234 Z"/>
+  </g>
+
+  <g id="labels" class="labels-layer">
+    <path class="label-line" d="M300 111 L225 86"/>
+    <text class="region-label" data-for="nervous" x="126" y="87">Nervous</text>
+    <path class="label-line" d="M300 135 L417 102"/>
+    <text class="region-label" data-for="sensory" x="427" y="106">Sensory</text>
+    <path class="label-line" d="M300 223 L424 180"/>
+    <text class="region-label" data-for="endocrine" x="434" y="184">Endocrine</text>
+    <path class="label-line" d="M276 303 L145 244"/>
+    <text class="region-label" data-for="cardiovascular" x="38" y="246">Cardiovascular</text>
+    <path class="label-line" d="M349 304 L456 264"/>
+    <text class="region-label" data-for="respiratory" x="466" y="268">Respiratory</text>
+    <path class="label-line" d="M310 262 L440 334"/>
+    <text class="region-label" data-for="lymphatic" x="450" y="338">Lymphatic</text>
+    <path class="label-line" d="M299 462 L137 422"/>
+    <text class="region-label" data-for="digestive" x="54" y="425">Digestive</text>
+    <path class="label-line" d="M360 474 L457 452"/>
+    <text class="region-label" data-for="urinary" x="467" y="456">Urinary</text>
+    <path class="label-line" d="M231 507 L123 537"/>
+    <text class="region-label" data-for="musculoskeletal" x="17" y="541">Musculoskeletal</text>
+    <path class="label-line" d="M300 626 L439 617"/>
+    <text class="region-label" data-for="reproductive" x="449" y="621">Reproductive</text>
+    <path class="label-line" d="M353 693 L455 696"/>
+    <text class="region-label" data-for="circulating-immune" x="465" y="700">Blood/Immune</text>
+    <path class="label-line" d="M207 790 L113 811"/>
+    <text class="region-label" data-for="integumentary" x="25" y="815">Integumentary</text>
+  </g>
+</svg>
