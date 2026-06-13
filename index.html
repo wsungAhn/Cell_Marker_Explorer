@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Markers Explorer</title>
+  <meta name="description" content="Interactive cell marker reference: explore human and mouse cell markers through anatomical drill-down navigation.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cell Markers Explorer">
+  <meta property="og:description" content="Interactive cell marker reference: explore human and mouse cell markers through anatomical drill-down navigation.">
+  <meta property="og:image" content="svg/body-map.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cell Markers Explorer">
+  <meta name="twitter:description" content="Interactive cell marker reference: explore human and mouse cell markers through anatomical drill-down navigation.">
+  <meta name="twitter:image" content="svg/body-map.svg">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="svg/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <noscript>
+    <p>
+      Cell Markers Explorer requires JavaScript for the interactive anatomy browser.
+      You can still reference cell marker data at
+      <a href="https://www.labome.com/method/Cell-Markers.html">Labome Cell Markers</a>.
+    </p>
+  </noscript>
+
+  <header id="app-header" role="banner">
+    <div class="header-left">
+      <h1 class="app-title">Cell Markers Explorer</h1>
+      <span class="version-badge" id="version-badge">v1.0.0</span>
+    </div>
+
+    <div class="header-center">
+      <div id="search-container" class="search-container" role="search">
+        <input type="search" id="search-input" placeholder="Search markers, cell types..." aria-label="Search cell markers" autocomplete="off">
+        <button id="search-button" type="button" aria-label="Search">
+          <span aria-hidden="true">Search</span>
+        </button>
+        <div id="search-results" class="search-results" role="listbox" hidden></div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div id="species-toggle" class="species-toggle" role="radiogroup" aria-label="Species">
+        <button class="species-btn active" type="button" data-species="human" role="radio" aria-checked="true">Human</button>
+        <button class="species-btn" type="button" data-species="mouse" role="radio" aria-checked="false">Mouse</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span aria-hidden="true">Theme</span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="breadcrumb" class="breadcrumb" aria-label="Navigation breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="#/">Body</a></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" role="main">
+    <div id="view-body-map" class="view active"></div>
+    <div id="view-organ" class="view" hidden></div>
+    <div id="view-cell" class="view" hidden></div>
+    <div id="view-search" class="view" hidden></div>
+    <div id="view-compare" class="view" hidden></div>
+  </main>
+
+  <aside id="compare-tray" class="compare-tray" hidden aria-label="Compare tray">
+    <h3>Compare (<span id="compare-count">0</span>)</h3>
+    <div id="compare-items" class="compare-items"></div>
+    <button id="compare-open-btn" type="button" disabled>Compare Markers</button>
+    <button id="compare-clear-btn" type="button" hidden>Clear All</button>
+  </aside>
+
+  <footer id="app-footer" role="contentinfo">
+    <div class="footer-left">
+      <span>Data sources: Labome, CellMarker 2.0, PanglaoDB</span>
+      <span class="update-badge" id="update-badge">Updated: 2024-06-27</span>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.labome.com/method/Cell-Markers.html" target="_blank" rel="noopener">Labome</a>
+      <a href="http://bio-bigdata.hrbmu.edu.cn/CellMarker/" target="_blank" rel="noopener">CellMarker 2.0</a>
+      <a href="https://panglaodb.se/" target="_blank" rel="noopener">PanglaoDB</a>
+    </div>
+  </footer>
+
+  <script src="js/datastore.js" defer></script>
+  <script src="js/router.js" defer></script>
+  <script src="js/body-map.js" defer></script>
+  <script src="js/organ-view.js" defer></script>
+  <script src="js/cell-view.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/compare.js" defer></script>
+  <script src="js/export.js" defer></script>
+  <script src="js/species-toggle.js" defer></script>
+  <script src="js/links.js" defer></script>
+  <script src="js/update-badge.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

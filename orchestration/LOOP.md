@@ -6,9 +6,9 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 |----|------|-------------|--------|-------|--------|-----|
 | 01 | 05-datastore | js/datastore.js | **accepted** | 0 | 07f5638 | task-01 |
 | 02 | 02-body-map-svg | svg/body-map.svg | **accepted** | 0 | 6f85f0d | task-02 |
-| 03 | 03-microanatomy-svgs | svg/microanatomy/*.svg (27) | **accepted** | 0 | cf706ae | task-03 |
-| 04 | 04-app-shell | index.html | **queued (in inbox)** | 0 | — | — |
-| 05 | 15-css-styles | css/styles.css | pending | 0 | — | — |
+| 03 | 03-microanatomy-svgs | svg/microanatomy/*.svg (27) | **accepted** | 0 | 25aeef5 | task-03 |
+| 04 | 04-app-shell | index.html | **accepted** | 0 | e2bacb8 | task-04 |
+| 05 | 15-css-styles | css/styles.css | **queued (in inbox)** | 0 | — | — |
 | 06 | 06-router | js/router.js | pending | 0 | — | — |
 | 07 | 07-body-map | js/body-map.js | pending | 0 | — | — |
 | 08 | 08-organ-view | js/organ-view.js | pending | 0 | — | — |
@@ -27,4 +27,4 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `04` (app-shell index.html queued in inbox, awaiting Codex). Milestones reached: `m2-assets` (after task-03). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
+**Current pointer:** `05` (css/styles.css queued in inbox, awaiting Codex). Milestones reached: `m2-assets` (after task-03). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
