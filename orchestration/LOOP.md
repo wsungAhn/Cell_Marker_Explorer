@@ -18,13 +18,13 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 | 12 | 12-export | js/export.js | **accepted** | 0 | 1558243 | task-12 |
 | 13 | 13-species-toggle | js/species-toggle.js | **accepted** | 0 | a6f9e0a | task-13 |
 | 14 | 14-links | js/links.js | **accepted** | 0 | e88ebf3 | task-14 |
-| 15 | 19-update-badge | js/update-badge.js | **accepted** | 0 | 611f5b5 | task-15 |
-| 16 | 18-app-init | js/app.js | **queued (in inbox)** | 0 | — | — |
-| 17 | 16-scraper | updater/scraper.py + config.yaml + requirements.txt | pending | 0 | — | — |
+| 15 | 19-update-badge | js/update-badge.js | **accepted** | 0 | d5cfb75 | task-15 |
+| 16 | 18-app-init | js/app.js | **accepted** | 0 | f9984f4 | task-16 |
+| 17 | 16-scraper | updater/scraper.py + config.yaml + requirements.txt | **queued (in inbox)** | 0 | — | — |
 | 18 | 17-merge-update | updater/merge.py + validate.py + README.md | pending | 0 | — | — |
 
 **Status legend:** pending → queued → codex_working → awaiting_review → **accepted** (assembled+committed+tagged+pushed) / rejected (fix re-issued, ≤3 rounds) / BLOCKED (escalate to user).
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `16` (js/app.js integration entry queued in inbox, awaiting Codex). Data gap flagged (task-09): cellType.references (1–157) lack a citation table; only 6 metadata.sources — see progress/09, escalate in final report. Milestones reached: `m2-assets` (after task-03), `m3-shell` (after task-05), `m4-views` (after task-14). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
+**Current pointer:** `17` (updater/scraper.py — after app.js integration smoke). Milestones: m2-assets, m3-shell, m4-views, m5-features (update-badge 15 + app.js 16). Data gap (task-09 references) escalate in final report. Per-task records: orchestration/progress/NN.md.
