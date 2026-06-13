@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="stomach-microanatomy-title stomach-microanatomy-desc">
+  <title id="stomach-microanatomy-title">Stomach microanatomy</title>
+  <desc id="stomach-microanatomy-desc">Keyboard-accessible microanatomy diagram for Stomach with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M311 105 C459 61 600 137 614 276 C632 450 461 540 313 493 C180 451 151 314 238 246 C282 211 279 147 311 105 Z"/>
+  <g class="regions-layer">
+    <g id="gastric-glands" class="microstructure-region" data-microstructure="gastric-glands" role="button" tabindex="0" aria-label="Gastric Glands">
+      <title>Gastric Glands</title>
+      <desc>Glands in the stomach lining that produce acid, enzymes, and hormones.</desc>
+      <path class="region-path" d="M311 105 C459 61 600 137 614 276 C632 450 461 540 313 493 C180 451 151 314 238 246 C282 211 279 147 311 105 Z" fill="#D4A574" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="details-layer" aria-hidden="true">
+    <path class="detail-line" d="M280 190 C368 156 514 202 536 302 M244 278 C332 238 500 282 524 384 M270 386 C342 430 462 426 526 348"/>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="gastric-glands" x="400" y="316" text-anchor="middle">Gastric Glands</text>
+  </g>
+</svg>

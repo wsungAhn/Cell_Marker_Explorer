@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="lung-microanatomy-title lung-microanatomy-desc">
+  <title id="lung-microanatomy-title">Lung microanatomy</title>
+  <desc id="lung-microanatomy-desc">Keyboard-accessible microanatomy diagram for Lung with 2 clickable regions.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M391 126 C314 67 194 91 149 197 C98 318 123 463 226 518 C308 562 375 520 390 424 Z M409 126 C486 67 606 91 651 197 C702 318 677 463 574 518 C492 562 425 520 410 424 Z"/>
+  <g class="regions-layer">
+    <g id="alveoli" class="microstructure-region" data-microstructure="alveoli" role="button" tabindex="0" aria-label="Alveoli">
+      <title>Alveoli</title>
+      <desc>Tiny air sacs where gas exchange occurs between air and blood.</desc>
+      <path class="region-path" d="M150 197 C98 318 123 463 226 518 C299 557 360 528 383 450 C337 399 270 397 237 489 L185 462 C191 392 219 346 271 315 C317 288 348 257 365 217 C319 148 205 101 150 197 Z M650 197 C702 318 677 463 574 518 C501 557 440 528 417 450 C463 399 530 397 563 489 L615 462 C609 392 581 346 529 315 C483 288 452 257 435 217 C481 148 595 101 650 197 Z" fill="#D5E8F0" fill-opacity="0.92"/>
+    </g>
+    <g id="bronchi" class="microstructure-region" data-microstructure="bronchi" role="button" tabindex="0" aria-label="Bronchi">
+      <title>Bronchi</title>
+      <desc>Large airways conducting air into the lungs.</desc>
+      <path class="region-path" d="M383 118 C384 209 353 266 271 315 C219 346 191 392 185 462 L237 489 C246 424 287 389 344 355 C404 319 426 252 417 118 Z M417 118 C416 209 447 266 529 315 C581 346 609 392 615 462 L563 489 C554 424 513 389 456 355 C396 319 374 252 383 118 Z" fill="#D5E8F0" fill-opacity="0.82"/>
+    </g>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="alveoli" x="601" y="418" text-anchor="middle">Alveoli</text>
+    <text class="region-label" data-for="bronchi" x="389" y="252" text-anchor="middle">Bronchi</text>
+  </g>
+</svg>

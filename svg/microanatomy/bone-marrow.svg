@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="bone-marrow-microanatomy-title bone-marrow-microanatomy-desc">
+  <title id="bone-marrow-microanatomy-title">Bone Marrow microanatomy</title>
+  <desc id="bone-marrow-microanatomy-desc">Keyboard-accessible microanatomy diagram for Bone Marrow with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M162 95 C231 50 317 66 370 121 L430 121 C483 66 569 50 638 95 C712 145 707 262 638 307 C707 352 712 469 638 515 C569 559 483 543 430 489 L370 489 C317 543 231 559 162 515 C88 469 93 352 162 307 C93 262 88 145 162 95 Z"/>
+  <g class="regions-layer">
+    <g id="hematopoietic-niche" class="microstructure-region" data-microstructure="hematopoietic-niche" role="button" tabindex="0" aria-label="Hematopoietic Niche">
+      <title>Hematopoietic Niche</title>
+      <desc>The microenvironment supporting hematopoietic stem cell maintenance and differentiation.</desc>
+      <path class="region-path" d="M162 95 C231 50 317 66 370 121 L430 121 C483 66 569 50 638 95 C712 145 707 262 638 307 C707 352 712 469 638 515 C569 559 483 543 430 489 L370 489 C317 543 231 559 162 515 C88 469 93 352 162 307 C93 262 88 145 162 95 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="details-layer" aria-hidden="true">
+    <circle class="detail-line" cx="292" cy="274" r="26"/>
+    <circle class="detail-line" cx="393" cy="338" r="22"/>
+    <circle class="detail-line" cx="506" cy="257" r="28"/>
+    <circle class="detail-line" cx="490" cy="398" r="20"/>
+    <circle class="detail-line" cx="318" cy="418" r="18"/>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="hematopoietic-niche" x="400" y="314" text-anchor="middle">Hematopoietic Niche</text>
+  </g>
+</svg>

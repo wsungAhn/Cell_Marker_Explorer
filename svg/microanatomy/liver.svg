@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="liver-microanatomy-title liver-microanatomy-desc">
+  <title id="liver-microanatomy-title">Liver microanatomy</title>
+  <desc id="liver-microanatomy-desc">Keyboard-accessible microanatomy diagram for Liver with 2 clickable regions.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M93 318 C116 161 275 90 455 108 C622 124 722 216 703 355 C683 494 544 535 358 513 C188 493 72 441 93 318 Z"/>
+  <g class="regions-layer">
+    <g id="lobule" class="microstructure-region" data-microstructure="lobule" role="button" tabindex="0" aria-label="Hepatic Lobule">
+      <title>Hepatic Lobule</title>
+      <desc>The functional unit of the liver, hexagonal in shape with a central vein.</desc>
+      <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z" fill="#D4A574" fill-opacity="0.92"/>
+    </g>
+    <g id="sinusoids" class="microstructure-region" data-microstructure="sinusoids" role="button" tabindex="0" aria-label="Hepatic Sinusoids">
+      <title>Hepatic Sinusoids</title>
+      <desc>Specialized capillaries in the liver connecting portal triads to the central vein.</desc>
+      <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z M400 198 L523 268 M400 198 L277 268 M400 198 V482 M278 291 L522 291 M268 363 L532 363 M278 430 L522 430" fill="#D4A574" fill-opacity="0.82"/>
+    </g>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="lobule" x="400" y="222" text-anchor="middle">Hepatic Lobule</text>
+    <text class="region-label" data-for="sinusoids" x="400" y="363" text-anchor="middle">Hepatic Sinusoids</text>
+  </g>
+</svg>

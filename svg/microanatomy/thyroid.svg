@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="thyroid-microanatomy-title thyroid-microanatomy-desc">
+  <title id="thyroid-microanatomy-title">Thyroid microanatomy</title>
+  <desc id="thyroid-microanatomy-desc">Keyboard-accessible microanatomy diagram for Thyroid with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M214 128 C306 70 386 144 384 270 C382 388 315 493 222 474 C126 454 111 328 158 226 C173 193 188 153 214 128 Z M586 128 C494 70 414 144 416 270 C418 388 485 493 578 474 C674 454 689 328 642 226 C627 193 612 153 586 128 Z M384 255 H416 V380 H384 Z"/>
+  <g class="regions-layer">
+    <g id="follicle" class="microstructure-region" data-microstructure="follicle" role="button" tabindex="0" aria-label="Thyroid Follicle">
+      <title>Thyroid Follicle</title>
+      <desc>Spherical structures that produce and store thyroid hormones.</desc>
+      <path class="region-path" d="M214 128 C306 70 386 144 384 270 C382 388 315 493 222 474 C126 454 111 328 158 226 C173 193 188 153 214 128 Z M586 128 C494 70 414 144 416 270 C418 388 485 493 578 474 C674 454 689 328 642 226 C627 193 612 153 586 128 Z M384 255 H416 V380 H384 Z" fill="#E0C8E8" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="details-layer" aria-hidden="true">
+    <circle class="detail-line" cx="284" cy="292" r="58"/>
+    <circle class="detail-line" cx="516" cy="292" r="58"/>
+    <circle class="detail-line" cx="400" cy="310" r="32"/>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="follicle" x="400" y="292" text-anchor="middle">Thyroid Follicle</text>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="thymus-microanatomy-title thymus-microanatomy-desc">
+  <title id="thymus-microanatomy-title">Thymus microanatomy</title>
+  <desc id="thymus-microanatomy-desc">Keyboard-accessible microanatomy diagram for Thymus with 2 clickable regions.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M247 105 C328 48 397 106 400 196 C403 106 472 48 553 105 C632 160 638 310 577 426 C526 524 434 555 400 472 C366 555 274 524 223 426 C162 310 168 160 247 105 Z"/>
+  <g class="regions-layer">
+    <g id="cortex" class="microstructure-region" data-microstructure="cortex" role="button" tabindex="0" aria-label="Thymic Cortex">
+      <title>Thymic Cortex</title>
+      <desc>The outer region of the thymus where T cell positive selection occurs.</desc>
+      <path class="region-path" d="M247 105 C328 48 397 106 400 196 C403 106 472 48 553 105 C632 160 638 310 577 426 C526 524 434 555 400 472 C366 555 274 524 223 426 C162 310 168 160 247 105 Z M279 178 C340 135 390 179 393 258 C407 179 460 135 521 178 C572 216 576 314 533 397 C499 463 425 481 400 414 C375 481 301 463 267 397 C224 314 228 216 279 178 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+    </g>
+    <g id="medulla" class="microstructure-region" data-microstructure="medulla" role="button" tabindex="0" aria-label="Thymic Medulla">
+      <title>Thymic Medulla</title>
+      <desc>The inner region where negative selection of T cells occurs.</desc>
+      <path class="region-path" d="M279 178 C340 135 390 179 393 258 C407 179 460 135 521 178 C572 216 576 314 533 397 C499 463 425 481 400 414 C375 481 301 463 267 397 C224 314 228 216 279 178 Z" fill="#C8D5E0" fill-opacity="0.82"/>
+    </g>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="cortex" x="400" y="132" text-anchor="middle">Thymic Cortex</text>
+    <text class="region-label" data-for="medulla" x="400" y="328" text-anchor="middle">Thymic Medulla</text>
+  </g>
+</svg>

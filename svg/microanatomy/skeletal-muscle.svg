@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="skeletal-muscle-microanatomy-title skeletal-muscle-microanatomy-desc">
+  <title id="skeletal-muscle-microanatomy-title">Skeletal Muscle microanatomy</title>
+  <desc id="skeletal-muscle-microanatomy-desc">Keyboard-accessible microanatomy diagram for Skeletal Muscle with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M92 206 C230 107 572 107 708 206 L708 394 C572 493 230 493 92 394 Z"/>
+  <g class="regions-layer">
+    <g id="muscle-fiber" class="microstructure-region" data-microstructure="muscle-fiber" role="button" tabindex="0" aria-label="Muscle Fiber">
+      <title>Muscle Fiber</title>
+      <desc>Multinucleated contractile cells forming skeletal muscle tissue.</desc>
+      <path class="region-path" d="M92 206 C230 107 572 107 708 206 L708 394 C572 493 230 493 92 394 Z" fill="#D5C8B8" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="details-layer" aria-hidden="true">
+    <path class="detail-line" d="M132 244 H668 M132 286 H668 M132 328 H668 M132 370 H668 M180 210 V398 M260 190 V418 M340 176 V432 M420 176 V432 M500 190 V418 M580 210 V398"/>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="muscle-fiber" x="400" y="306" text-anchor="middle">Muscle Fiber</text>
+  </g>
+</svg>

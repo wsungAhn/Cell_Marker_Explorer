@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="lymph-nodes-microanatomy-title lymph-nodes-microanatomy-desc">
+  <title id="lymph-nodes-microanatomy-title">Lymph Nodes microanatomy</title>
+  <desc id="lymph-nodes-microanatomy-desc">Keyboard-accessible microanatomy diagram for Lymph Nodes with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M400 58 C550 58 672 180 672 330 C672 480 550 542 400 542 C250 542 128 480 128 330 C128 180 250 58 400 58 Z"/>
+  <g class="regions-layer">
+    <g id="germinal-center" class="microstructure-region" data-microstructure="germinal-center" role="button" tabindex="0" aria-label="Germinal Center">
+      <title>Germinal Center</title>
+      <desc>Sites within lymph node follicles where B cells undergo affinity maturation.</desc>
+      <path class="region-path" d="M400 144 C502 144 586 228 586 330 C586 432 502 456 400 456 C298 456 214 432 214 330 C214 228 298 144 400 144 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="details-layer" aria-hidden="true">
+    <circle class="detail-line" cx="400" cy="330" r="112"/>
+    <circle class="detail-line" cx="400" cy="330" r="55"/>
+    <path class="detail-line" d="M400 144 V218 M400 442 V456 M214 330 H288 M512 330 H586"/>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="germinal-center" x="400" y="218" text-anchor="middle">Germinal Center</text>
+  </g>
+</svg>

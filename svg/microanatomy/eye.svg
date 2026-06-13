@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="eye-microanatomy-title eye-microanatomy-desc">
+  <title id="eye-microanatomy-title">Eye microanatomy</title>
+  <desc id="eye-microanatomy-desc">Keyboard-accessible microanatomy diagram for Eye with 1 clickable region.</desc>
+  <style>
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .organ-outline {
+      fill: var(--bg-secondary);
+      stroke: #000;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .microstructure-region {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .region-path,
+    .detail-line {
+      stroke: #000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+    }
+
+    .region-path {
+      stroke-width: 1;
+    }
+
+    .detail-line {
+      fill: none;
+      stroke-width: 1;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .microstructure-region:hover .region-path,
+    .microstructure-region:focus .region-path,
+    .microstructure-region:focus-visible .region-path {
+      filter: brightness(1.15) drop-shadow(var(--hover-glow));
+    }
+
+    .microstructure-region:focus-visible .region-path,
+    .microstructure-region.selected .region-path,
+    .microstructure-region[aria-pressed="true"] .region-path {
+      stroke: var(--accent-blue);
+      stroke-width: 2;
+    }
+
+    .region-label {
+      fill: var(--text-primary);
+      font-size: 11px;
+      font-weight: 600;
+      paint-order: stroke;
+      stroke: var(--bg-primary);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .label-small {
+      font-size: 10px;
+    }
+  </style>
+  <path class="organ-outline" d="M69 300 C171 151 292 93 400 93 C508 93 629 151 731 300 C629 449 508 507 400 507 C292 507 171 449 69 300 Z"/>
+  <g class="regions-layer">
+    <g id="retina" class="microstructure-region" data-microstructure="retina" role="button" tabindex="0" aria-label="Retina">
+      <title>Retina</title>
+      <desc>The light-sensitive layer at the back of the eye.</desc>
+      <path class="region-path" d="M69 300 C171 151 292 93 400 93 C508 93 629 151 731 300 C629 449 508 507 400 507 C292 507 171 449 69 300 Z M190 300 C257 218 329 183 400 183 C471 183 543 218 610 300 C543 382 471 417 400 417 C329 417 257 382 190 300 Z" fill="#C8E8D8" fill-opacity="0.92"/>
+    </g>
+  </g>
+  <g class="labels-layer">
+    <text class="region-label" data-for="retina" x="400" y="386" text-anchor="middle">Retina</text>
+  </g>
+</svg>
