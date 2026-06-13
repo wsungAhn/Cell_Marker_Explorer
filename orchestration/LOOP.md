@@ -27,4 +27,4 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** ALL 18 TASKS ACCEPTED. Milestones: m2-assets, m3-shell, m4-views, m5-features, m6-pipeline. App v1.0.0 smoke PASSED. Finalizing: app-v1.0.0 tag + FINAL-REPORT. Deferred (final report): task-09 references data gap; task-17 live scrape.
+**Current pointer:** ✅ COMPLETE — all 18 tasks accepted, app-v1.0.0 tagged, FINAL-REPORT.md published. Deferred (see FINAL-REPORT §5): task-09 references data gap; task-17 live scrape.
