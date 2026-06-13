@@ -4,8 +4,8 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 | id | spec | deliverable | status | fixes | commit | tag |
 |----|------|-------------|--------|-------|--------|-----|
-| 01 | 05-datastore | js/datastore.js | **queued (in inbox)** | 0 | — | — |
-| 02 | 02-body-map-svg | svg/body-map.svg | pending | 0 | — | — |
+| 01 | 05-datastore | js/datastore.js | **accepted** | 0 | 7ab0b96 | task-01 |
+| 02 | 02-body-map-svg | svg/body-map.svg | **queued (in inbox)** | 0 | — | — |
 | 03 | 03-microanatomy-svgs | svg/microanatomy/*.svg (27) | pending | 0 | — | — |
 | 04 | 04-app-shell | index.html | pending | 0 | — | — |
 | 05 | 15-css-styles | css/styles.css | pending | 0 | — | — |
@@ -27,4 +27,4 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
-**Current pointer:** `01` (awaiting Codex on the main system). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
+**Current pointer:** `02` (body-map SVG queued in inbox, awaiting Codex). Per-task durable records: `orchestration/progress/NN.md`. Final aggregate: `FINAL-REPORT.md`.
