@@ -18,26 +18,36 @@
 
 ## 2. Ownership map — what you MAY create/edit
 
-You may **only** write files under these paths, and **only the specific file(s) named in your current task**:
+You run inside an **orchestration loop** (see §8 and `orchestration/README.md`). You **never write into the live project tree.** You write your deliverable(s) into the current task's drop directory only:
 
-| You own (write) | Notes |
+```
+orchestration/outbox/<task-id>/   ← your ONLY write target
+```
+
+Inside it, mirror each deliverable's **final** project path, plus a report:
+
+| Logical deliverable (per spec) | You write it to |
 |---|---|
-| `index.html` | per spec 04 |
-| `css/styles.css` | per spec 15 — single file |
-| `js/*.js` | one module per spec (05–14, plus app.js when its spec exists) |
-| `svg/body-map.svg` | per spec 02 |
-| `svg/microanatomy/*.svg` | per spec 03 (27 files) |
-| `svg/icons/**` | only if a task explicitly asks |
-| `updater/*.py`, `updater/config.yaml`, `updater/requirements.txt`, `updater/README.md` | per specs 16–17 |
+| `js/datastore.js` | `orchestration/outbox/<id>/js/datastore.js` |
+| `css/styles.css` | `orchestration/outbox/<id>/css/styles.css` |
+| `svg/body-map.svg` | `orchestration/outbox/<id>/svg/body-map.svg` |
+| `svg/microanatomy/*.svg` | `orchestration/outbox/<id>/svg/microanatomy/*.svg` |
+| `updater/*.py`, `config.yaml`, … | `orchestration/outbox/<id>/updater/...` |
+| your completion report | `orchestration/outbox/<id>/REPORT.md` |
 
-**Scope rule:** if today's task says "create `js/datastore.js`", you create **only** that file. Do not also "helpfully" create `app.js`, edit `index.html`, or refactor a sibling. Out-of-scope changes are rejected on review.
+The **supervisor** audits your drop and assembles accepted files into the real `js/ css/ svg/ updater/` tree. That keeps every change reviewable before it becomes official.
+
+**Scope rule:** if today's task says "create `js/datastore.js`", you create **only** `<id>/js/datastore.js` (+ `REPORT.md`). Do not also "helpfully" create `app.js`, write `index.html`, refactor a sibling, or write into any other `<id>` folder. Out-of-scope changes are rejected on review.
 
 ---
 
 ## 3. 🚫 Prohibition list — what you MUST NOT do
 
 **Files / data you must never create, edit, move, or delete:**
-- ❌ `data/cell-markers.json` — **read-only, sacred.** Never edit, reformat, re-key, or "fix" it. If you believe it has an error, STOP and report (§6). The only script ever allowed to write it is `updater/merge.py`, and only when that is your assigned task.
+- ❌ The live project tree — `js/`, `css/`, `svg/`, `updater/`, `index.html`. You write deliverables into `orchestration/outbox/<task-id>/` only (§2/§8). The supervisor assembles the live tree.
+- ❌ Any other task's folder — only your current `<task-id>` under `outbox/`. Never read/write another `inbox/` or `outbox/<otherid>/`.
+- ❌ `orchestration/inbox/**` (the supervisor owns task prompts), `orchestration/codex-runner.sh`, `orchestration/README.md`, `review/**`.
+- ❌ `data/cell-markers.json` — **read-only, sacred.** Never edit, reformat, re-key, or "fix" it. If you believe it has an error, STOP and report (§6). The only script ever allowed to write it is `updater/merge.py`, and only when that is your assigned task — and even then you write the *script*, not the data.
 - ❌ `data/changelog.json` — read-only except via `updater/merge.py` task.
 - ❌ `MASTER-PLAN.md`, `AGENTS.md`, anything in `codex-specs/` — these are the supervisor's. Read them; never modify them.
 - ❌ `.git/`, `.github/`, git history, branches, tags, remotes.
@@ -109,4 +119,18 @@ Surfacing a blocker is success, not failure. A wrong guess that the supervisor m
 Phase 1 data ✅ (already compiled). Supervisor handoff order (v3.1, auditability-first):
 `05 datastore.js → 02 body-map.svg → 03 microanatomy svgs (27) → 04 index.html → 15 styles.css → 06 router.js → 07 body-map.js → 08 organ-view.js → 09 cell-view.js → 10 search.js → 11 compare.js → 12 export.js → 13 species-toggle.js → 14 links.js → 19 update-badge.js → 18 app.js → 16 scraper → 17 merge/validate.`
 
-You will be handed **one** task at a time as a `codex-tasks/TASK-*.md` prompt. Wait for it. **First task: `codex-tasks/TASK-01-datastore.md`.**
+You will be handed **one** task at a time. Wait for it.
+
+---
+
+## 8. Autonomous loop protocol
+
+You are driven by `orchestration/codex-runner.sh`, which watches `orchestration/inbox/` and runs you on the oldest `TASK-*.md` it finds. Full contract: `orchestration/README.md`. Your obligations per run:
+
+1. The runner gives you one task and its **task id** (the token after `TASK-`, e.g. `01`). Read `AGENTS.md` + the task + the named spec + the dataset.
+2. Produce your deliverable(s) **only** inside `orchestration/outbox/<id>/`, mirroring final paths (§2).
+3. Write `orchestration/outbox/<id>/REPORT.md` in the §5 handoff format.
+4. Stop. The runner writes the `.done` sentinel and archives the prompt. Do **not** create `.done` yourself, do **not** touch the inbox, do **not** start the next task.
+5. If blocked (§6), still write `REPORT.md` with `FLAGS:` explaining the blocker instead of guessing — the supervisor will read it and re-issue.
+
+The supervisor audits your drop, assembles accepted files into the live tree, and drops the next task into the inbox. That is the loop. **First task queued: `orchestration/inbox/TASK-01-datastore.md`.**

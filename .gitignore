@@ -25,3 +25,18 @@ npm-debug.log*
 # Logs / temp
 *.log
 tmp/
+
+# Orchestration runtime artifacts (transient handoff state; not source)
+orchestration/STOP
+orchestration/outbox/*
+!orchestration/outbox/.gitkeep
+orchestration/logs/*
+!orchestration/logs/.gitkeep
+orchestration/inbox/.processed/*
+# review work area (transient; accepted files get assembled into the live tree)
+review/pending/*
+!review/pending/.gitkeep
+review/rejected/*
+!review/rejected/.gitkeep
+review/accepted/*
+!review/accepted/.gitkeep

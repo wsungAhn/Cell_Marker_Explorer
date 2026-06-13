@@ -3,7 +3,7 @@
 You are the **implementer** for the Cell Markers Explorer project. Before doing anything, read `AGENTS.md` in the project root in full and follow it. Read `MASTER-PLAN.md` §0 (reconciliation notes).
 
 ## Your single deliverable for this task
-Create **`svg/body-map.svg`** — and nothing else. Do not create or edit any other file. Do not touch `data/`, `codex-specs/`, `MASTER-PLAN.md`, `AGENTS.md`, or git.
+Produce **`svg/body-map.svg`** — and nothing else. **Output location (loop rule §8):** write it to **`orchestration/outbox/<id>/svg/body-map.svg`** (the runner gives you the id) and your report to **`orchestration/outbox/<id>/REPORT.md`**. Do **not** write into the live `svg/` tree or touch `data/`, `codex-specs/`, `MASTER-PLAN.md`, `AGENTS.md`, the inbox, or git. Do not create the `.done` sentinel — the runner does that.
 
 ## Contract
 Implement exactly per **`codex-specs/02-body-map-svg.md`**. Key non-negotiables:
