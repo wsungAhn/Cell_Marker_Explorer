@@ -1,101 +1,63 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="brain-microanatomy-title brain-microanatomy-desc">
-  <title id="brain-microanatomy-title">Brain microanatomy</title>
-  <desc id="brain-microanatomy-desc">Keyboard-accessible microanatomy diagram for Brain with 4 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Brain microanatomy — cortex, cerebellum, choroid plexus, microglia">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Brain Regions</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M143 286 C91 205 138 105 238 89 C305 30 426 54 468 115 C565 109 654 177 655 283 C719 345 681 463 580 487 C518 553 398 545 344 493 C238 521 144 463 151 365 C126 345 118 314 143 286 Z"/>
-  <g class="regions-layer">
-    <g id="cerebral-cortex" class="microstructure-region" data-microstructure="cerebral-cortex" role="button" tabindex="0" aria-label="Cerebral Cortex">
-      <title>Cerebral Cortex</title>
-      <desc>The outer layer of the cerebrum involved in higher-order brain functions.</desc>
-      <path class="region-path" d="M143 286 C91 205 138 105 238 89 C305 30 426 54 468 115 C565 109 654 177 655 283 C719 345 681 463 580 487 C518 553 398 545 344 493 C238 521 144 463 151 365 C126 345 118 314 143 286 Z M212 303 C207 393 277 440 362 416 C421 466 527 459 560 402 C632 376 648 304 603 262 C606 193 543 156 478 160 C441 111 354 96 304 141 C231 145 197 213 212 303 Z" fill="#F5E6A3" fill-opacity="0.92"/>
+  <!-- Cerebral cortex: outer gray-matter band -->
+  <g id="cerebral-cortex" class="microstructure-region" data-microstructure="cerebral-cortex"
+     role="button" tabindex="0" aria-label="Cerebral Cortex — click to view cell types">
+    <title>Cerebral Cortex</title>
+    <desc>Outer gray-matter band of folded cortex with layered pyramidal neurons and astrocytes.</desc>
+    <path class="region-path" d="M70,300 q0,-180 180,-180 q120,0 150,70 q-90,20 -90,110 q0,90 90,110 q-30,70 -150,70 q-180,0 -180,-180 z"
+      fill="#F5E6A3" stroke="#b9a35a" stroke-width="2.5"/>
+    <!-- gyri/sulci folds -->
+    <g fill="none" stroke="#cbb56a" stroke-width="5" opacity="0.6">
+      <path d="M120,200 q30,20 10,50"/><path d="M120,400 q30,-20 10,-50"/><path d="M100,300 q40,0 50,0"/>
     </g>
-    <g id="cerebellum" class="microstructure-region" data-microstructure="cerebellum" role="button" tabindex="0" aria-label="Cerebellum">
-      <title>Cerebellum</title>
-      <desc>The brain region responsible for motor coordination and balance.</desc>
-      <path class="region-path" d="M446 376 C524 338 621 358 651 424 C611 485 522 513 437 476 C412 444 417 398 446 376 Z" fill="#F5E6A3" fill-opacity="0.82"/>
+    <!-- pyramidal neurons -->
+    <g fill="#8a7030"><circle cx="160" cy="250" r="6"/><circle cx="180" cy="300" r="6"/><circle cx="160" cy="350" r="6"/></g>
+  </g>
+
+  <!-- Cerebellum: foliated structure (bottom right) -->
+  <g id="cerebellum" class="microstructure-region" data-microstructure="cerebellum"
+     role="button" tabindex="0" aria-label="Cerebellum — click to view cell types">
+    <title>Cerebellum</title>
+    <desc>Foliated cerebellar cortex with Purkinje cells between molecular and granule layers.</desc>
+    <path class="region-path" d="M470,420 q40,-90 150,-90 q120,0 130,90 q-10,80 -130,80 q-110,0 -150,-80 z"
+      fill="#f0dd92" stroke="#b9a35a" stroke-width="2.5"/>
+    <!-- folia -->
+    <g fill="none" stroke="#cbb56a" stroke-width="4" opacity="0.7">
+      <path d="M520,400 q10,30 0,60"/><path d="M580,390 q10,35 0,70"/><path d="M640,400 q10,30 0,60"/>
     </g>
-    <g id="choroid-plexus" class="microstructure-region" data-microstructure="choroid-plexus" role="button" tabindex="0" aria-label="Choroid Plexus">
-      <title>Choroid Plexus</title>
-      <desc>Structure in the ventricles that produces cerebrospinal fluid.</desc>
-      <path class="region-path" d="M352 224 C386 194 441 203 463 238 C435 266 383 270 352 244 Z" fill="#F5E6A3" fill-opacity="0.72"/>
-    </g>
-    <g id="brain-microglia" class="microstructure-region" data-microstructure="brain-microglia" role="button" tabindex="0" aria-label="Brain Microglia">
-      <title>Brain Microglia</title>
-      <desc>Resident macrophages of the central nervous system derived from yolk sac progenitors.</desc>
-      <path class="region-path" d="M238 306 C259 287 288 292 300 316 C288 341 255 344 237 325 Z M488 258 C509 239 538 244 550 268 C538 293 505 296 487 277 Z M335 382 C356 363 385 368 397 392 C385 417 352 420 334 401 Z M573 322 C594 303 623 308 635 332 C623 357 590 360 572 341 Z" fill="#F5E6A3" fill-opacity="0.62"/>
+    <!-- Purkinje cells (row) -->
+    <g fill="#9c6a3a"><circle cx="540" cy="430" r="6"/><circle cx="600" cy="425" r="6"/><circle cx="655" cy="435" r="6"/></g>
+  </g>
+
+  <!-- Choroid plexus: ventricular tuft (top right) -->
+  <g id="choroid-plexus" class="microstructure-region" data-microstructure="choroid-plexus"
+     role="button" tabindex="0" aria-label="Choroid Plexus — click to view cell types">
+    <title>Choroid Plexus</title>
+    <desc>Ventricular tuft of fronded epithelium that produces cerebrospinal fluid.</desc>
+    <g class="region-path" fill="#e3b0c8" stroke="#b87a98" stroke-width="2">
+      <ellipse cx="560" cy="180" rx="26" ry="16"/><ellipse cx="600" cy="160" rx="24" ry="14"/><ellipse cx="640" cy="185" rx="26" ry="16"/><ellipse cx="600" cy="205" rx="24" ry="14"/><ellipse cx="555" cy="215" rx="22" ry="13"/>
     </g>
   </g>
+
+  <!-- Microglia: scattered stellate overlay -->
+  <g id="brain-microglia" class="microstructure-region" data-microstructure="brain-microglia"
+     role="button" tabindex="0" aria-label="Brain Microglia — click to view cell types">
+    <title>Brain Microglia</title>
+    <desc>Resident immune cells of the CNS: small stellate cells scattered through the parenchyma.</desc>
+    <g class="region-path" stroke="#6a8a4a" stroke-width="2.5" fill="none">
+      <g transform="translate(330,460)"><circle r="7" fill="#9bbb59" stroke="none"/><line x1="0" y1="-7" x2="0" y2="-22"/><line x1="6" y1="5" x2="18" y2="16"/><line x1="-6" y1="5" x2="-18" y2="16"/><line x1="7" y1="-2" x2="22" y2="-6"/><line x1="-7" y1="-2" x2="-22" y2="-6"/></g>
+      <g transform="translate(420,200)"><circle r="7" fill="#9bbb59" stroke="none"/><line x1="0" y1="-7" x2="0" y2="-22"/><line x1="6" y1="5" x2="18" y2="16"/><line x1="-6" y1="5" x2="-18" y2="16"/><line x1="7" y1="-2" x2="22" y2="-6"/></g>
+      <g transform="translate(250,470)"><circle r="7" fill="#9bbb59" stroke="none"/><line x1="0" y1="-7" x2="0" y2="-22"/><line x1="6" y1="5" x2="18" y2="16"/><line x1="-6" y1="5" x2="-18" y2="16"/></g>
+    </g>
+  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="cerebral-cortex" x="198" y="122" text-anchor="middle">Cerebral Cortex</text>
-    <text class="region-label" data-for="cerebellum" x="512" y="446" text-anchor="middle">Cerebellum</text>
-    <text class="region-label" data-for="choroid-plexus" x="374" y="226" text-anchor="middle">Choroid Plexus</text>
-    <text class="region-label" data-for="brain-microglia" x="495" y="318" text-anchor="middle">Brain Microglia</text>
+    <text class="region-label" data-for="cerebral-cortex" x="160" y="300" text-anchor="middle" font-size="11" fill="var(--text-secondary)">Cortex</text>
+    <text class="region-label" data-for="cerebellum" x="600" y="475" text-anchor="middle" font-size="11" fill="var(--text-secondary)">Cerebellum</text>
+    <text class="region-label" data-for="choroid-plexus" x="600" y="245" text-anchor="middle" font-size="10" fill="var(--text-secondary)">Choroid plexus</text>
+    <text class="region-label" data-for="brain-microglia" x="330" y="500" text-anchor="middle" font-size="10" fill="#6a8a4a">Microglia</text>
   </g>
 </svg>

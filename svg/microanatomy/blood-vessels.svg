@@ -1,95 +1,44 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="blood-vessels-microanatomy-title blood-vessels-microanatomy-desc">
-  <title id="blood-vessels-microanatomy-title">Blood Vessels microanatomy</title>
-  <desc id="blood-vessels-microanatomy-desc">Keyboard-accessible microanatomy diagram for Blood Vessels with 3 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Blood vessel microanatomy — intima, media, adventitia">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Vessel Wall (Tunica Layers)</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M400 62 C542 62 658 178 658 320 C658 462 542 538 400 538 C258 538 142 462 142 320 C142 178 258 62 400 62 Z"/>
-  <g class="regions-layer">
-    <g id="vessel-intima" class="microstructure-region" data-microstructure="vessel-intima" role="button" tabindex="0" aria-label="Vessel Intima (Endothelium)">
-      <title>Vessel Intima (Endothelium)</title>
-      <desc>The inner lining of blood vessels composed of endothelial cells.</desc>
-      <path class="region-path" d="M400 214 C455 214 500 259 500 320 C500 381 455 386 400 386 C345 386 300 381 300 320 C300 259 345 214 400 214 Z" fill="#E8A0A0" fill-opacity="0.92"/>
-    </g>
-    <g id="vessel-media" class="microstructure-region" data-microstructure="vessel-media" role="button" tabindex="0" aria-label="Vessel Media">
-      <title>Vessel Media</title>
-      <desc>The middle layer of blood vessels containing smooth muscle cells.</desc>
-      <path class="region-path" d="M400 132 C503 132 588 217 588 320 C588 423 503 468 400 468 C297 468 212 423 212 320 C212 217 297 132 400 132 Z M400 214 C345 214 300 259 300 320 C300 381 345 386 400 386 C455 386 500 381 500 320 C500 259 455 214 400 214 Z" fill="#E8A0A0" fill-opacity="0.82"/>
-    </g>
-    <g id="vessel-adventitia" class="microstructure-region" data-microstructure="vessel-adventitia" role="button" tabindex="0" aria-label="Vessel Adventitia">
-      <title>Vessel Adventitia</title>
-      <desc>The outer connective tissue layer of blood vessels.</desc>
-      <path class="region-path" d="M400 62 C542 62 658 178 658 320 C658 462 542 538 400 538 C258 538 142 462 142 320 C142 178 258 62 400 62 Z M400 132 C297 132 212 217 212 320 C212 423 297 468 400 468 C503 468 588 423 588 320 C588 217 503 132 400 132 Z" fill="#E8A0A0" fill-opacity="0.72"/>
-    </g>
+  <!-- Adventitia: outer connective ring -->
+  <g id="vessel-adventitia" class="microstructure-region" data-microstructure="vessel-adventitia"
+     role="button" tabindex="0" aria-label="Vessel Adventitia — click to view cell types">
+    <title>Vessel Adventitia</title>
+    <desc>Outer tunica adventitia: connective tissue with fibroblasts and vasa vasorum.</desc>
+    <circle class="region-path" cx="400" cy="300" r="240" fill="#E8A0A0" stroke="#a85a5a" stroke-width="2.5"/>
+    <g fill="none" stroke="#c97a7a" stroke-width="2" opacity="0.5"><circle cx="400" cy="300" r="225"/><circle cx="400" cy="300" r="210"/></g>
   </g>
+
+  <!-- Media: middle smooth-muscle layer -->
+  <g id="vessel-media" class="microstructure-region" data-microstructure="vessel-media"
+     role="button" tabindex="0" aria-label="Vessel Media — click to view cell types">
+    <title>Vessel Media</title>
+    <desc>Middle tunica media: concentric smooth-muscle cells and elastic laminae.</desc>
+    <circle class="region-path" cx="400" cy="300" r="180" fill="#e8b8b8" stroke="#b86a6a" stroke-width="2.5"/>
+    <!-- circumferential smooth muscle bands -->
+    <g fill="none" stroke="#c98a8a" stroke-width="10" opacity="0.6"><circle cx="400" cy="300" r="165"/><circle cx="400" cy="300" r="140"/></g>
+    <!-- smooth muscle nuclei -->
+    <g fill="#8a4a4a"><ellipse cx="400" cy="145" rx="6" ry="3"/><ellipse cx="540" cy="240" rx="3" ry="6"/><ellipse cx="540" cy="360" rx="3" ry="6"/><ellipse cx="400" cy="455" rx="6" ry="3"/><ellipse cx="260" cy="360" rx="3" ry="6"/><ellipse cx="260" cy="240" rx="3" ry="6"/></g>
+  </g>
+
+  <!-- Intima: inner endothelial lining -->
+  <g id="vessel-intima" class="microstructure-region" data-microstructure="vessel-intima"
+     role="button" tabindex="0" aria-label="Vessel Intima (Endothelium) — click to view cell types">
+    <title>Vessel Intima (Endothelium)</title>
+    <desc>Innermost tunica intima: a single layer of endothelial cells lining the lumen.</desc>
+    <circle class="region-path" cx="400" cy="300" r="115" fill="#f3d0d0" stroke="#b86a6a" stroke-width="2.5"/>
+    <!-- lumen -->
+    <circle cx="400" cy="300" r="90" fill="#fff" stroke="#d8a8a8" stroke-width="2"/>
+    <text x="400" y="304" text-anchor="middle" font-size="12" fill="#b86a6a">lumen</text>
+    <!-- endothelial cells (flat, lining) -->
+    <g fill="#c0504d"><circle cx="400" cy="190" r="5"/><circle cx="478" cy="222" r="5"/><circle cx="510" cy="300" r="5"/><circle cx="478" cy="378" r="5"/><circle cx="400" cy="410" r="5"/><circle cx="322" cy="378" r="5"/><circle cx="290" cy="300" r="5"/><circle cx="322" cy="222" r="5"/></g>
+  </g>
+
   <g class="labels-layer">
-    <text class="region-label label-small" data-for="vessel-intima" x="400" y="320" text-anchor="middle">Vessel Intima (Endothelium)</text>
-    <text class="region-label" data-for="vessel-media" x="400" y="176" text-anchor="middle">Vessel Media</text>
-    <text class="region-label" data-for="vessel-adventitia" x="400" y="102" text-anchor="middle">Vessel Adventitia</text>
+    <text class="region-label" data-for="vessel-adventitia" x="400" y="80" text-anchor="middle" font-size="11" fill="var(--text-secondary)">Adventitia</text>
+    <text class="region-label" data-for="vessel-media" x="400" y="150" text-anchor="middle" font-size="11" fill="var(--text-secondary)">Media</text>
+    <text class="region-label" data-for="vessel-intima" x="400" y="210" text-anchor="middle" font-size="11" fill="var(--text-secondary)">Intima</text>
   </g>
 </svg>
