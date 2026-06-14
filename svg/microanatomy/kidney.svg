@@ -1,89 +1,46 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="kidney-microanatomy-title kidney-microanatomy-desc">
-  <title id="kidney-microanatomy-title">Kidney microanatomy</title>
-  <desc id="kidney-microanatomy-desc">Keyboard-accessible microanatomy diagram for Kidney with 2 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Kidney microanatomy — glomerulus and tubules">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Glomerulus &amp; Nephron Tubules</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M442 70 C574 86 668 207 660 344 C652 474 551 544 426 529 C340 519 280 470 248 388 C201 388 163 350 163 303 C163 256 201 218 248 218 C287 124 354 60 442 70 Z"/>
-  <g class="regions-layer">
-    <g id="glomerulus" class="microstructure-region" data-microstructure="glomerulus" role="button" tabindex="0" aria-label="Glomerulus">
-      <title>Glomerulus</title>
-      <desc>The filtering unit of the kidney consisting of Bowman&#x27;s capsule and capillary tuft.</desc>
-      <path class="region-path" d="M300 202 C338 164 401 168 435 212 C469 257 448 321 393 338 C335 356 279 319 275 263 C273 238 282 218 300 202 Z" fill="#E8D5A0" fill-opacity="0.92"/>
+  <!-- Glomerulus: capillary tuft in Bowman's capsule (left) -->
+  <g id="glomerulus" class="microstructure-region" data-microstructure="glomerulus"
+     role="button" tabindex="0" aria-label="Glomerulus — click to view cell types">
+    <title>Glomerulus</title>
+    <desc>Capillary tuft within Bowman's capsule: podocytes and mesangial cells performing blood filtration.</desc>
+    <circle class="region-path" cx="260" cy="300" r="170" fill="#E8D5A0" stroke="#b9a35a" stroke-width="2.5"/>
+    <!-- Bowman's space -->
+    <circle cx="260" cy="300" r="140" fill="#f5ecc8" stroke="#cbb56a" stroke-width="2"/>
+    <!-- capillary tuft (coiled loops) -->
+    <g fill="none" stroke="#c0504d" stroke-width="9" opacity="0.65">
+      <path d="M200,300 q20,-50 60,-50 q40,0 60,50 q-20,50 -60,50 q-40,0 -60,-50 z"/>
+      <path d="M220,260 q40,-30 80,0"/>
+      <path d="M220,340 q40,30 80,0"/>
+      <circle cx="260" cy="300" r="34"/>
     </g>
-    <g id="nephron-tubules" class="microstructure-region" data-microstructure="nephron-tubules" role="button" tabindex="0" aria-label="Nephron Tubules">
-      <title>Nephron Tubules</title>
-      <desc>Tubular structures that process the glomerular filtrate.</desc>
-      <path class="region-path" d="M442 70 C574 86 668 207 660 344 C652 474 551 544 426 529 C340 519 280 470 248 388 C201 388 163 350 163 303 C163 256 201 218 248 218 C287 124 354 60 442 70 Z M300 202 C338 164 401 168 435 212 C469 257 448 321 393 338 C335 356 279 319 275 263 C273 238 282 218 300 202 Z" fill="#E8D5A0" fill-opacity="0.82"/>
-    </g>
+    <!-- podocytes -->
+    <g fill="#8a7030"><circle cx="200" cy="250" r="7"/><circle cx="320" cy="250" r="7"/><circle cx="200" cy="350" r="7"/><circle cx="320" cy="350" r="7"/></g>
+    <!-- mesangial cell (center) -->
+    <circle cx="260" cy="300" r="9" fill="#9bbb59"/>
   </g>
+
+  <!-- Nephron tubules: tubular structures (right) -->
+  <g id="nephron-tubules" class="microstructure-region" data-microstructure="nephron-tubules"
+     role="button" tabindex="0" aria-label="Nephron Tubules — click to view cell types">
+    <title>Nephron Tubules</title>
+    <desc>Proximal and distal convoluted tubules lined by reabsorptive epithelial cells.</desc>
+    <rect class="region-path" x="470" y="110" width="250" height="380" rx="16" fill="#E8D5A0" stroke="#b9a35a" stroke-width="2" opacity="0.5"/>
+    <!-- tubule cross-sections (rings of cuboidal cells) -->
+    <g fill="#f3e6c0" stroke="#b9a35a" stroke-width="3">
+      <circle cx="540" cy="180" r="44"/><circle cx="650" cy="220" r="40"/><circle cx="520" cy="300" r="46"/><circle cx="640" cy="340" r="42"/><circle cx="560" cy="420" r="44"/>
+    </g>
+    <!-- lumina -->
+    <g fill="#fff"><circle cx="540" cy="180" r="16"/><circle cx="650" cy="220" r="14"/><circle cx="520" cy="300" r="17"/><circle cx="640" cy="340" r="15"/><circle cx="560" cy="420" r="16"/></g>
+    <!-- brush-border cell nuclei -->
+    <g fill="#8a7030"><circle cx="540" cy="142" r="5"/><circle cx="520" cy="262" r="5"/><circle cx="560" cy="382" r="5"/></g>
+  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="glomerulus" x="353" y="258" text-anchor="middle">Glomerulus</text>
-    <text class="region-label" data-for="nephron-tubules" x="492" y="408" text-anchor="middle">Nephron Tubules</text>
+    <text class="region-label" data-for="glomerulus" x="260" y="500" text-anchor="middle" font-size="12" fill="var(--text-secondary)">Glomerulus</text>
+    <text class="region-label" data-for="nephron-tubules" x="595" y="505" text-anchor="middle" font-size="12" fill="var(--text-secondary)">Tubules</text>
   </g>
 </svg>

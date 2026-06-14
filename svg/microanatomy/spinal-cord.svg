@@ -1,89 +1,34 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="spinal-cord-microanatomy-title spinal-cord-microanatomy-desc">
-  <title id="spinal-cord-microanatomy-title">Spinal Cord microanatomy</title>
-  <desc id="spinal-cord-microanatomy-desc">Keyboard-accessible microanatomy diagram for Spinal Cord with 2 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Spinal cord microanatomy — white and gray matter">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Spinal Cord (Cross-section)</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M400 58 C545 58 662 175 662 320 C662 465 545 542 400 542 C255 542 138 465 138 320 C138 175 255 58 400 58 Z"/>
-  <g class="regions-layer">
-    <g id="spinal-cord-white-matter" class="microstructure-region" data-microstructure="spinal-cord-white-matter" role="button" tabindex="0" aria-label="White Matter">
-      <title>White Matter</title>
-      <desc>Myelinated nerve fiber tracts in the spinal cord.</desc>
-      <path class="region-path" d="M400 58 C545 58 662 175 662 320 C662 465 545 542 400 542 C255 542 138 465 138 320 C138 175 255 58 400 58 Z M400 151 C307 151 231 227 231 320 C231 413 307 449 400 449 C493 449 569 413 569 320 C569 227 493 151 400 151 Z" fill="#F5E6A3" fill-opacity="0.92"/>
-    </g>
-    <g id="spinal-cord-gray-matter" class="microstructure-region" data-microstructure="spinal-cord-gray-matter" role="button" tabindex="0" aria-label="Gray Matter">
-      <title>Gray Matter</title>
-      <desc>Neuronal cell bodies and synapses in the spinal cord.</desc>
-      <path class="region-path" d="M400 165 C450 191 475 237 462 284 C512 283 543 309 541 347 C538 394 491 411 448 382 C435 424 366 424 352 382 C309 411 262 394 259 347 C257 309 288 283 338 284 C325 237 350 191 400 165 Z" fill="#F5E6A3" fill-opacity="0.82"/>
-    </g>
+  <!-- White matter: outer ring -->
+  <g id="spinal-cord-white-matter" class="microstructure-region" data-microstructure="spinal-cord-white-matter"
+     role="button" tabindex="0" aria-label="White Matter — click to view cell types">
+    <title>White Matter</title>
+    <desc>Outer myelinated tracts of the spinal cord, rich in oligodendrocytes and astrocytes.</desc>
+    <ellipse class="region-path" cx="400" cy="300" rx="250" ry="210" fill="#F5E6A3" stroke="#b9a35a" stroke-width="2.5"/>
+    <!-- myelinated tract texture -->
+    <g fill="#e6d488" opacity="0.6"><circle cx="300" cy="170" r="6"/><circle cx="500" cy="170" r="6"/><circle cx="610" cy="300" r="6"/><circle cx="500" cy="430" r="6"/><circle cx="300" cy="430" r="6"/><circle cx="190" cy="300" r="6"/></g>
   </g>
+
+  <!-- Gray matter: inner butterfly/H shape (on top) -->
+  <g id="spinal-cord-gray-matter" class="microstructure-region" data-microstructure="spinal-cord-gray-matter"
+     role="button" tabindex="0" aria-label="Gray Matter — click to view cell types">
+    <title>Gray Matter</title>
+    <desc>Central butterfly-shaped gray matter containing neuronal cell bodies, microglia, and ependymal cells lining the central canal.</desc>
+    <path class="region-path" d="M400,200
+      C470,200 470,250 520,260 C560,268 560,330 520,340 C470,352 470,400 400,400
+      C330,400 330,352 280,340 C240,330 240,268 280,260 C330,250 330,200 400,200 Z"
+      fill="#cbb56a" stroke="#9a8540" stroke-width="2.5"/>
+    <!-- central canal -->
+    <circle cx="400" cy="300" r="14" fill="#fff" stroke="#9a8540" stroke-width="2"/>
+    <!-- motor neurons (ventral horns) -->
+    <g fill="#8a7030"><circle cx="320" cy="350" r="9"/><circle cx="480" cy="350" r="9"/><circle cx="345" cy="255" r="7"/><circle cx="455" cy="255" r="7"/></g>
+  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="spinal-cord-white-matter" x="400" y="117" text-anchor="middle">White Matter</text>
-    <text class="region-label" data-for="spinal-cord-gray-matter" x="400" y="327" text-anchor="middle">Gray Matter</text>
+    <text class="region-label" data-for="spinal-cord-white-matter" x="660" y="200" font-size="12" fill="var(--text-secondary)">White matter</text>
+    <text class="region-label" data-for="spinal-cord-gray-matter" x="400" y="300" text-anchor="middle" font-size="11" fill="#7a6020">Gray</text>
   </g>
 </svg>
