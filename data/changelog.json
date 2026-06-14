@@ -1,6 +1,34 @@
 {
   "updates": [
     {
+      "version": "1.0.2",
+      "date": "2026-06-14",
+      "description": "Patch: textbook-quality SVG redraws. All 27 microanatomy diagrams and 27 organ icons hand-redrawn lightweight (anatomy informed by NIH BioArt, CC-BY 4.0) with canonical region ids; organ-view now shows an organ icon card grid. Citation data (156 refs) still deferred to the scraper track.",
+      "sources_scraped": [],
+      "changes": {
+        "cell_types_added": 0,
+        "cell_types_modified": 0,
+        "cell_types_removed": 0,
+        "markers_added": 0,
+        "markers_modified": 0,
+        "markers_removed": 0,
+        "svg_files_redrawn": 55,
+        "new_ui_elements": [
+          "organ-card-grid",
+          "organ-card-icon"
+        ]
+      },
+      "details": {
+        "microanatomy": "27 microanatomy SVGs redrawn at ~3KB each (was schematic); accurate histology with canonical microstructure-region ids (e.g. hepatic-lobule hexagon, kidney glomerulus, brain 4 regions).",
+        "organ_icons": "27 organ icons generated (svg/icons/organ-icons/, 64x64, tissue-system colour + outline) and wired into organ-view organ cards.",
+        "body_map": "Body map redrawn with chest left/right split (v1.0.1 flow).",
+        "attribution": "SVG anatomy informed by NIH BioArt (NIAID), CC-BY 4.0.",
+        "deferred": [
+          "Citation data: 156 references (scraper, network) -> v1.1.0"
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "date": "2026-06-14",
       "description": "Patch: marker nomenclature normalization (53 markers -> gene symbols + expression_levels), microstructure id canonicalization (svg_region_id removed), body-map redraw with chest left/right split, citations code infrastructure (data pending), loading spinner, and favicon (404 fixed). Textbook SVG redraws and citation data are deferred.",
