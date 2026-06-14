@@ -269,7 +269,6 @@
       section.className = 'microstructure-section flat';
       section.id = 'ms-section-' + microstructure.id;
       section.dataset.microstructureId = microstructure.id;
-      section.dataset.svgRegionId = microstructure.svg_region_id || '';
 
       const heading = document.createElement('h3');
       heading.className = 'microstructure-title';
@@ -292,7 +291,6 @@
       details.className = 'microstructure-section';
       details.id = 'ms-section-' + microstructure.id;
       details.dataset.microstructureId = microstructure.id;
-      details.dataset.svgRegionId = microstructure.svg_region_id || '';
       details.open = open;
 
       const summary = document.createElement('summary');
@@ -467,7 +465,7 @@
 
       const microstructures = this.currentOrgan.microstructures || [];
       for (let i = 0; i < microstructures.length; i += 1) {
-        if (microstructures[i].id === idOrRegionId || microstructures[i].svg_region_id === idOrRegionId) {
+        if (microstructures[i].id === idOrRegionId) {
           return microstructures[i];
         }
       }
@@ -476,7 +474,7 @@
 
     findSvgRegion(idOrRegionId) {
       const microstructure = this.findMicrostructure(idOrRegionId);
-      const regionId = microstructure ? microstructure.svg_region_id : idOrRegionId;
+      const regionId = microstructure ? microstructure.id : idOrRegionId;
       const regions = this.container.querySelectorAll('g.microstructure-region[data-microstructure]');
 
       for (let i = 0; i < regions.length; i += 1) {

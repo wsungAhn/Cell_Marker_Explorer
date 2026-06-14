@@ -64,9 +64,8 @@ Define and validate the JSON schema for `data/cell-markers.json`. This spec ensu
 ### Microstructure Schema
 ```json
 {
-  "id": "lowercase-hyphenated (e.g. 'hepatic-lobule')",
+  "id": "lowercase-hyphenated (e.g. 'hepatic-lobule') — also the SVG region element id (v1.1.0: svg_region_id removed)",
   "name": "Display name",
-  "svg_region_id": "ID of clickable region in microanatomy SVG",
   "description": "1-2 sentence description",
   "cell_types": [ ... ]
 }
@@ -127,7 +126,7 @@ Define and validate the JSON schema for `data/cell-markers.json`. This spec ensu
 ## Validation Rules
 1. Every `id` must be unique within its parent array
 2. Every `body_map_region` must match an SVG element ID in the body map
-3. Every `svg_region_id` must match an element in the organ's microanatomy SVG
+3. Every microstructure `id` must match the `<g id>` of its clickable region in the organ's microanatomy SVG (v1.1.0: canonical `id` replaces the removed `svg_region_id`)
 4. `version` must follow semver (MAJOR.MINOR.PATCH)
 5. `markers.human.positive` and `markers.mouse.positive` must not be empty arrays (every cell type must have at least one positive marker in at least one species)
 6. No duplicate markers within the same array (e.g. no `CD68` appearing twice in `markers.human.positive`)

@@ -55,7 +55,6 @@
             {
               "id": "epidermis",
               "name": "Epidermis",
-              "svg_region_id": "epidermis",
               "description": "The outermost layer of the skin, composed of stratified squamous epithelium.",
               "cell_types": [
                 {
@@ -193,7 +192,6 @@
             {
               "id": "dermis",
               "name": "Dermis",
-              "svg_region_id": "dermis",
               "description": "The thick inner layer of skin containing connective tissue, blood vessels, and nerve endings.",
               "cell_types": [
                 {
@@ -304,7 +302,6 @@
             {
               "id": "hypodermis",
               "name": "Hypodermis (Subcutaneous Adipose)",
-              "svg_region_id": "hypodermis",
               "description": "The deepest layer of skin composed primarily of adipose tissue.",
               "cell_types": [
                 {
@@ -494,7 +491,6 @@
             {
               "id": "cerebral-cortex",
               "name": "Cerebral Cortex",
-              "svg_region_id": "cortex",
               "description": "The outer layer of the cerebrum involved in higher-order brain functions.",
               "cell_types": [
                 {
@@ -616,7 +612,6 @@
             {
               "id": "cerebellum",
               "name": "Cerebellum",
-              "svg_region_id": "cerebellum",
               "description": "The brain region responsible for motor coordination and balance.",
               "cell_types": [
                 {
@@ -671,7 +666,6 @@
             {
               "id": "choroid-plexus",
               "name": "Choroid Plexus",
-              "svg_region_id": "choroid-plexus",
               "description": "Structure in the ventricles that produces cerebrospinal fluid.",
               "cell_types": [
                 {
@@ -709,7 +703,6 @@
             {
               "id": "brain-microglia",
               "name": "Brain Microglia",
-              "svg_region_id": "microglia",
               "description": "Resident macrophages of the central nervous system derived from yolk sac progenitors.",
               "cell_types": [
                 {
@@ -770,7 +763,6 @@
             {
               "id": "spinal-cord-white-matter",
               "name": "White Matter",
-              "svg_region_id": "white-matter",
               "description": "Myelinated nerve fiber tracts in the spinal cord.",
               "cell_types": [
                 {
@@ -815,7 +807,6 @@
             {
               "id": "spinal-cord-gray-matter",
               "name": "Gray Matter",
-              "svg_region_id": "gray-matter",
               "description": "Neuronal cell bodies and synapses in the spinal cord.",
               "cell_types": [
                 {
@@ -866,7 +857,6 @@
             {
               "id": "peripheral-nerve-sheath",
               "name": "Nerve Sheath",
-              "svg_region_id": "nerve-sheath",
               "description": "Connective tissue and glial cell layers surrounding peripheral nerve fibers.",
               "cell_types": [
                 {
@@ -1018,7 +1008,6 @@
             {
               "id": "myocardium",
               "name": "Myocardium",
-              "svg_region_id": "myocardium",
               "description": "The muscular tissue of the heart wall responsible for contraction.",
               "cell_types": [
                 {
@@ -1113,7 +1102,6 @@
             {
               "id": "vessel-intima",
               "name": "Vessel Intima (Endothelium)",
-              "svg_region_id": "intima",
               "description": "The inner lining of blood vessels composed of endothelial cells.",
               "cell_types": [
                 {
@@ -1214,7 +1202,6 @@
             {
               "id": "vessel-media",
               "name": "Vessel Media",
-              "svg_region_id": "media",
               "description": "The middle layer of blood vessels containing smooth muscle cells.",
               "cell_types": [
                 {
@@ -1253,7 +1240,6 @@
             {
               "id": "vessel-adventitia",
               "name": "Vessel Adventitia",
-              "svg_region_id": "adventitia",
               "description": "The outer connective tissue layer of blood vessels.",
               "cell_types": [
                 {
@@ -1310,7 +1296,6 @@
             {
               "id": "alveoli",
               "name": "Alveoli",
-              "svg_region_id": "alveoli",
               "description": "Tiny air sacs where gas exchange occurs between air and blood.",
               "cell_types": [
                 {
@@ -1426,7 +1411,6 @@
             {
               "id": "bronchi",
               "name": "Bronchi",
-              "svg_region_id": "bronchi",
               "description": "Large airways conducting air into the lungs.",
               "cell_types": [
                 {
@@ -1522,7 +1506,6 @@
             {
               "id": "gastric-glands",
               "name": "Gastric Glands",
-              "svg_region_id": "gastric-glands",
               "description": "Glands in the stomach lining that produce acid, enzymes, and hormones.",
               "cell_types": [
                 {
@@ -1601,7 +1584,6 @@
             {
               "id": "intestinal-villi",
               "name": "Intestinal Villi",
-              "svg_region_id": "villi",
               "description": "Finger-like projections that increase the absorptive surface area.",
               "cell_types": [
                 {
@@ -1643,7 +1625,6 @@
             {
               "id": "intestinal-crypt",
               "name": "Intestinal Crypt (Crypt of Lieberkuhn)",
-              "svg_region_id": "crypt",
               "description": "Glands at the base of villi containing stem cells and secretory cells.",
               "cell_types": [
                 {
@@ -1806,7 +1787,6 @@
             {
               "id": "colonic-epithelium",
               "name": "Colonic Epithelium",
-              "svg_region_id": "colonic-epithelium",
               "description": "The lining of the colon composed of absorptive and secretory cells.",
               "cell_types": [
                 {
@@ -1855,7 +1835,6 @@
             {
               "id": "hepatic-lobule",
               "name": "Hepatic Lobule",
-              "svg_region_id": "lobule",
               "description": "The functional unit of the liver, hexagonal in shape with a central vein.",
               "cell_types": [
                 {
@@ -1937,7 +1916,6 @@
             {
               "id": "hepatic-sinusoids",
               "name": "Hepatic Sinusoids",
-              "svg_region_id": "sinusoids",
               "description": "Specialized capillaries in the liver connecting portal triads to the central vein.",
               "cell_types": [
                 {
@@ -2022,7 +2000,6 @@
             {
               "id": "pancreatic-acini",
               "name": "Pancreatic Acini",
-              "svg_region_id": "acini",
               "description": "Exocrine units producing digestive enzymes.",
               "cell_types": [
                 {
@@ -2061,7 +2038,6 @@
             {
               "id": "islets-of-langerhans",
               "name": "Islets of Langerhans",
-              "svg_region_id": "islets",
               "description": "Endocrine cell clusters producing insulin, glucagon, and other hormones.",
               "cell_types": [
                 {
@@ -2175,7 +2151,6 @@
             {
               "id": "hematopoietic-niche",
               "name": "Hematopoietic Niche",
-              "svg_region_id": "hematopoietic-niche",
               "description": "The microenvironment supporting hematopoietic stem cell maintenance and differentiation.",
               "cell_types": [
                 {
@@ -2507,7 +2482,6 @@
             {
               "id": "thymic-cortex",
               "name": "Thymic Cortex",
-              "svg_region_id": "cortex",
               "description": "The outer region of the thymus where T cell positive selection occurs.",
               "cell_types": [
                 {
@@ -2581,7 +2555,6 @@
             {
               "id": "thymic-medulla",
               "name": "Thymic Medulla",
-              "svg_region_id": "medulla",
               "description": "The inner region where negative selection of T cells occurs.",
               "cell_types": [
                 {
@@ -2628,7 +2601,6 @@
             {
               "id": "white-pulp",
               "name": "White Pulp",
-              "svg_region_id": "white-pulp",
               "description": "Lymphoid tissue of the spleen containing T and B cell zones.",
               "cell_types": [
                 {
@@ -2677,7 +2649,6 @@
             {
               "id": "germinal-center",
               "name": "Germinal Center",
-              "svg_region_id": "germinal-center",
               "description": "Sites within lymph node follicles where B cells undergo affinity maturation.",
               "cell_types": [
                 {
@@ -2817,7 +2788,6 @@
             {
               "id": "thyroid-follicle",
               "name": "Thyroid Follicle",
-              "svg_region_id": "follicle",
               "description": "Spherical structures that produce and store thyroid hormones.",
               "cell_types": [
                 {
@@ -2868,7 +2838,6 @@
             {
               "id": "adrenal-cortex",
               "name": "Adrenal Cortex",
-              "svg_region_id": "cortex",
               "description": "The outer layer producing steroid hormones (cortisol, aldosterone).",
               "cell_types": [
                 {
@@ -2932,7 +2901,6 @@
             {
               "id": "adrenal-medulla",
               "name": "Adrenal Medulla",
-              "svg_region_id": "medulla",
               "description": "The inner layer producing catecholamines (adrenaline, noradrenaline).",
               "cell_types": [
                 {
@@ -2990,7 +2958,6 @@
             {
               "id": "muscle-fiber",
               "name": "Muscle Fiber",
-              "svg_region_id": "muscle-fiber",
               "description": "Multinucleated contractile cells forming skeletal muscle tissue.",
               "cell_types": [
                 {
@@ -3094,7 +3061,6 @@
             {
               "id": "bone-marrow-cavity",
               "name": "Bone Marrow Cavity",
-              "svg_region_id": "marrow-cavity",
               "description": "The central cavity of bones containing hematopoietic and stromal cells.",
               "cell_types": [
                 {
@@ -3257,7 +3223,6 @@
             {
               "id": "ovarian-follicle",
               "name": "Ovarian Follicle",
-              "svg_region_id": "follicle",
               "description": "Structures containing an oocyte surrounded by granulosa and theca cells.",
               "cell_types": [
                 {
@@ -3396,7 +3361,6 @@
             {
               "id": "seminiferous-tubule",
               "name": "Seminiferous Tubule",
-              "svg_region_id": "seminiferous-tubule",
               "description": "Coiled tubes in the testis where spermatogenesis occurs.",
               "cell_types": [
                 {
@@ -3498,7 +3462,6 @@
             {
               "id": "prostate-epithelium",
               "name": "Prostate Epithelium",
-              "svg_region_id": "prostate-epithelium",
               "description": "The glandular epithelium of the prostate.",
               "cell_types": [
                 {
@@ -3560,7 +3523,6 @@
             {
               "id": "glomerulus",
               "name": "Glomerulus",
-              "svg_region_id": "glomerulus",
               "description": "The filtering unit of the kidney consisting of Bowman's capsule and capillary tuft.",
               "cell_types": [
                 {
@@ -3630,7 +3592,6 @@
             {
               "id": "nephron-tubules",
               "name": "Nephron Tubules",
-              "svg_region_id": "tubules",
               "description": "Tubular structures that process the glomerular filtrate.",
               "cell_types": [
                 {
@@ -3718,7 +3679,6 @@
             {
               "id": "retina",
               "name": "Retina",
-              "svg_region_id": "retina",
               "description": "The light-sensitive layer at the back of the eye.",
               "cell_types": [
                 {
@@ -3782,7 +3742,6 @@
             {
               "id": "blood-leukocytes",
               "name": "Blood Leukocytes",
-              "svg_region_id": "leukocytes",
               "description": "White blood cells involved in immune defense.",
               "cell_types": [
                 {
@@ -5552,7 +5511,6 @@
             {
               "id": "cell-lines-misc",
               "name": "Miscellaneous Cell Lines",
-              "svg_region_id": "cell-lines",
               "description": "Cell lines and other cell types.",
               "cell_types": [
                 {

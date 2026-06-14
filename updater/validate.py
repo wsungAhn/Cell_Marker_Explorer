@@ -164,7 +164,7 @@ class DatasetValidator:
             self._require_fields(
                 result,
                 microstructure,
-                ("id", "name", "svg_region_id", "description", "cell_types"),
+                ("id", "name", "description", "cell_types"),
                 path,
             )
             self._validate_id(result, microstructure.get("id"), f"{path}.id")
@@ -273,16 +273,16 @@ class DatasetValidator:
             for organ in self._dict_items(system.get("organs", [])):
                 organ_id = organ.get("id", "<unknown-organ>")
                 for microstructure in self._dict_items(organ.get("microstructures", [])):
-                    svg_region_id = microstructure.get("svg_region_id")
-                    if isinstance(svg_region_id, str):
-                        key = (str(organ_id), svg_region_id)
+                    micro_id = microstructure.get("id")
+                    if isinstance(micro_id, str):
+                        key = (str(organ_id), micro_id)
                         if key in micro_svg_regions:
                             result.errors.append(
-                                f"Organ {organ_id} has duplicate microstructure svg_region_id: {svg_region_id}"
+                                f"Organ {organ_id} has duplicate microstructure id: {micro_id}"
                             )
                         micro_svg_regions.add(key)
         result.info.append(
-            f"Checked {len(body_regions)} body_map_region values and {len(micro_svg_regions)} micro SVG region IDs"
+            f"Checked {len(body_regions)} body_map_region values and {len(micro_svg_regions)} microstructure IDs"
         )
         return result
 
