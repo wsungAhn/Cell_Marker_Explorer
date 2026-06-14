@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Cell membrane (thin dark outline for dark tab bars + green membrane) -->
+  <circle cx="16" cy="16" r="14" fill="#FAF9F3" stroke="#333" stroke-width="0.5"/>
+  <circle cx="16" cy="16" r="14" fill="none" stroke="#75A025" stroke-width="2"/>
+  <!-- Nucleus -->
+  <circle cx="16" cy="16" r="6" fill="#75A025"/>
+  <!-- Nucleolus -->
+  <circle cx="18" cy="14" r="2" fill="#FAF9F3" opacity="0.6"/>
+</svg>
