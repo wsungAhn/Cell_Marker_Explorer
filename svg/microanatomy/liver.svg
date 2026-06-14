@@ -1,89 +1,66 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="liver-microanatomy-title liver-microanatomy-desc">
-  <title id="liver-microanatomy-title">Liver microanatomy</title>
-  <desc id="liver-microanatomy-desc">Keyboard-accessible microanatomy diagram for Liver with 2 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Liver microanatomy — hepatic lobule and sinusoids">
+  <!-- Visual style informed by NIH BioArt 565 "Liver Lobule" (CC-BY 4.0, NIAID); redrawn lightweight with canonical region ids -->
+  <defs>
+    <radialGradient id="lobuleFill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E6C9A0"/>
+      <stop offset="100%" stop-color="#D4A574"/>
+    </radialGradient>
+  </defs>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Hepatic Lobule</text>
 
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M93 318 C116 161 275 90 455 108 C622 124 722 216 703 355 C683 494 544 535 358 513 C188 493 72 441 93 318 Z"/>
-  <g class="regions-layer">
-    <g id="hepatic-lobule" class="microstructure-region" data-microstructure="hepatic-lobule" role="button" tabindex="0" aria-label="Hepatic Lobule">
-      <title>Hepatic Lobule</title>
-      <desc>The functional unit of the liver, hexagonal in shape with a central vein.</desc>
-      <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z" fill="#D4A574" fill-opacity="0.92"/>
+  <!-- ============ Hepatic Lobule region (hexagonal classic lobule) ============ -->
+  <g id="hepatic-lobule" class="microstructure-region" data-microstructure="hepatic-lobule"
+     role="button" tabindex="0" aria-label="Hepatic Lobule — click to view cell types">
+    <title>Hepatic Lobule</title>
+    <desc>The hexagonal functional unit of the liver: hepatocyte plates radiating from a central vein toward six portal triads.</desc>
+    <polygon class="region-path" points="660,300 530,495 270,495 140,300 270,105 530,105"
+             fill="url(#lobuleFill)" stroke="#8a6a3f" stroke-width="2.5"/>
+    <g stroke="#b3884f" stroke-width="3" opacity="0.65">
+      <line x1="400" y1="300" x2="660" y2="300"/>
+      <line x1="400" y1="300" x2="595" y2="397"/>
+      <line x1="400" y1="300" x2="530" y2="495"/>
+      <line x1="400" y1="300" x2="400" y2="520"/>
+      <line x1="400" y1="300" x2="270" y2="495"/>
+      <line x1="400" y1="300" x2="205" y2="397"/>
+      <line x1="400" y1="300" x2="140" y2="300"/>
+      <line x1="400" y1="300" x2="205" y2="203"/>
+      <line x1="400" y1="300" x2="270" y2="105"/>
+      <line x1="400" y1="300" x2="400" y2="80"/>
+      <line x1="400" y1="300" x2="530" y2="105"/>
+      <line x1="400" y1="300" x2="595" y2="203"/>
     </g>
-    <g id="hepatic-sinusoids" class="microstructure-region" data-microstructure="hepatic-sinusoids" role="button" tabindex="0" aria-label="Hepatic Sinusoids">
-      <title>Hepatic Sinusoids</title>
-      <desc>Specialized capillaries in the liver connecting portal triads to the central vein.</desc>
-      <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z M400 198 L523 268 M400 198 L277 268 M400 198 V482 M278 291 L522 291 M268 363 L532 363 M278 430 L522 430" fill="#D4A574" fill-opacity="0.82"/>
+    <circle cx="400" cy="300" r="34" fill="#9c3a3a" stroke="#6e2626" stroke-width="2"/>
+    <text x="400" y="304" text-anchor="middle" font-size="9" fill="#fff">CV</text>
+    <g class="portal-triads">
+      <g transform="translate(660,300)"><circle r="9" fill="#7a9bd0"/><circle cx="14" cy="-7" r="5" fill="#c0504d"/><circle cx="14" cy="7" r="5" fill="#9bbb59"/></g>
+      <g transform="translate(530,495)"><circle r="9" fill="#7a9bd0"/><circle cx="7" cy="14" r="5" fill="#c0504d"/><circle cx="-7" cy="14" r="5" fill="#9bbb59"/></g>
+      <g transform="translate(270,495)"><circle r="9" fill="#7a9bd0"/><circle cx="-7" cy="14" r="5" fill="#c0504d"/><circle cx="7" cy="14" r="5" fill="#9bbb59"/></g>
+      <g transform="translate(140,300)"><circle r="9" fill="#7a9bd0"/><circle cx="-14" cy="-7" r="5" fill="#c0504d"/><circle cx="-14" cy="7" r="5" fill="#9bbb59"/></g>
+      <g transform="translate(270,105)"><circle r="9" fill="#7a9bd0"/><circle cx="-7" cy="-14" r="5" fill="#c0504d"/><circle cx="7" cy="-14" r="5" fill="#9bbb59"/></g>
+      <g transform="translate(530,105)"><circle r="9" fill="#7a9bd0"/><circle cx="7" cy="-14" r="5" fill="#c0504d"/><circle cx="-7" cy="-14" r="5" fill="#9bbb59"/></g>
     </g>
   </g>
+
+  <!-- ============ Hepatic Sinusoids region (channels between hepatocyte plates) ============ -->
+  <g id="hepatic-sinusoids" class="microstructure-region" data-microstructure="hepatic-sinusoids"
+     role="button" tabindex="0" aria-label="Hepatic Sinusoids — click to view cell types">
+    <title>Hepatic Sinusoids</title>
+    <desc>Fenestrated capillary channels between hepatocyte plates carrying blood from portal triads to the central vein.</desc>
+    <g class="region-path" fill="none" stroke="#c98a8a" stroke-width="6" opacity="0.55" stroke-linecap="round">
+      <line x1="430" y1="278" x2="628" y2="246"/>
+      <line x1="430" y1="322" x2="560" y2="460"/>
+      <line x1="400" y1="334" x2="300" y2="470"/>
+      <line x1="370" y1="322" x2="172" y2="354"/>
+      <line x1="370" y1="278" x2="240" y2="140"/>
+      <line x1="400" y1="266" x2="500" y2="130"/>
+    </g>
+  </g>
+
+  <!-- ============ Labels ============ -->
   <g class="labels-layer">
-    <text class="region-label" data-for="hepatic-lobule" x="400" y="222" text-anchor="middle">Hepatic Lobule</text>
-    <text class="region-label" data-for="hepatic-sinusoids" x="400" y="363" text-anchor="middle">Hepatic Sinusoids</text>
+    <text class="region-label" data-for="hepatic-lobule" x="400" y="560" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Hepatic Lobule (hepatocyte plates · central vein · portal triads)</text>
+    <text class="region-label" data-for="hepatic-sinusoids" x="690" y="232" font-size="11" fill="#a05a5a">Sinusoids</text>
   </g>
 </svg>
