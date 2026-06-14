@@ -1,88 +1,28 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="lymph-nodes-microanatomy-title lymph-nodes-microanatomy-desc">
-  <title id="lymph-nodes-microanatomy-title">Lymph Nodes microanatomy</title>
-  <desc id="lymph-nodes-microanatomy-desc">Keyboard-accessible microanatomy diagram for Lymph Nodes with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M400 58 C550 58 672 180 672 330 C672 480 550 542 400 542 C250 542 128 480 128 330 C128 180 250 58 400 58 Z"/>
-  <g class="regions-layer">
-    <g id="germinal-center" class="microstructure-region" data-microstructure="germinal-center" role="button" tabindex="0" aria-label="Germinal Center">
-      <title>Germinal Center</title>
-      <desc>Sites within lymph node follicles where B cells undergo affinity maturation.</desc>
-      <path class="region-path" d="M400 144 C502 144 586 228 586 330 C586 432 502 456 400 456 C298 456 214 432 214 330 C214 228 298 144 400 144 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Lymph node microanatomy — germinal center">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Germinal Center</text>
+  <g id="germinal-center" class="microstructure-region" data-microstructure="germinal-center"
+     role="button" tabindex="0" aria-label="Germinal Center — click to view cell types">
+    <title>Germinal Center</title>
+    <desc>Reactive lymphoid follicle: a pale germinal center (dark + light zones) surrounded by a dense mantle of small B cells.</desc>
+    <!-- node cortex background -->
+    <ellipse cx="400" cy="300" rx="320" ry="210" fill="#C8D5E0" opacity="0.3" stroke="#7a93a8" stroke-width="2"/>
+    <!-- follicle with germinal centre (clickable) -->
+    <circle class="region-path" cx="400" cy="300" r="170" fill="#dbe6ee" stroke="#7a93a8" stroke-width="2.5"/>
+    <!-- mantle zone (dense rim) -->
+    <circle cx="400" cy="300" r="170" fill="none" stroke="#8fa6bd" stroke-width="22" opacity="0.55"/>
+    <!-- germinal centre light + dark zones -->
+    <circle cx="400" cy="300" r="115" fill="#eef4f8" stroke="#a8c0d0" stroke-width="1.5"/>
+    <path d="M400,185 a115,115 0 0,1 0,230 z" fill="#9fb4c8" opacity="0.4"/>
+    <text x="360" y="305" text-anchor="middle" font-size="10" fill="#5a6ba0">dark</text>
+    <text x="450" y="305" text-anchor="middle" font-size="10" fill="#7a93a8">light</text>
+    <!-- centroblasts/centrocytes -->
+    <g fill="#7a93b8">
+      <circle cx="350" cy="260" r="6"/><circle cx="370" cy="300" r="6"/><circle cx="345" cy="340" r="6"/><circle cx="390" cy="270" r="6"/><circle cx="380" cy="330" r="6"/>
+      <circle cx="440" cy="270" r="5"/><circle cx="460" cy="310" r="5"/><circle cx="430" cy="345" r="5"/>
     </g>
   </g>
-  <g class="details-layer" aria-hidden="true">
-    <circle class="detail-line" cx="400" cy="330" r="112"/>
-    <circle class="detail-line" cx="400" cy="330" r="55"/>
-    <path class="detail-line" d="M400 144 V218 M400 442 V456 M214 330 H288 M512 330 H586"/>
-  </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="germinal-center" x="400" y="218" text-anchor="middle">Germinal Center</text>
+    <text class="region-label" data-for="germinal-center" x="400" y="545" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Germinal Center — dark/light zones + mantle of B cells</text>
   </g>
 </svg>

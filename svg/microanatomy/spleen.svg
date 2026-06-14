@@ -1,87 +1,29 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="spleen-microanatomy-title spleen-microanatomy-desc">
-  <title id="spleen-microanatomy-title">Spleen microanatomy</title>
-  <desc id="spleen-microanatomy-desc">Keyboard-accessible microanatomy diagram for Spleen with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M301 79 C433 35 598 115 652 243 C717 397 601 525 430 529 C271 533 162 448 143 317 C121 168 188 116 301 79 Z"/>
-  <g class="regions-layer">
-    <g id="white-pulp" class="microstructure-region" data-microstructure="white-pulp" role="button" tabindex="0" aria-label="White Pulp">
-      <title>White Pulp</title>
-      <desc>Lymphoid tissue of the spleen containing T and B cell zones.</desc>
-      <path class="region-path" d="M301 79 C433 35 598 115 652 243 C717 397 601 525 430 529 C271 533 162 448 143 317 C121 168 188 116 301 79 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Spleen microanatomy — white pulp">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">White Pulp</text>
+  <g id="white-pulp" class="microstructure-region" data-microstructure="white-pulp"
+     role="button" tabindex="0" aria-label="White Pulp — click to view cell types">
+    <title>White Pulp</title>
+    <desc>Lymphoid tissue: periarteriolar lymphoid sheath (PALS) and follicle around a central arteriole, set in red pulp.</desc>
+    <!-- red pulp background -->
+    <rect x="100" y="80" width="600" height="440" rx="16" fill="#cf8f8f" opacity="0.35"/>
+    <!-- white pulp nodule (clickable) -->
+    <circle class="region-path" cx="400" cy="300" r="190" fill="#C8D5E0" stroke="#7a93a8" stroke-width="2.5"/>
+    <!-- lymphocytes (dense small cells) -->
+    <g fill="#8fa6bd">
+      <circle cx="330" cy="240" r="6"/><circle cx="370" cy="220" r="6"/><circle cx="420" cy="225" r="6"/><circle cx="465" cy="245" r="6"/>
+      <circle cx="310" cy="290" r="6"/><circle cx="350" cy="320" r="6"/><circle cx="300" cy="350" r="6"/>
+      <circle cx="470" cy="300" r="6"/><circle cx="490" cy="340" r="6"/><circle cx="450" cy="370" r="6"/>
+      <circle cx="380" cy="380" r="6"/><circle cx="420" cy="390" r="6"/><circle cx="340" cy="400" r="6"/>
+      <circle cx="400" cy="180" r="6"/><circle cx="360" cy="420" r="6"/><circle cx="440" cy="180" r="6"/>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M249 194 C352 130 514 174 579 276 C516 247 437 269 393 340 C340 300 280 292 218 326"/>
-    <circle class="detail-line" cx="431" cy="294" r="70"/>
+    <!-- germinal centre (paler follicle) -->
+    <circle cx="470" cy="320" r="55" fill="#e3ecf3" stroke="#a8c0d0" stroke-width="2" opacity="0.8"/>
+    <!-- central arteriole (eccentric red vessel) -->
+    <circle cx="360" cy="290" r="16" fill="#c0504d" stroke="#8a3838" stroke-width="2"/>
+    <text x="360" y="294" text-anchor="middle" font-size="8" fill="#fff">art.</text>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="white-pulp" x="400" y="312" text-anchor="middle">White Pulp</text>
+    <text class="region-label" data-for="white-pulp" x="400" y="540" text-anchor="middle" font-size="13" fill="var(--text-secondary)">White Pulp — PALS + follicle around central arteriole</text>
   </g>
 </svg>
