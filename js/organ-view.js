@@ -186,6 +186,18 @@
       card.setAttribute('tabindex', '0');
       card.dataset.organId = organ.id;
 
+      if (organ.icon) {
+        const icon = document.createElement('img');
+        icon.className = 'organ-card-icon';
+        icon.src = organ.icon;
+        icon.alt = '';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.setAttribute('loading', 'lazy');
+        icon.width = 48;
+        icon.height = 48;
+        card.appendChild(icon);
+      }
+
       const title = document.createElement('h3');
       title.className = 'organ-card-title';
       title.textContent = organ.name;

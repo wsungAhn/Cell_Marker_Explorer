@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kidney icon">
+  <title>Kidney</title>
+  <g fill-opacity="0.65" stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <path d="M40,16 C52,16 54,34 46,42 C40,48 42,52 34,50 C22,47 18,36 22,26 C25,18 30,16 40,16 Z" fill="#E8D5A0"/><path d="M40,32 q-8,0 -8,0" stroke="#333" stroke-width="2" fill="none"/>
+  </g>
+</svg>

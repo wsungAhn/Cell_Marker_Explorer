@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bone Marrow icon">
+  <title>Bone Marrow</title>
+  <g fill-opacity="0.65" stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <rect x="20" y="16" width="24" height="32" rx="12" fill="#C8D5E0"/><ellipse cx="32" cy="32" rx="8" ry="12" fill="#c0504d" fill-opacity=".4"/>
+  </g>
+</svg>

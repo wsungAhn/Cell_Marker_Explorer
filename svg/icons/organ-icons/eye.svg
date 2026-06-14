@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Eye icon">
+  <title>Eye</title>
+  <g fill-opacity="0.65" stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <ellipse cx="32" cy="32" rx="24" ry="14" fill="#C8E8D8"/><circle cx="32" cy="32" r="9" fill="#fff" stroke="#333" stroke-width="1.2"/><circle cx="32" cy="32" r="5" fill="#333"/>
+  </g>
+</svg>

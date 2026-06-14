@@ -1036,3 +1036,16 @@ button:disabled {
     text-decoration: underline;
   }
 }
+
+/* ── Organ list cards + icons (v1.x asset track) ── */
+.organ-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
+.organ-card {
+  border: 1px solid var(--border-color); border-radius: var(--radius-md);
+  padding: 16px; cursor: pointer; background: var(--bg-primary);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.organ-card:hover, .organ-card:focus { border-color: var(--accent-blue); box-shadow: var(--hover-glow); outline: none; }
+.organ-card-icon { width: 48px; height: 48px; display: block; margin-bottom: 8px; }
+.organ-card-title { font-weight: 600; font-size: 16px; }
+.organ-card-description { color: var(--text-secondary); font-size: 13px; margin-top: 4px; line-height: 1.4; }
+.organ-card-meta { color: var(--text-muted); font-size: 12px; margin-top: 6px; }
