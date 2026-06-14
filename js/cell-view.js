@@ -382,7 +382,7 @@
       section.appendChild(heading);
 
       if (!references.length) {
-        section.appendChild(this.createElement('p', 'empty-message', 'No references listed.'));
+        section.appendChild(this.createElement('p', 'empty-message', 'No references available'));
         return section;
       }
 
@@ -395,29 +395,61 @@
     }
 
     renderReferenceItem(reference) {
-      var item = this.createElement('li', 'reference-item');
-      var source = this.resolveSource(reference);
-      var label = source && source.title ? source.title : 'Reference ' + reference;
+      var citation = this.datastore && typeof this.datastore.getCitation === 'function'
+        ? this.datastore.getCitation(reference)
+        : null;
 
-      if (source && source.url) {
-        var sourceLink = this.createElement('a', 'reference-title', label);
-        sourceLink.href = source.url;
-        sourceLink.target = '_blank';
-        sourceLink.rel = 'noopener';
-        item.appendChild(sourceLink);
-      } else {
-        item.appendChild(this.createElement('span', 'reference-title', label));
+      if (!citation) {
+        return this.renderUnresolvedReference(reference);
       }
 
-      if (source && source.doi) {
+      var item = this.createElement('li', 'reference-item');
+      var titleUrl = this.getCitationUrl(citation);
+      item.setAttribute('data-ref-id', String(reference));
+
+      if (citation.authors) {
+        item.appendChild(this.createElement('span', 'ref-authors', citation.authors));
         item.appendChild(document.createTextNode(' '));
-        var doi = this.createElement('a', 'reference-doi', 'DOI: ' + source.doi);
-        doi.href = 'https://doi.org/' + encodeURIComponent(source.doi);
+      }
+
+      if (titleUrl && citation.title) {
+        var titleLink = this.createElement('a', 'ref-title', citation.title);
+        titleLink.href = titleUrl;
+        titleLink.target = '_blank';
+        titleLink.rel = 'noopener';
+        item.appendChild(titleLink);
+      } else {
+        item.appendChild(this.createElement('span', 'ref-title', citation.title || citation.raw_text || 'Reference ' + reference));
+      }
+
+      if (citation.journal) {
+        item.appendChild(document.createTextNode(' '));
+        item.appendChild(this.createElement('span', 'ref-journal', citation.journal));
+      }
+
+      if (citation.year) {
+        item.appendChild(document.createTextNode(' '));
+        item.appendChild(this.createElement('span', 'ref-year', '(' + citation.year + ')'));
+      }
+
+      if (citation.doi) {
+        item.appendChild(document.createTextNode(' '));
+        var doi = this.createElement('a', 'ref-doi', 'doi:' + citation.doi);
+        doi.href = 'https://doi.org/' + citation.doi;
         doi.target = '_blank';
         doi.rel = 'noopener';
         item.appendChild(doi);
       }
 
+      return item;
+    }
+
+    renderUnresolvedReference(reference) {
+      var item = this.createElement('li', 'reference-item reference-unresolved');
+      item.setAttribute('data-ref-id', String(reference));
+      item.appendChild(this.createElement('span', 'ref-id', 'Reference ' + reference));
+      item.appendChild(document.createTextNode(' '));
+      item.appendChild(this.createElement('span', 'ref-note', 'Citation details pending'));
       return item;
     }
 
@@ -579,6 +611,22 @@
       }
 
       return null;
+    }
+
+    getCitationUrl(citation) {
+      if (!citation) {
+        return '';
+      }
+      if (citation.url) {
+        return citation.url;
+      }
+      if (citation.pmid) {
+        return 'https://pubmed.ncbi.nlm.nih.gov/' + encodeURIComponent(citation.pmid) + '/';
+      }
+      if (citation.doi) {
+        return 'https://doi.org/' + citation.doi;
+      }
+      return '';
     }
 
     getCompareController() {

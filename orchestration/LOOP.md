@@ -33,20 +33,27 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 
 # Loop Ledger — v1.1.0 upgrade
 
-Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes modified copies into outbox; supervisor audits + swaps into live tree. One atomic commit + `task-NN` tag per accepted task. SVG visual quality is human-glance (structure/id audited automatically). Milestones: `m7-data-normalize` (after id-reconcile), `m8-svg-redraw` (after icons), `m9-citations-ui`, `app-v1.1.0` (final).
+Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes modified copies into outbox; supervisor audits + swaps into live tree. One atomic commit + `task-NN` tag per accepted task. **RESTRUCTURED (user decision):** textbook SVG REDRAWS go to a separate **medical-asset track (codex 외, free CC vector assets)** — deferred; the codex loop continues with the non-SVG / functional work. Milestones: `m7-data-normalize` (done), `m8-citations-ui`, `app-v1.1.0` (final).
 
+## Codex track (active loop)
 | task | spec | deliverable | status | fixes | commit | tag |
 |------|------|-------------|--------|-------|--------|-----|
 | 19 | 20-marker-normalization | data normalize + normalize_markers.py + links.js + styles.css + cell-view.js | **accepted** | 0 | 31030b2 | task-19 |
-| 20 | 24-microstructure-id-reconcile | data (rm svg_region_id) + organ-view.js + SVG element renames | **accepted** | 0 | 3f1035c | task-20 |
-| 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data body_map_region | **accepted** | 0 | 2f2e363 | task-21 |
-| 22 | 26-microanatomy-batch-1 | 7 microanatomy SVGs (integ/nervous/cardio/resp) | **queued (in inbox)** | 0 | — | — |
-| 23 | 27-microanatomy-batch-2 | 5 microanatomy SVGs (digestive) | pending | 0 | — | — |
-| 24 | 28-microanatomy-batch-3 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) | pending | 0 | — | — |
-| 25 | 29-organ-icon-svgs | 27 organ icon SVGs | pending | 0 | — | — |
-| 26 | 21-citations-table | metadata.citations + datastore methods + cell-view + scraper | pending | 0 | — | — |
-| 27 | 22-favicon | svg/icons/favicon.svg | pending | 0 | — | — |
-| 28 | 23-loading-spinner | css/styles.css loading spinner | pending | 0 | — | — |
-| 29 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
+| 20 | 24-microstructure-id-reconcile | data (rm svg_region_id) + organ-view.js (+ validate.py/01-schema patches) | **accepted** | 0 | 3f1035c | task-20 |
+| — | 24 §2 svg id rename | microanatomy region ids → canonical (15 files, 42/42) | **done** | 0 | d27714c | — |
+| 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data | **accepted** (codex; visual may be upgraded by asset track) | 0 | 2f2e363 | task-21 |
+| 22 | 21-citations-table | metadata.citations + datastore methods + cell-view + scraper (+ task-19 old-name search alias) | **accepted** | 0 | 60bd401 | task-22 |
+| 23 | 23-loading-spinner | css/styles.css loading spinner | **queued (in inbox)** | 0 | — | — |
+| 24 | 22-favicon | svg/icons/favicon.svg (simple decorative icon — codex OK) | pending | 0 | — | — |
+| 25 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
 
-**v1.1.0 pointer:** `22` (microanatomy batch 1 queued). body-map redrawn (structure PASS, visual improved-but-not-textbook). spec 25 data-system->data-tissue-system reconciled.
+## Medical-asset track (DEFERRED — codex 외, free CC medical vector assets, manual region mapping)
+| spec | deliverable | status |
+|------|-------------|--------|
+| 26 | 7 microanatomy SVGs (integ/nervous/cardio/resp) — textbook redraw | DEFERRED (asset sourcing) |
+| 27 | 5 microanatomy SVGs (digestive) — textbook redraw | DEFERRED |
+| 28 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) — textbook redraw | DEFERRED |
+| 29 | 27 organ icon SVGs — textbook redraw | DEFERRED |
+| 25(visual) | body-map textbook upgrade (optional; codex version is functional) | OPTIONAL |
+
+**v1.1.0 pointer:** `23` (loading-spinner queued, codex). citations code infra done (DATA deferred to scraper track); task-19 old-name search gap closed.

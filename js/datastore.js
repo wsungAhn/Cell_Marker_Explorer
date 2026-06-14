@@ -3,6 +3,45 @@
 
   var VALID_SPECIES = { human: true, mouse: true };
   var DEFAULT_LIMIT = 50;
+  var MARKER_ALIASES = {
+    'VE-cadherin': 'CDH5',
+    'c-Kit': 'KIT',
+    'Langerin': 'CD207',
+    'DEC-205': 'LY75',
+    'DC-SIGN': 'CD209',
+    'DC-LAMP': 'CD208',
+    'B220': 'CD45R',
+    'Fc\u03b5RI': 'FCER1A',
+    '2B4': 'CD244',
+    'Ly-6G': 'LY6G',
+    'F4/80': 'ADGRE1',
+    'Gr-1': 'LY6G',
+    'Mac-1': 'ITGAM',
+    'Sca-1': 'LY6A',
+    'PD-1': 'PDCD1',
+    'CTLA-4': 'CTLA4',
+    'GITR': 'TNFRSF18',
+    'OX40': 'TNFRSF4',
+    'TIM-1': 'HAVCR1',
+    'NG2': 'CSPG4',
+    'Podoplanin': 'PDPN',
+    'Thrombomodulin': 'THBD',
+    'Endomucin': 'EMCN',
+    'Iba1': 'AIF1',
+    'cTnI': 'TNNI3',
+    'cTnT': 'TNNT2',
+    'Alpha-SMA': 'ACTA2',
+    'Alpha-smooth muscle actin': 'ACTA2',
+    'Alpha-gustducin': 'GNAT3',
+    'Integrin alpha 8': 'ITGA8',
+    'PDGFRalpha': 'PDGFRA',
+    'TGF-beta': 'TGFB1',
+    'TNF-alpha': 'TNF',
+    'TCRalpha/beta': 'TRAC/TRBC1',
+    'TCRbeta': 'TRBC1',
+    'cGMP-dependent protein kinase': 'PRKG1',
+    'Pro-SFTPC': 'SFTPC'
+  };
 
   class CellMarkersDatastore {
     constructor() {
@@ -13,6 +52,7 @@
       this.cellTypeById = new Map();
       this.organById = new Map();
       this.microstructureById = new Map();
+      this.citationById = new Map();
       this.markerIndex = {
         human: new Map(),
         mouse: new Map()
@@ -52,6 +92,27 @@
       return this.data && this.data.metadata && Array.isArray(this.data.metadata.sources)
         ? this.data.metadata.sources
         : [];
+    }
+
+    getCitation(id) {
+      if (id === null || id === undefined) {
+        return null;
+      }
+      return this.citationById.get(id) ||
+        this.citationById.get(Number(id)) ||
+        this.citationById.get(String(id)) ||
+        null;
+    }
+
+    getCitationsForCellType(cellTypeId) {
+      var cellType = this.getCellTypeById(cellTypeId);
+      if (!cellType || !Array.isArray(cellType.references)) {
+        return [];
+      }
+
+      return cellType.references
+        .map((referenceId) => this.getCitation(referenceId))
+        .filter(Boolean);
     }
 
     getTissueSystems() {
@@ -264,6 +325,7 @@
       this.cellTypeById.clear();
       this.organById.clear();
       this.microstructureById.clear();
+      this.citationById.clear();
       this.markerIndex.human.clear();
       this.markerIndex.mouse.clear();
       this.searchIndex = [];
@@ -271,6 +333,16 @@
       this.cellTypePathById.clear();
       this.organPathById.clear();
       this.microstructurePathById.clear();
+
+      if (this.data && this.data.metadata && Array.isArray(this.data.metadata.citations)) {
+        this.data.metadata.citations.forEach((citation) => {
+          if (!citation || citation.id === null || citation.id === undefined) {
+            return;
+          }
+          this.citationById.set(citation.id, citation);
+          this.citationById.set(String(citation.id), citation);
+        });
+      }
 
       this.getTissueSystems().forEach((tissueSystem) => {
         this._setWithDuplicateWarning(this.tissueSystemById, tissueSystem.id, tissueSystem, 'tissue system');
@@ -320,6 +392,7 @@
               this._addSearchEntry('cell_type', cellType.id, cellType.name, this._fragment(tissueSystem.id, organ.id, microstructure.id, cellType.id), [
                 { field: 'name', value: cellType.name },
                 { field: 'aliases', value: (cellType.aliases || []).join(' ') },
+                { field: 'marker_aliases', value: this._getMarkerAliasesForCellType(cellType).join(' ') },
                 { field: 'description', value: cellType.description },
                 { field: 'organ', value: organ.name },
                 { field: 'microstructure', value: microstructure.name },
@@ -339,16 +412,53 @@
           .concat(markerSet.negative || []);
 
         markers.forEach((marker) => {
-          var normalizedMarker = this._normalizeMarker(marker);
-          if (!normalizedMarker) {
-            return;
-          }
-          if (!this.markerIndex[species].has(normalizedMarker)) {
-            this.markerIndex[species].set(normalizedMarker, new Set());
-          }
-          this.markerIndex[species].get(normalizedMarker).add(cellType.id);
+          this._addMarkerIndexEntry(species, marker, cellType.id);
+          this._getMarkerAliasesForCanonical(marker).forEach((alias) => {
+            this._addMarkerIndexEntry(species, alias, cellType.id);
+          });
         });
       });
+    }
+
+    _addMarkerIndexEntry(species, marker, cellTypeId) {
+      var normalizedMarker = this._normalizeMarker(marker);
+      if (!normalizedMarker) {
+        return;
+      }
+      if (!this.markerIndex[species].has(normalizedMarker)) {
+        this.markerIndex[species].set(normalizedMarker, new Set());
+      }
+      this.markerIndex[species].get(normalizedMarker).add(cellTypeId);
+    }
+
+    _getMarkerAliasesForCellType(cellType) {
+      var aliases = [];
+      ['human', 'mouse'].forEach((species) => {
+        var markerSet = cellType.markers && cellType.markers[species] ? cellType.markers[species] : {};
+        var markers = []
+          .concat(markerSet.positive || [])
+          .concat(markerSet.negative || []);
+
+        markers.forEach((marker) => {
+          this._getMarkerAliasesForCanonical(marker).forEach((alias) => {
+            if (aliases.indexOf(alias) === -1) {
+              aliases.push(alias);
+            }
+          });
+        });
+      });
+      return aliases;
+    }
+
+    _getMarkerAliasesForCanonical(marker) {
+      var normalizedMarker = this._normalizeMarker(marker);
+      var aliases = [];
+      Object.keys(MARKER_ALIASES).forEach((alias) => {
+        if (this._normalizeMarker(MARKER_ALIASES[alias]) === normalizedMarker) {
+          aliases.push(alias);
+        }
+      });
+      return aliases;
     }
 
     _addSearchEntry(type, id, name, path, fields, baseScore) {

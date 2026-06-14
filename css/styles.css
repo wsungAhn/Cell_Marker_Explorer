@@ -722,6 +722,55 @@ button:disabled {
   text-decoration: underline;
 }
 
+.references-section {
+  margin-top: 20px;
+}
+
+.references-list {
+  margin-top: 10px;
+  padding-left: 24px;
+  list-style: decimal;
+}
+
+.reference-item {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ref-authors {
+  font-weight: 600;
+}
+
+.ref-title {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.ref-title:hover {
+  text-decoration: underline;
+}
+
+.ref-journal {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.ref-year {
+  color: var(--text-muted);
+}
+
+.ref-doi {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.reference-unresolved {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
