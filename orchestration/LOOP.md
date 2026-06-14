@@ -50,10 +50,10 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 ## Medical-asset track (DEFERRED — codex 외, free CC medical vector assets, manual region mapping)
 | spec | deliverable | status |
 |------|-------------|--------|
-| 26 | 7 microanatomy SVGs (integ/nervous/cardio/resp) — textbook redraw | DEFERRED (asset sourcing) |
-| 27 | 5 microanatomy SVGs (digestive) — textbook redraw | DEFERRED |
-| 28 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) — textbook redraw | DEFERRED |
-| 29 | 27 organ icon SVGs — textbook redraw | DEFERRED |
-| 25(visual) | body-map textbook upgrade (optional; codex version is functional) | OPTIONAL |
+| 26 | 7 microanatomy SVGs (integ/nervous/cardio/resp) — textbook redraw | DONE (supervisor redraw, 27/27) |
+| 27 | 5 microanatomy SVGs (digestive) — textbook redraw | DONE |
+| 28 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) — textbook redraw | DONE |
+| 29 | 27 organ icon SVGs — textbook redraw | DONE |
+| 25(visual) | body-map textbook upgrade (optional; codex version is functional) | done via codex (task-21) |
 
-**v1.1.0 pointer:** codex track COMPLETE (19-24 accepted; integration smoke PASS: favicon 200, expr badge, canonical-id organ mapping, citations fallback, 0 console errors). Task 25 (version bump) HELD pending version-policy decision. Asset track (SVG textbook redraws) + citation DATA still deferred.
+**v1.1.0 pointer:** asset track COMPLETE — all 27 microanatomy + 27 organ icons redrawn (lightweight, canonical ids), organ-view card grid wired. body-map redrawn (task-21). Integration verified (organ list icons, organ detail SVGs, 0 console errors). Remaining: citation DATA (scraper/network). Version bump pending decision.
