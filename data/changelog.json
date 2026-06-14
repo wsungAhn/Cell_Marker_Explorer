@@ -1,6 +1,45 @@
 {
   "updates": [
     {
+      "version": "1.0.1",
+      "date": "2026-06-14",
+      "description": "Patch: marker nomenclature normalization (53 markers -> gene symbols + expression_levels), microstructure id canonicalization (svg_region_id removed), body-map redraw with chest left/right split, citations code infrastructure (data pending), loading spinner, and favicon (404 fixed). Textbook SVG redraws and citation data are deferred.",
+      "sources_scraped": [],
+      "changes": {
+        "cell_types_added": 0,
+        "cell_types_modified": 121,
+        "cell_types_removed": 0,
+        "markers_added": 0,
+        "markers_modified": 53,
+        "markers_removed": 0,
+        "new_data_fields": [
+          "markers.human.expression_levels",
+          "markers.mouse.expression_levels",
+          "metadata.citations (empty)"
+        ],
+        "removed_data_fields": [
+          "svg_region_id"
+        ],
+        "new_ui_elements": [
+          "loading-spinner",
+          "favicon",
+          "expression-level-badges",
+          "references-list"
+        ]
+      },
+      "details": {
+        "marker_normalizations": "53 markers normalized (suffix->expression_level, Greek/full-name->gene symbol). See spec 20.",
+        "microstructure_id_reconcile": "svg_region_id removed; SVG region ids now equal canonical microstructure ids (24 reconciled). See spec 24.",
+        "chest_region_split": "cardiovascular body_map_region chest->chest-left; respiratory chest->chest-right.",
+        "body_map": "Redrawn with anatomical organ placement + chest L/R split (codex; textbook-quality redraw deferred to asset track).",
+        "citations": "Code infrastructure (getCitation, getCitationsForCellType, references rendering + pending fallback) shipped; metadata.citations is empty pending the Labome scrape.",
+        "deferred": [
+          "Textbook SVG redraws: 25 microanatomy + 27 organ icons (medical-asset track)",
+          "Citation data: 156 references (scraper, network)"
+        ]
+      }
+    },
+    {
       "version": "1.0.0",
       "date": "2024-06-27",
       "description": "Initial dataset compiled from Labome Cell Markers, T/B Cell Markers, Macrophage Markers, and Stem Cell Markers pages. 121 cell types across 12 tissue systems and 27 organs with 706 human markers.",

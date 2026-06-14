@@ -45,7 +45,7 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 | 22 | 21-citations-table | metadata.citations + datastore methods + cell-view + scraper (+ task-19 old-name search alias) | **accepted** | 0 | 60bd401 | task-22 |
 | 23 | 23-loading-spinner | css/styles.css loading spinner | **accepted** | 0 | d9651ac | task-23 |
 | 24 | 22-favicon | svg/icons/favicon.svg (simple decorative icon — codex OK) | **accepted** (supervisor direct) | 0 | 659484a | task-24 |
-| 25 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
+| 25 | version-bump (supervisor) | metadata.version 1.0.1 + changelog 1.0.1 entry | **accepted** (v1.0.1 patch) | 0 | fdd4463 | task-25 |
 
 ## Medical-asset track (DEFERRED — codex 외, free CC medical vector assets, manual region mapping)
 | spec | deliverable | status |
