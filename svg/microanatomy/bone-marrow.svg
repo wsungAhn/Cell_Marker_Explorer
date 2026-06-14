@@ -1,90 +1,28 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="bone-marrow-microanatomy-title bone-marrow-microanatomy-desc">
-  <title id="bone-marrow-microanatomy-title">Bone Marrow microanatomy</title>
-  <desc id="bone-marrow-microanatomy-desc">Keyboard-accessible microanatomy diagram for Bone Marrow with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M162 95 C231 50 317 66 370 121 L430 121 C483 66 569 50 638 95 C712 145 707 262 638 307 C707 352 712 469 638 515 C569 559 483 543 430 489 L370 489 C317 543 231 559 162 515 C88 469 93 352 162 307 C93 262 88 145 162 95 Z"/>
-  <g class="regions-layer">
-    <g id="hematopoietic-niche" class="microstructure-region" data-microstructure="hematopoietic-niche" role="button" tabindex="0" aria-label="Hematopoietic Niche">
-      <title>Hematopoietic Niche</title>
-      <desc>The microenvironment supporting hematopoietic stem cell maintenance and differentiation.</desc>
-      <path class="region-path" d="M162 95 C231 50 317 66 370 121 L430 121 C483 66 569 50 638 95 C712 145 707 262 638 307 C707 352 712 469 638 515 C569 559 483 543 430 489 L370 489 C317 543 231 559 162 515 C88 469 93 352 162 307 C93 262 88 145 162 95 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Bone marrow microanatomy — hematopoietic niche">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Hematopoietic Niche</text>
+  <g id="hematopoietic-niche" class="microstructure-region" data-microstructure="hematopoietic-niche"
+     role="button" tabindex="0" aria-label="Hematopoietic Niche — click to view cell types">
+    <title>Hematopoietic Niche</title>
+    <desc>Marrow cavity within trabecular bone: sinusoids and stromal niche supporting hematopoietic stem cells and developing blood cells.</desc>
+    <!-- trabecular bone border -->
+    <rect x="100" y="80" width="600" height="440" rx="20" fill="#ece3d2" stroke="#b8a888" stroke-width="3"/>
+    <!-- marrow cavity (clickable) -->
+    <rect class="region-path" x="140" y="118" width="520" height="364" rx="14" fill="#C8D5E0" stroke="#7a93a8" stroke-width="2" opacity="0.5"/>
+    <!-- sinusoid (red vascular channel) -->
+    <path d="M150,220 q200,-40 520,30" fill="none" stroke="#c0504d" stroke-width="16" opacity="0.5"/>
+    <path d="M150,380 q260,50 520,-20" fill="none" stroke="#c0504d" stroke-width="14" opacity="0.5"/>
+    <!-- mixed hematopoietic cells (varied sizes/colors) -->
+    <g>
+      <circle cx="200" cy="180" r="12" fill="#e79a9a"/><circle cx="260" cy="160" r="9" fill="#8fa6bd"/><circle cx="320" cy="185" r="14" fill="#cbb56a"/>
+      <circle cx="390" cy="165" r="10" fill="#9bbb59"/><circle cx="450" cy="190" r="12" fill="#e79a9a"/><circle cx="520" cy="170" r="9" fill="#8fa6bd"/><circle cx="590" cy="195" r="11" fill="#cbb56a"/>
+      <circle cx="230" cy="280" r="11" fill="#9bbb59"/><circle cx="300" cy="300" r="14" fill="#e79a9a"/><circle cx="380" cy="285" r="9" fill="#8fa6bd"/><circle cx="460" cy="305" r="12" fill="#cbb56a"/><circle cx="540" cy="290" r="10" fill="#9bbb59"/>
+      <circle cx="210" cy="420" r="10" fill="#8fa6bd"/><circle cx="290" cy="440" r="13" fill="#e79a9a"/><circle cx="380" cy="425" r="9" fill="#cbb56a"/><circle cx="470" cy="445" r="11" fill="#9bbb59"/><circle cx="560" cy="425" r="12" fill="#e79a9a"/>
+      <!-- megakaryocyte (large) -->
+      <circle cx="400" cy="360" r="26" fill="#b89ad0" stroke="#8a6aa8" stroke-width="2"/>
     </g>
   </g>
-  <g class="details-layer" aria-hidden="true">
-    <circle class="detail-line" cx="292" cy="274" r="26"/>
-    <circle class="detail-line" cx="393" cy="338" r="22"/>
-    <circle class="detail-line" cx="506" cy="257" r="28"/>
-    <circle class="detail-line" cx="490" cy="398" r="20"/>
-    <circle class="detail-line" cx="318" cy="418" r="18"/>
-  </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="hematopoietic-niche" x="400" y="314" text-anchor="middle">Hematopoietic Niche</text>
+    <text class="region-label" data-for="hematopoietic-niche" x="400" y="545" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Hematopoietic Niche — sinusoids + mixed blood-forming cells</text>
   </g>
 </svg>

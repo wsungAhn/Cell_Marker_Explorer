@@ -1,86 +1,35 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="skeletal-muscle-microanatomy-title skeletal-muscle-microanatomy-desc">
-  <title id="skeletal-muscle-microanatomy-title">Skeletal Muscle microanatomy</title>
-  <desc id="skeletal-muscle-microanatomy-desc">Keyboard-accessible microanatomy diagram for Skeletal Muscle with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M92 206 C230 107 572 107 708 206 L708 394 C572 493 230 493 92 394 Z"/>
-  <g class="regions-layer">
-    <g id="muscle-fiber" class="microstructure-region" data-microstructure="muscle-fiber" role="button" tabindex="0" aria-label="Muscle Fiber">
-      <title>Muscle Fiber</title>
-      <desc>Multinucleated contractile cells forming skeletal muscle tissue.</desc>
-      <path class="region-path" d="M92 206 C230 107 572 107 708 206 L708 394 C572 493 230 493 92 394 Z" fill="#D5C8B8" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Skeletal muscle microanatomy — muscle fiber">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Muscle Fiber</text>
+  <g id="muscle-fiber" class="microstructure-region" data-microstructure="muscle-fiber"
+     role="button" tabindex="0" aria-label="Muscle Fiber — click to view cell types">
+    <title>Muscle Fiber</title>
+    <desc>Longitudinal skeletal muscle: multinucleated striated fibers with peripheral nuclei and satellite cells.</desc>
+    <rect class="region-path" x="100" y="100" width="600" height="400" rx="10" fill="#D5C8B8" stroke="#a89878" stroke-width="2.5"/>
+    <!-- striated fibers (long bands) -->
+    <g>
+      <rect x="120" y="130" width="560" height="58" rx="10" fill="#e0d3c0" stroke="#b8a888" stroke-width="2"/>
+      <rect x="120" y="206" width="560" height="58" rx="10" fill="#e0d3c0" stroke="#b8a888" stroke-width="2"/>
+      <rect x="120" y="282" width="560" height="58" rx="10" fill="#e0d3c0" stroke="#b8a888" stroke-width="2"/>
+      <rect x="120" y="358" width="560" height="58" rx="10" fill="#e0d3c0" stroke="#b8a888" stroke-width="2"/>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M132 244 H668 M132 286 H668 M132 328 H668 M132 370 H668 M180 210 V398 M260 190 V418 M340 176 V432 M420 176 V432 M500 190 V418 M580 210 V398"/>
+    <!-- cross-striations -->
+    <g stroke="#9c8a68" stroke-width="2" opacity="0.5">
+      <g>
+        <line x1="140" y1="130" x2="140" y2="416"/><line x1="170" y1="130" x2="170" y2="416"/><line x1="200" y1="130" x2="200" y2="416"/><line x1="230" y1="130" x2="230" y2="416"/><line x1="260" y1="130" x2="260" y2="416"/><line x1="290" y1="130" x2="290" y2="416"/><line x1="320" y1="130" x2="320" y2="416"/><line x1="350" y1="130" x2="350" y2="416"/><line x1="380" y1="130" x2="380" y2="416"/><line x1="410" y1="130" x2="410" y2="416"/><line x1="440" y1="130" x2="440" y2="416"/><line x1="470" y1="130" x2="470" y2="416"/><line x1="500" y1="130" x2="500" y2="416"/><line x1="530" y1="130" x2="530" y2="416"/><line x1="560" y1="130" x2="560" y2="416"/><line x1="590" y1="130" x2="590" y2="416"/><line x1="620" y1="130" x2="620" y2="416"/><line x1="650" y1="130" x2="650" y2="416"/>
+      </g>
+    </g>
+    <!-- peripheral nuclei -->
+    <g fill="#6a5a8a">
+      <ellipse cx="200" cy="136" rx="8" ry="4"/><ellipse cx="400" cy="136" rx="8" ry="4"/><ellipse cx="560" cy="136" rx="8" ry="4"/>
+      <ellipse cx="280" cy="212" rx="8" ry="4"/><ellipse cx="480" cy="212" rx="8" ry="4"/>
+      <ellipse cx="220" cy="288" rx="8" ry="4"/><ellipse cx="440" cy="288" rx="8" ry="4"/><ellipse cx="600" cy="288" rx="8" ry="4"/>
+      <ellipse cx="320" cy="364" rx="8" ry="4"/><ellipse cx="520" cy="364" rx="8" ry="4"/>
+    </g>
+    <!-- satellite cell -->
+    <circle cx="350" cy="246" r="6" fill="#9bbb59"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="muscle-fiber" x="400" y="306" text-anchor="middle">Muscle Fiber</text>
+    <text class="region-label" data-for="muscle-fiber" x="400" y="540" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Muscle Fiber — striated multinucleated fibers + satellite cell (green)</text>
   </g>
 </svg>

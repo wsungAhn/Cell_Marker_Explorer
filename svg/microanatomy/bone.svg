@@ -1,86 +1,32 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="bone-microanatomy-title bone-microanatomy-desc">
-  <title id="bone-microanatomy-title">Bone microanatomy</title>
-  <desc id="bone-microanatomy-desc">Keyboard-accessible microanatomy diagram for Bone with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M151 96 C225 48 318 66 369 126 L431 126 C482 66 575 48 649 96 C722 144 718 263 647 307 C718 351 722 470 649 518 C575 566 482 548 431 488 L369 488 C318 548 225 566 151 518 C78 470 82 351 153 307 C82 263 78 144 151 96 Z"/>
-  <g class="regions-layer">
-    <g id="bone-marrow-cavity" class="microstructure-region" data-microstructure="bone-marrow-cavity" role="button" tabindex="0" aria-label="Bone Marrow Cavity">
-      <title>Bone Marrow Cavity</title>
-      <desc>The central cavity of bones containing hematopoietic and stromal cells.</desc>
-      <path class="region-path" d="M151 96 C225 48 318 66 369 126 L431 126 C482 66 575 48 649 96 C722 144 718 263 647 307 C718 351 722 470 649 518 C575 566 482 548 431 488 L369 488 C318 548 225 566 151 518 C78 470 82 351 153 307 C82 263 78 144 151 96 Z" fill="#D5C8B8" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Bone microanatomy — bone marrow cavity">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Bone Marrow Cavity</text>
+  <g id="bone-marrow-cavity" class="microstructure-region" data-microstructure="bone-marrow-cavity"
+     role="button" tabindex="0" aria-label="Bone Marrow Cavity — click to view cell types">
+    <title>Bone Marrow Cavity</title>
+    <desc>Central medullary cavity inside cortical bone, lined by endosteum with osteoblasts and osteoclasts at the bone surface.</desc>
+    <!-- cortical bone (outer dense ring) -->
+    <ellipse cx="400" cy="300" rx="300" ry="210" fill="#ece3d2" stroke="#b8a888" stroke-width="3"/>
+    <ellipse cx="400" cy="300" rx="300" ry="210" fill="none" stroke="#cbb89a" stroke-width="40" opacity="0.5"/>
+    <!-- osteons (concentric circles in cortical bone) -->
+    <g fill="none" stroke="#b8a888" stroke-width="1.5" opacity="0.7">
+      <circle cx="400" cy="110" r="16"/><circle cx="400" cy="110" r="9"/>
+      <circle cx="640" cy="300" r="16"/><circle cx="640" cy="300" r="9"/>
+      <circle cx="160" cy="300" r="16"/><circle cx="160" cy="300" r="9"/>
+      <circle cx="400" cy="490" r="16"/><circle cx="400" cy="490" r="9"/>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M268 180 C344 235 456 235 532 180 M268 434 C344 379 456 379 532 434 M252 307 H548"/>
+    <!-- marrow cavity (clickable) -->
+    <ellipse class="region-path" cx="400" cy="300" rx="230" ry="150" fill="#C8D5E0" stroke="#7a93a8" stroke-width="2" opacity="0.55"/>
+    <!-- marrow cells -->
+    <g>
+      <circle cx="330" cy="270" r="10" fill="#e79a9a"/><circle cx="400" cy="250" r="8" fill="#8fa6bd"/><circle cx="470" cy="275" r="11" fill="#cbb56a"/>
+      <circle cx="350" cy="330" r="9" fill="#9bbb59"/><circle cx="420" cy="345" r="12" fill="#e79a9a"/><circle cx="300" cy="310" r="8" fill="#8fa6bd"/><circle cx="490" cy="330" r="9" fill="#cbb56a"/>
+    </g>
+    <!-- osteoblasts (rim) + osteoclast (multinucleated) -->
+    <g fill="#9bbb59"><circle cx="250" cy="220" r="7"/><circle cx="540" cy="380" r="7"/></g>
+    <g transform="translate(540,220)"><circle r="14" fill="#c98a8a" stroke="#a05a5a" stroke-width="2"/><circle cx="-4" cy="-3" r="3" fill="#7a3838"/><circle cx="4" cy="-3" r="3" fill="#7a3838"/><circle cx="0" cy="4" r="3" fill="#7a3838"/></g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="bone-marrow-cavity" x="400" y="312" text-anchor="middle">Bone Marrow Cavity</text>
+    <text class="region-label" data-for="bone-marrow-cavity" x="400" y="545" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Bone Marrow Cavity — cortical bone (osteons) + medullary marrow</text>
   </g>
 </svg>
