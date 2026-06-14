@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M143 286 C91 205 138 105 238 89 C305 30 426 54 468 115 C565 109 654 177 655 283 C719 345 681 463 580 487 C518 553 398 545 344 493 C238 521 144 463 151 365 C126 345 118 314 143 286 Z"/>
   <g class="regions-layer">
-    <g id="cortex" class="microstructure-region" data-microstructure="cortex" role="button" tabindex="0" aria-label="Cerebral Cortex">
+    <g id="cerebral-cortex" class="microstructure-region" data-microstructure="cerebral-cortex" role="button" tabindex="0" aria-label="Cerebral Cortex">
       <title>Cerebral Cortex</title>
       <desc>The outer layer of the cerebrum involved in higher-order brain functions.</desc>
       <path class="region-path" d="M143 286 C91 205 138 105 238 89 C305 30 426 54 468 115 C565 109 654 177 655 283 C719 345 681 463 580 487 C518 553 398 545 344 493 C238 521 144 463 151 365 C126 345 118 314 143 286 Z M212 303 C207 393 277 440 362 416 C421 466 527 459 560 402 C632 376 648 304 603 262 C606 193 543 156 478 160 C441 111 354 96 304 141 C231 145 197 213 212 303 Z" fill="#F5E6A3" fill-opacity="0.92"/>
@@ -86,16 +86,16 @@
       <desc>Structure in the ventricles that produces cerebrospinal fluid.</desc>
       <path class="region-path" d="M352 224 C386 194 441 203 463 238 C435 266 383 270 352 244 Z" fill="#F5E6A3" fill-opacity="0.72"/>
     </g>
-    <g id="microglia" class="microstructure-region" data-microstructure="microglia" role="button" tabindex="0" aria-label="Brain Microglia">
+    <g id="brain-microglia" class="microstructure-region" data-microstructure="brain-microglia" role="button" tabindex="0" aria-label="Brain Microglia">
       <title>Brain Microglia</title>
       <desc>Resident macrophages of the central nervous system derived from yolk sac progenitors.</desc>
       <path class="region-path" d="M238 306 C259 287 288 292 300 316 C288 341 255 344 237 325 Z M488 258 C509 239 538 244 550 268 C538 293 505 296 487 277 Z M335 382 C356 363 385 368 397 392 C385 417 352 420 334 401 Z M573 322 C594 303 623 308 635 332 C623 357 590 360 572 341 Z" fill="#F5E6A3" fill-opacity="0.62"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="cortex" x="198" y="122" text-anchor="middle">Cerebral Cortex</text>
+    <text class="region-label" data-for="cerebral-cortex" x="198" y="122" text-anchor="middle">Cerebral Cortex</text>
     <text class="region-label" data-for="cerebellum" x="512" y="446" text-anchor="middle">Cerebellum</text>
     <text class="region-label" data-for="choroid-plexus" x="374" y="226" text-anchor="middle">Choroid Plexus</text>
-    <text class="region-label" data-for="microglia" x="495" y="318" text-anchor="middle">Brain Microglia</text>
+    <text class="region-label" data-for="brain-microglia" x="495" y="318" text-anchor="middle">Brain Microglia</text>
   </g>
 </svg>

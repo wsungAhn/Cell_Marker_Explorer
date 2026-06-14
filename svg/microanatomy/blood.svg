@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M96 112 H704 C737 112 764 139 764 172 V428 C764 461 737 488 704 488 H96 C63 488 36 461 36 428 V172 C36 139 63 112 96 112 Z"/>
   <g class="regions-layer">
-    <g id="leukocytes" class="microstructure-region" data-microstructure="leukocytes" role="button" tabindex="0" aria-label="Blood Leukocytes">
+    <g id="blood-leukocytes" class="microstructure-region" data-microstructure="blood-leukocytes" role="button" tabindex="0" aria-label="Blood Leukocytes">
       <title>Blood Leukocytes</title>
       <desc>White blood cells involved in immune defense.</desc>
       <path class="region-path" d="M96 112 H704 C737 112 764 139 764 172 V428 C764 461 737 488 704 488 H96 C63 488 36 461 36 428 V172 C36 139 63 112 96 112 Z" fill="#C8D5E0" fill-opacity="0.92"/>
@@ -90,6 +90,6 @@
     <circle class="detail-line" cx="660" cy="174" r="16"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="leukocytes" x="400" y="300" text-anchor="middle">Blood Leukocytes</text>
+    <text class="region-label" data-for="blood-leukocytes" x="400" y="300" text-anchor="middle">Blood Leukocytes</text>
   </g>
 </svg>

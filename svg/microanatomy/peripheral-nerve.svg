@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M96 242 C204 124 330 147 446 212 C546 268 632 283 712 222 L740 302 C644 393 522 378 404 310 C300 250 198 229 112 334 Z"/>
   <g class="regions-layer">
-    <g id="nerve-sheath" class="microstructure-region" data-microstructure="nerve-sheath" role="button" tabindex="0" aria-label="Nerve Sheath">
+    <g id="peripheral-nerve-sheath" class="microstructure-region" data-microstructure="peripheral-nerve-sheath" role="button" tabindex="0" aria-label="Nerve Sheath">
       <title>Nerve Sheath</title>
       <desc>Connective tissue and glial cell layers surrounding peripheral nerve fibers.</desc>
       <path class="region-path" d="M96 242 C204 124 330 147 446 212 C546 268 632 283 712 222 L740 302 C644 393 522 378 404 310 C300 250 198 229 112 334 Z" fill="#F5E6A3" fill-opacity="0.92"/>
@@ -81,6 +81,6 @@
     <path class="detail-line" d="M153 282 C246 197 350 215 462 276 C550 324 628 331 704 284 M139 316 C246 231 344 252 450 310 C540 360 614 366 684 326 M192 252 C264 242 331 262 407 304"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="nerve-sheath" x="400" y="312" text-anchor="middle">Nerve Sheath</text>
+    <text class="region-label" data-for="peripheral-nerve-sheath" x="400" y="312" text-anchor="middle">Nerve Sheath</text>
   </g>
 </svg>

@@ -71,19 +71,19 @@
   </style>
   <path class="organ-outline" d="M93 318 C116 161 275 90 455 108 C622 124 722 216 703 355 C683 494 544 535 358 513 C188 493 72 441 93 318 Z"/>
   <g class="regions-layer">
-    <g id="lobule" class="microstructure-region" data-microstructure="lobule" role="button" tabindex="0" aria-label="Hepatic Lobule">
+    <g id="hepatic-lobule" class="microstructure-region" data-microstructure="hepatic-lobule" role="button" tabindex="0" aria-label="Hepatic Lobule">
       <title>Hepatic Lobule</title>
       <desc>The functional unit of the liver, hexagonal in shape with a central vein.</desc>
       <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z" fill="#D4A574" fill-opacity="0.92"/>
     </g>
-    <g id="sinusoids" class="microstructure-region" data-microstructure="sinusoids" role="button" tabindex="0" aria-label="Hepatic Sinusoids">
+    <g id="hepatic-sinusoids" class="microstructure-region" data-microstructure="hepatic-sinusoids" role="button" tabindex="0" aria-label="Hepatic Sinusoids">
       <title>Hepatic Sinusoids</title>
       <desc>Specialized capillaries in the liver connecting portal triads to the central vein.</desc>
       <path class="region-path" d="M400 151 L565 245 L565 434 L400 529 L235 434 L235 245 Z M400 198 L523 268 M400 198 L277 268 M400 198 V482 M278 291 L522 291 M268 363 L532 363 M278 430 L522 430" fill="#D4A574" fill-opacity="0.82"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="lobule" x="400" y="222" text-anchor="middle">Hepatic Lobule</text>
-    <text class="region-label" data-for="sinusoids" x="400" y="363" text-anchor="middle">Hepatic Sinusoids</text>
+    <text class="region-label" data-for="hepatic-lobule" x="400" y="222" text-anchor="middle">Hepatic Lobule</text>
+    <text class="region-label" data-for="hepatic-sinusoids" x="400" y="363" text-anchor="middle">Hepatic Sinusoids</text>
   </g>
 </svg>

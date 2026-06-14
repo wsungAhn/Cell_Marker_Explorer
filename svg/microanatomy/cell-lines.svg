@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M194 98 H606 C637 98 662 123 662 154 V446 C662 477 637 502 606 502 H194 C163 502 138 477 138 446 V154 C138 123 163 98 194 98 Z"/>
   <g class="regions-layer">
-    <g id="cell-lines" class="microstructure-region" data-microstructure="cell-lines" role="button" tabindex="0" aria-label="Miscellaneous Cell Lines">
+    <g id="cell-lines-misc" class="microstructure-region" data-microstructure="cell-lines-misc" role="button" tabindex="0" aria-label="Miscellaneous Cell Lines">
       <title>Miscellaneous Cell Lines</title>
       <desc>Cell lines and other cell types.</desc>
       <path class="region-path" d="M194 98 H606 C637 98 662 123 662 154 V446 C662 477 637 502 606 502 H194 C163 502 138 477 138 446 V154 C138 123 163 98 194 98 Z" fill="#C8D5E0" fill-opacity="0.92"/>
@@ -83,6 +83,6 @@
     <circle class="detail-line" cx="470" cy="324" r="30"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="cell-lines" x="400" y="302" text-anchor="middle">Miscellaneous Cell Lines</text>
+    <text class="region-label" data-for="cell-lines-misc" x="400" y="302" text-anchor="middle">Miscellaneous Cell Lines</text>
   </g>
 </svg>

@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M400 74 C555 74 680 190 680 322 C680 470 555 536 400 536 C245 536 120 470 120 322 C120 190 245 74 400 74 Z"/>
   <g class="regions-layer">
-    <g id="follicle" class="microstructure-region" data-microstructure="follicle" role="button" tabindex="0" aria-label="Ovarian Follicle">
+    <g id="ovarian-follicle" class="microstructure-region" data-microstructure="ovarian-follicle" role="button" tabindex="0" aria-label="Ovarian Follicle">
       <title>Ovarian Follicle</title>
       <desc>Structures containing an oocyte surrounded by granulosa and theca cells.</desc>
       <path class="region-path" d="M400 74 C555 74 680 190 680 322 C680 470 555 536 400 536 C245 536 120 470 120 322 C120 190 245 74 400 74 Z" fill="#F0C8D8" fill-opacity="0.92"/>
@@ -83,6 +83,6 @@
     <circle class="detail-line" cx="400" cy="302" r="18"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="follicle" x="400" y="238" text-anchor="middle">Ovarian Follicle</text>
+    <text class="region-label" data-for="ovarian-follicle" x="400" y="238" text-anchor="middle">Ovarian Follicle</text>
   </g>
 </svg>

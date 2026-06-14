@@ -71,19 +71,19 @@
   </style>
   <path class="organ-outline" d="M123 365 C159 182 288 80 400 80 C512 80 641 182 677 365 C698 474 576 528 400 528 C224 528 102 474 123 365 Z"/>
   <g class="regions-layer">
-    <g id="cortex" class="microstructure-region" data-microstructure="cortex" role="button" tabindex="0" aria-label="Adrenal Cortex">
+    <g id="adrenal-cortex" class="microstructure-region" data-microstructure="adrenal-cortex" role="button" tabindex="0" aria-label="Adrenal Cortex">
       <title>Adrenal Cortex</title>
       <desc>The outer layer producing steroid hormones (cortisol, aldosterone).</desc>
       <path class="region-path" d="M123 365 C159 182 288 80 400 80 C512 80 641 182 677 365 C698 474 576 528 400 528 C224 528 102 474 123 365 Z M215 360 C240 236 325 164 400 164 C475 164 560 236 585 360 C597 424 520 454 400 454 C280 454 203 424 215 360 Z" fill="#E0C8E8" fill-opacity="0.92"/>
     </g>
-    <g id="medulla" class="microstructure-region" data-microstructure="medulla" role="button" tabindex="0" aria-label="Adrenal Medulla">
+    <g id="adrenal-medulla" class="microstructure-region" data-microstructure="adrenal-medulla" role="button" tabindex="0" aria-label="Adrenal Medulla">
       <title>Adrenal Medulla</title>
       <desc>The inner layer producing catecholamines (adrenaline, noradrenaline).</desc>
       <path class="region-path" d="M215 360 C240 236 325 164 400 164 C475 164 560 236 585 360 C597 424 520 454 400 454 C280 454 203 424 215 360 Z" fill="#E0C8E8" fill-opacity="0.82"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="cortex" x="400" y="146" text-anchor="middle">Adrenal Cortex</text>
-    <text class="region-label" data-for="medulla" x="400" y="343" text-anchor="middle">Adrenal Medulla</text>
+    <text class="region-label" data-for="adrenal-cortex" x="400" y="146" text-anchor="middle">Adrenal Cortex</text>
+    <text class="region-label" data-for="adrenal-medulla" x="400" y="343" text-anchor="middle">Adrenal Medulla</text>
   </g>
 </svg>

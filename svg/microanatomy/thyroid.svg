@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M214 128 C306 70 386 144 384 270 C382 388 315 493 222 474 C126 454 111 328 158 226 C173 193 188 153 214 128 Z M586 128 C494 70 414 144 416 270 C418 388 485 493 578 474 C674 454 689 328 642 226 C627 193 612 153 586 128 Z M384 255 H416 V380 H384 Z"/>
   <g class="regions-layer">
-    <g id="follicle" class="microstructure-region" data-microstructure="follicle" role="button" tabindex="0" aria-label="Thyroid Follicle">
+    <g id="thyroid-follicle" class="microstructure-region" data-microstructure="thyroid-follicle" role="button" tabindex="0" aria-label="Thyroid Follicle">
       <title>Thyroid Follicle</title>
       <desc>Spherical structures that produce and store thyroid hormones.</desc>
       <path class="region-path" d="M214 128 C306 70 386 144 384 270 C382 388 315 493 222 474 C126 454 111 328 158 226 C173 193 188 153 214 128 Z M586 128 C494 70 414 144 416 270 C418 388 485 493 578 474 C674 454 689 328 642 226 C627 193 612 153 586 128 Z M384 255 H416 V380 H384 Z" fill="#E0C8E8" fill-opacity="0.92"/>
@@ -83,6 +83,6 @@
     <circle class="detail-line" cx="400" cy="310" r="32"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="follicle" x="400" y="292" text-anchor="middle">Thyroid Follicle</text>
+    <text class="region-label" data-for="thyroid-follicle" x="400" y="292" text-anchor="middle">Thyroid Follicle</text>
   </g>
 </svg>

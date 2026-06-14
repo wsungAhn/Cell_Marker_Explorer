@@ -71,25 +71,25 @@
   </style>
   <path class="organ-outline" d="M400 62 C542 62 658 178 658 320 C658 462 542 538 400 538 C258 538 142 462 142 320 C142 178 258 62 400 62 Z"/>
   <g class="regions-layer">
-    <g id="intima" class="microstructure-region" data-microstructure="intima" role="button" tabindex="0" aria-label="Vessel Intima (Endothelium)">
+    <g id="vessel-intima" class="microstructure-region" data-microstructure="vessel-intima" role="button" tabindex="0" aria-label="Vessel Intima (Endothelium)">
       <title>Vessel Intima (Endothelium)</title>
       <desc>The inner lining of blood vessels composed of endothelial cells.</desc>
       <path class="region-path" d="M400 214 C455 214 500 259 500 320 C500 381 455 386 400 386 C345 386 300 381 300 320 C300 259 345 214 400 214 Z" fill="#E8A0A0" fill-opacity="0.92"/>
     </g>
-    <g id="media" class="microstructure-region" data-microstructure="media" role="button" tabindex="0" aria-label="Vessel Media">
+    <g id="vessel-media" class="microstructure-region" data-microstructure="vessel-media" role="button" tabindex="0" aria-label="Vessel Media">
       <title>Vessel Media</title>
       <desc>The middle layer of blood vessels containing smooth muscle cells.</desc>
       <path class="region-path" d="M400 132 C503 132 588 217 588 320 C588 423 503 468 400 468 C297 468 212 423 212 320 C212 217 297 132 400 132 Z M400 214 C345 214 300 259 300 320 C300 381 345 386 400 386 C455 386 500 381 500 320 C500 259 455 214 400 214 Z" fill="#E8A0A0" fill-opacity="0.82"/>
     </g>
-    <g id="adventitia" class="microstructure-region" data-microstructure="adventitia" role="button" tabindex="0" aria-label="Vessel Adventitia">
+    <g id="vessel-adventitia" class="microstructure-region" data-microstructure="vessel-adventitia" role="button" tabindex="0" aria-label="Vessel Adventitia">
       <title>Vessel Adventitia</title>
       <desc>The outer connective tissue layer of blood vessels.</desc>
       <path class="region-path" d="M400 62 C542 62 658 178 658 320 C658 462 542 538 400 538 C258 538 142 462 142 320 C142 178 258 62 400 62 Z M400 132 C297 132 212 217 212 320 C212 423 297 468 400 468 C503 468 588 423 588 320 C588 217 503 132 400 132 Z" fill="#E8A0A0" fill-opacity="0.72"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label label-small" data-for="intima" x="400" y="320" text-anchor="middle">Vessel Intima (Endothelium)</text>
-    <text class="region-label" data-for="media" x="400" y="176" text-anchor="middle">Vessel Media</text>
-    <text class="region-label" data-for="adventitia" x="400" y="102" text-anchor="middle">Vessel Adventitia</text>
+    <text class="region-label label-small" data-for="vessel-intima" x="400" y="320" text-anchor="middle">Vessel Intima (Endothelium)</text>
+    <text class="region-label" data-for="vessel-media" x="400" y="176" text-anchor="middle">Vessel Media</text>
+    <text class="region-label" data-for="vessel-adventitia" x="400" y="102" text-anchor="middle">Vessel Adventitia</text>
   </g>
 </svg>

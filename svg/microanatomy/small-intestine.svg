@@ -71,19 +71,19 @@
   </style>
   <path class="organ-outline" d="M150 155 C234 73 548 73 650 155 C730 220 710 445 609 504 C502 567 287 557 182 493 C84 433 74 229 150 155 Z"/>
   <g class="regions-layer">
-    <g id="villi" class="microstructure-region" data-microstructure="villi" role="button" tabindex="0" aria-label="Intestinal Villi">
+    <g id="intestinal-villi" class="microstructure-region" data-microstructure="intestinal-villi" role="button" tabindex="0" aria-label="Intestinal Villi">
       <title>Intestinal Villi</title>
       <desc>Finger-like projections that increase the absorptive surface area.</desc>
       <path class="region-path" d="M150 155 C234 73 548 73 650 155 C730 220 710 445 609 504 C502 567 287 557 182 493 C84 433 74 229 150 155 Z M164 245 C220 188 246 310 292 246 C338 182 365 312 412 246 C459 180 488 312 535 246 C583 181 618 299 653 250 C670 336 639 435 575 470 C473 527 306 522 215 468 C152 431 128 324 164 245 Z" fill="#D4A574" fill-opacity="0.92"/>
     </g>
-    <g id="crypt" class="microstructure-region" data-microstructure="crypt" role="button" tabindex="0" aria-label="Intestinal Crypt (Crypt of Lieberkuhn)">
+    <g id="intestinal-crypt" class="microstructure-region" data-microstructure="intestinal-crypt" role="button" tabindex="0" aria-label="Intestinal Crypt (Crypt of Lieberkuhn)">
       <title>Intestinal Crypt (Crypt of Lieberkuhn)</title>
       <desc>Glands at the base of villi containing stem cells and secretory cells.</desc>
       <path class="region-path" d="M164 245 C220 188 246 310 292 246 C338 182 365 312 412 246 C459 180 488 312 535 246 C583 181 618 299 653 250 C670 336 639 435 575 470 C473 527 306 522 215 468 C152 431 128 324 164 245 Z" fill="#D4A574" fill-opacity="0.82"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="villi" x="399" y="178" text-anchor="middle">Intestinal Villi</text>
-    <text class="region-label label-small" data-for="crypt" x="399" y="438" text-anchor="middle">Intestinal Crypt (Crypt of Lieberkuhn)</text>
+    <text class="region-label" data-for="intestinal-villi" x="399" y="178" text-anchor="middle">Intestinal Villi</text>
+    <text class="region-label label-small" data-for="intestinal-crypt" x="399" y="438" text-anchor="middle">Intestinal Crypt (Crypt of Lieberkuhn)</text>
   </g>
 </svg>

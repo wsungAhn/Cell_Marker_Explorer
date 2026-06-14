@@ -71,7 +71,7 @@
   </style>
   <path class="organ-outline" d="M151 96 C225 48 318 66 369 126 L431 126 C482 66 575 48 649 96 C722 144 718 263 647 307 C718 351 722 470 649 518 C575 566 482 548 431 488 L369 488 C318 548 225 566 151 518 C78 470 82 351 153 307 C82 263 78 144 151 96 Z"/>
   <g class="regions-layer">
-    <g id="marrow-cavity" class="microstructure-region" data-microstructure="marrow-cavity" role="button" tabindex="0" aria-label="Bone Marrow Cavity">
+    <g id="bone-marrow-cavity" class="microstructure-region" data-microstructure="bone-marrow-cavity" role="button" tabindex="0" aria-label="Bone Marrow Cavity">
       <title>Bone Marrow Cavity</title>
       <desc>The central cavity of bones containing hematopoietic and stromal cells.</desc>
       <path class="region-path" d="M151 96 C225 48 318 66 369 126 L431 126 C482 66 575 48 649 96 C722 144 718 263 647 307 C718 351 722 470 649 518 C575 566 482 548 431 488 L369 488 C318 548 225 566 151 518 C78 470 82 351 153 307 C82 263 78 144 151 96 Z" fill="#D5C8B8" fill-opacity="0.92"/>
@@ -81,6 +81,6 @@
     <path class="detail-line" d="M268 180 C344 235 456 235 532 180 M268 434 C344 379 456 379 532 434 M252 307 H548"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="marrow-cavity" x="400" y="312" text-anchor="middle">Bone Marrow Cavity</text>
+    <text class="region-label" data-for="bone-marrow-cavity" x="400" y="312" text-anchor="middle">Bone Marrow Cavity</text>
   </g>
 </svg>

@@ -71,19 +71,19 @@
   </style>
   <path class="organ-outline" d="M98 328 C169 215 266 182 398 202 C516 219 596 165 704 111 C729 214 694 311 604 371 C493 446 354 428 229 480 C135 519 69 422 98 328 Z"/>
   <g class="regions-layer">
-    <g id="acini" class="microstructure-region" data-microstructure="acini" role="button" tabindex="0" aria-label="Pancreatic Acini">
+    <g id="pancreatic-acini" class="microstructure-region" data-microstructure="pancreatic-acini" role="button" tabindex="0" aria-label="Pancreatic Acini">
       <title>Pancreatic Acini</title>
       <desc>Exocrine units producing digestive enzymes.</desc>
       <path class="region-path" d="M98 328 C169 215 266 182 398 202 C516 219 596 165 704 111 C729 214 694 311 604 371 C493 446 354 428 229 480 C135 519 69 422 98 328 Z" fill="#D4A574" fill-opacity="0.92"/>
     </g>
-    <g id="islets" class="microstructure-region" data-microstructure="islets" role="button" tabindex="0" aria-label="Islets of Langerhans">
+    <g id="islets-of-langerhans" class="microstructure-region" data-microstructure="islets-of-langerhans" role="button" tabindex="0" aria-label="Islets of Langerhans">
       <title>Islets of Langerhans</title>
       <desc>Endocrine cell clusters producing insulin, glucagon, and other hormones.</desc>
       <path class="region-path" d="M452 246 C506 207 588 220 617 272 C587 325 501 340 447 297 C434 278 436 260 452 246 Z" fill="#D4A574" fill-opacity="0.82"/>
     </g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="acini" x="251" y="354" text-anchor="middle">Pancreatic Acini</text>
-    <text class="region-label" data-for="islets" x="510" y="279" text-anchor="middle">Islets of Langerhans</text>
+    <text class="region-label" data-for="pancreatic-acini" x="251" y="354" text-anchor="middle">Pancreatic Acini</text>
+    <text class="region-label" data-for="islets-of-langerhans" x="510" y="279" text-anchor="middle">Islets of Langerhans</text>
   </g>
 </svg>
