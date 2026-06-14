@@ -1,88 +1,29 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="cell-lines-microanatomy-title cell-lines-microanatomy-desc">
-  <title id="cell-lines-microanatomy-title">Cell Lines / Other microanatomy</title>
-  <desc id="cell-lines-microanatomy-desc">Keyboard-accessible microanatomy diagram for Cell Lines / Other with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M194 98 H606 C637 98 662 123 662 154 V446 C662 477 637 502 606 502 H194 C163 502 138 477 138 446 V154 C138 123 163 98 194 98 Z"/>
-  <g class="regions-layer">
-    <g id="cell-lines-misc" class="microstructure-region" data-microstructure="cell-lines-misc" role="button" tabindex="0" aria-label="Miscellaneous Cell Lines">
-      <title>Miscellaneous Cell Lines</title>
-      <desc>Cell lines and other cell types.</desc>
-      <path class="region-path" d="M194 98 H606 C637 98 662 123 662 154 V446 C662 477 637 502 606 502 H194 C163 502 138 477 138 446 V154 C138 123 163 98 194 98 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Cell lines — cultured cells">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Cultured Cell Lines</text>
+  <g id="cell-lines-misc" class="microstructure-region" data-microstructure="cell-lines-misc"
+     role="button" tabindex="0" aria-label="Miscellaneous Cell Lines — click to view cell types">
+    <title>Miscellaneous Cell Lines</title>
+    <desc>Abstract culture-dish motif representing established and stem-cell lines grown in vitro (e.g. iPSC, ESC, cancer lines).</desc>
+    <!-- culture dish -->
+    <ellipse class="region-path" cx="400" cy="310" rx="280" ry="210" fill="#dfe7ec" stroke="#7a93a8" stroke-width="4"/>
+    <ellipse cx="400" cy="300" rx="250" ry="185" fill="#eef3f6" stroke="#a8c0d0" stroke-width="2"/>
+    <!-- adherent cultured cells (polygonal colonies) -->
+    <g fill="#bcd0e8" stroke="#7a93a8" stroke-width="1.5">
+      <polygon points="300,230 340,220 360,250 335,280 295,270"/>
+      <polygon points="430,210 475,215 485,250 455,275 420,255"/>
+      <polygon points="520,270 560,260 575,295 545,320 510,300"/>
+      <polygon points="250,330 295,325 305,360 270,385 235,360"/>
+      <polygon points="380,330 425,328 440,365 405,392 368,365"/>
+      <polygon points="490,360 535,358 548,392 512,415 478,388"/>
+      <polygon points="320,400 360,395 375,425 345,450 308,428"/>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M235 168 H565 V396 H235 Z M284 224 H516 M284 285 H516 M284 346 H516"/>
-    <circle class="detail-line" cx="332" cy="254" r="24"/>
-    <circle class="detail-line" cx="470" cy="324" r="30"/>
+    <!-- nuclei -->
+    <g fill="#5a6ba0"><circle cx="328" cy="252" r="6"/><circle cx="452" cy="244" r="6"/><circle cx="542" cy="292" r="6"/><circle cx="270" cy="356" r="6"/><circle cx="404" cy="360" r="6"/><circle cx="512" cy="388" r="6"/><circle cx="342" cy="424" r="6"/></g>
+    <!-- iPSC/stem colony (tight round cluster) -->
+    <g transform="translate(560,200)"><circle r="30" fill="#cde8d8" stroke="#6aa888" stroke-width="2"/><g fill="#4a8a68"><circle cx="-8" cy="-6" r="5"/><circle cx="8" cy="-6" r="5"/><circle cx="0" cy="6" r="5"/><circle cx="-10" cy="8" r="5"/><circle cx="10" cy="8" r="5"/></g></g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="cell-lines-misc" x="400" y="302" text-anchor="middle">Miscellaneous Cell Lines</text>
+    <text class="region-label" data-for="cell-lines-misc" x="400" y="560" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Cultured Cell Lines — adherent colonies + stem-cell cluster (in vitro)</text>
   </g>
 </svg>

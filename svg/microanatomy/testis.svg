@@ -1,86 +1,32 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="testis-microanatomy-title testis-microanatomy-desc">
-  <title id="testis-microanatomy-title">Testis microanatomy</title>
-  <desc id="testis-microanatomy-desc">Keyboard-accessible microanatomy diagram for Testis with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M400 62 C558 62 686 196 686 340 C686 494 558 542 400 542 C242 542 114 494 114 340 C114 196 242 62 400 62 Z"/>
-  <g class="regions-layer">
-    <g id="seminiferous-tubule" class="microstructure-region" data-microstructure="seminiferous-tubule" role="button" tabindex="0" aria-label="Seminiferous Tubule">
-      <title>Seminiferous Tubule</title>
-      <desc>Coiled tubes in the testis where spermatogenesis occurs.</desc>
-      <path class="region-path" d="M400 62 C558 62 686 196 686 340 C686 494 558 542 400 542 C242 542 114 494 114 340 C114 196 242 62 400 62 Z" fill="#F0C8D8" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Testis microanatomy — seminiferous tubule">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Seminiferous Tubule</text>
+  <g id="seminiferous-tubule" class="microstructure-region" data-microstructure="seminiferous-tubule"
+     role="button" tabindex="0" aria-label="Seminiferous Tubule — click to view cell types">
+    <title>Seminiferous Tubule</title>
+    <desc>Cross-section of a seminiferous tubule: concentric germ-cell layers maturing toward the lumen, supported by Sertoli cells.</desc>
+    <ellipse class="region-path" cx="400" cy="300" rx="260" ry="200" fill="#F0C8D8" stroke="#b87a98" stroke-width="3"/>
+    <!-- basement membrane ring -->
+    <ellipse cx="400" cy="300" rx="225" ry="170" fill="#fbe6ef" stroke="#c97a9c" stroke-width="6"/>
+    <!-- germ cell layers (concentric, maturing inward) -->
+    <ellipse cx="400" cy="300" rx="180" ry="135" fill="none" stroke="#d88ab0" stroke-width="3" opacity="0.6"/>
+    <ellipse cx="400" cy="300" rx="130" ry="98" fill="none" stroke="#d88ab0" stroke-width="3" opacity="0.6"/>
+    <!-- lumen -->
+    <ellipse cx="400" cy="300" rx="80" ry="58" fill="#fff" stroke="#d8a8c0" stroke-width="2"/>
+    <text x="400" y="304" text-anchor="middle" font-size="10" fill="#b87a98">lumen</text>
+    <!-- spermatogonia (outer) -->
+    <g fill="#c2729a"><circle cx="400" cy="135" r="8"/><circle cx="560" cy="220" r="8"/><circle cx="600" cy="300" r="8"/><circle cx="560" cy="380" r="8"/><circle cx="400" cy="465" r="8"/><circle cx="240" cy="380" r="8"/><circle cx="200" cy="300" r="8"/><circle cx="240" cy="220" r="8"/></g>
+    <!-- spermatids/sperm (inner, tailed) -->
+    <g stroke="#a05a7a" stroke-width="2" fill="#a05a7a">
+      <g transform="translate(400,250)"><circle r="5"/><line x1="0" y1="5" x2="0" y2="34"/></g>
+      <g transform="translate(450,300) rotate(90)"><circle r="5"/><line x1="0" y1="5" x2="0" y2="34"/></g>
+      <g transform="translate(400,350) rotate(180)"><circle r="5"/><line x1="0" y1="5" x2="0" y2="34"/></g>
+      <g transform="translate(350,300) rotate(270)"><circle r="5"/><line x1="0" y1="5" x2="0" y2="34"/></g>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M234 240 C306 168 476 168 562 246 C641 318 566 438 430 420 C294 402 212 332 282 278 C339 235 470 238 506 294 C544 353 470 386 386 366 C318 349 300 300 348 279"/>
+    <!-- Sertoli cell nucleus -->
+    <circle cx="300" cy="240" r="9" fill="#7a4a6a"/>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="seminiferous-tubule" x="400" y="304" text-anchor="middle">Seminiferous Tubule</text>
+    <text class="region-label" data-for="seminiferous-tubule" x="400" y="555" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Seminiferous Tubule — germ-cell layers maturing toward lumen + Sertoli cell</text>
   </g>
 </svg>

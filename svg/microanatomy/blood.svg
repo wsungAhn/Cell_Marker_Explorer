@@ -1,95 +1,34 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="blood-microanatomy-title blood-microanatomy-desc">
-  <title id="blood-microanatomy-title">Blood microanatomy</title>
-  <desc id="blood-microanatomy-desc">Keyboard-accessible microanatomy diagram for Blood with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M96 112 H704 C737 112 764 139 764 172 V428 C764 461 737 488 704 488 H96 C63 488 36 461 36 428 V172 C36 139 63 112 96 112 Z"/>
-  <g class="regions-layer">
-    <g id="blood-leukocytes" class="microstructure-region" data-microstructure="blood-leukocytes" role="button" tabindex="0" aria-label="Blood Leukocytes">
-      <title>Blood Leukocytes</title>
-      <desc>White blood cells involved in immune defense.</desc>
-      <path class="region-path" d="M96 112 H704 C737 112 764 139 764 172 V428 C764 461 737 488 704 488 H96 C63 488 36 461 36 428 V172 C36 139 63 112 96 112 Z" fill="#C8D5E0" fill-opacity="0.92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Blood microanatomy — circulating leukocytes">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Blood Leukocytes (Smear)</text>
+  <!-- generous clickable field: hosts 37 cell types -->
+  <g id="blood-leukocytes" class="microstructure-region" data-microstructure="blood-leukocytes"
+     role="button" tabindex="0" aria-label="Blood Leukocytes — click to view cell types">
+    <title>Blood Leukocytes</title>
+    <desc>A blood smear field of circulating white blood cells (lymphocytes, monocytes, granulocytes, NK and dendritic cells) among red cells and platelets.</desc>
+    <rect class="region-path" x="80" y="70" width="640" height="460" rx="16" fill="#C8D5E0" stroke="#7a93a8" stroke-width="2.5" opacity="0.4"/>
+    <!-- red blood cells (biconcave, pale ring) -->
+    <g fill="#e79a9a" opacity="0.8">
+      <circle cx="150" cy="140" r="18"/><circle cx="250" cy="180" r="18"/><circle cx="360" cy="130" r="18"/><circle cx="470" cy="170" r="18"/><circle cx="580" cy="140" r="18"/><circle cx="650" cy="200" r="18"/>
+      <circle cx="180" cy="280" r="18"/><circle cx="300" cy="320" r="18"/><circle cx="520" cy="300" r="18"/><circle cx="620" cy="350" r="18"/>
+      <circle cx="160" cy="420" r="18"/><circle cx="280" cy="450" r="18"/><circle cx="430" cy="430" r="18"/><circle cx="560" cy="460" r="18"/>
     </g>
-  </g>
-  <g class="details-layer" aria-hidden="true">
-    <circle class="detail-line" cx="142" cy="194" r="21"/>
-    <circle class="detail-line" cx="224" cy="276" r="25"/>
-    <circle class="detail-line" cx="324" cy="202" r="18"/>
-    <circle class="detail-line" cx="432" cy="322" r="27"/>
-    <circle class="detail-line" cx="558" cy="226" r="20"/>
-    <circle class="detail-line" cx="646" cy="356" r="24"/>
-    <circle class="detail-line" cx="176" cy="386" r="18"/>
-    <circle class="detail-line" cx="306" cy="414" r="20"/>
-    <circle class="detail-line" cx="520" cy="418" r="17"/>
-    <circle class="detail-line" cx="660" cy="174" r="16"/>
+    <g fill="#f0c0c0"><circle cx="150" cy="140" r="8"/><circle cx="250" cy="180" r="8"/><circle cx="360" cy="130" r="8"/><circle cx="470" cy="170" r="8"/><circle cx="580" cy="140" r="8"/><circle cx="180" cy="280" r="8"/><circle cx="300" cy="320" r="8"/><circle cx="520" cy="300" r="8"/><circle cx="160" cy="420" r="8"/><circle cx="280" cy="450" r="8"/><circle cx="430" cy="430" r="8"/><circle cx="560" cy="460" r="8"/></g>
+    <!-- leukocytes (varied nuclei) -->
+    <!-- lymphocyte (large round nucleus) -->
+    <g transform="translate(220,240)"><circle r="24" fill="#cdbce8" stroke="#9a7aa8" stroke-width="2"/><circle r="17" fill="#6a4a8a"/></g>
+    <!-- monocyte (kidney nucleus) -->
+    <g transform="translate(400,260)"><circle r="28" fill="#bcd0e8" stroke="#7a93a8" stroke-width="2"/><path d="M-12,-8 a16,16 0 1,0 0,16 a10,10 0 1,1 0,-16 z" fill="#3a5a8a"/></g>
+    <!-- neutrophil (multilobed) -->
+    <g transform="translate(330,400)"><circle r="24" fill="#dfeacf" stroke="#9bbb59" stroke-width="2"/><g fill="#5a7a2a"><circle cx="-8" cy="-6" r="6"/><circle cx="8" cy="-6" r="6"/><circle cx="0" cy="8" r="6"/></g></g>
+    <!-- eosinophil (bilobed, granules) -->
+    <g transform="translate(540,210)"><circle r="22" fill="#f0d0b0" stroke="#d08a4a" stroke-width="2"/><g fill="#a0502a"><circle cx="-7" cy="0" r="6"/><circle cx="7" cy="0" r="6"/></g></g>
+    <!-- NK / dendritic accents -->
+    <g transform="translate(480,400)"><circle r="20" fill="#cde8d8" stroke="#6aa888" stroke-width="2"/><circle r="13" fill="#4a8a68"/></g>
+    <!-- platelets -->
+    <g fill="#b89ad0"><circle cx="340" cy="200" r="5"/><circle cx="600" cy="280" r="5"/><circle cx="240" cy="380" r="5"/></g>
   </g>
   <g class="labels-layer">
-    <text class="region-label" data-for="blood-leukocytes" x="400" y="300" text-anchor="middle">Blood Leukocytes</text>
+    <text class="region-label" data-for="blood-leukocytes" x="400" y="560" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Blood Leukocytes — lymphocyte, monocyte, neutrophil, eosinophil, NK among RBCs</text>
   </g>
 </svg>
