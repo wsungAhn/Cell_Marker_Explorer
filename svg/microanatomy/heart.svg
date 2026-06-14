@@ -1,86 +1,43 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="heart-microanatomy-title heart-microanatomy-desc">
-  <title id="heart-microanatomy-title">Heart microanatomy</title>
-  <desc id="heart-microanatomy-desc">Keyboard-accessible microanatomy diagram for Heart with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Heart microanatomy — myocardium">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Myocardium (Cardiac Muscle)</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M404 526 C205 396 112 268 148 159 C180 61 302 63 400 166 C498 63 620 61 652 159 C688 268 596 396 404 526 Z"/>
-  <g class="regions-layer">
-    <g id="myocardium" class="microstructure-region" data-microstructure="myocardium" role="button" tabindex="0" aria-label="Myocardium">
-      <title>Myocardium</title>
-      <desc>The muscular tissue of the heart wall responsible for contraction.</desc>
-      <path class="region-path" d="M404 526 C205 396 112 268 148 159 C180 61 302 63 400 166 C498 63 620 61 652 159 C688 268 596 396 404 526 Z" fill="#E8A0A0" fill-opacity="0.92"/>
+  <!-- Myocardium: whole tissue is the single clickable region -->
+  <g id="myocardium" class="microstructure-region" data-microstructure="myocardium"
+     role="button" tabindex="0" aria-label="Myocardium — click to view cell types">
+    <title>Myocardium</title>
+    <desc>Cardiac muscle: branching striated cardiomyocytes joined by intercalated discs, with resident cardiac macrophages.</desc>
+    <rect class="region-path" x="100" y="80" width="600" height="440" rx="14" fill="#E8A0A0" stroke="#a85a5a" stroke-width="2.5"/>
+    <!-- branching cardiomyocyte fibres (wavy bands) -->
+    <g stroke="#c46d6d" stroke-width="16" fill="none" opacity="0.55" stroke-linecap="round">
+      <path d="M120,150 q160,-30 320,10 q160,40 320,-10"/>
+      <path d="M120,230 q160,40 320,0 q160,-40 320,10"/>
+      <path d="M120,310 q160,-30 320,10 q160,40 320,-10"/>
+      <path d="M120,390 q160,40 320,0 q160,-40 320,10"/>
+      <path d="M120,460 q160,-25 320,8 q160,33 320,-8"/>
+    </g>
+    <!-- intercalated discs (dark step junctions) -->
+    <g stroke="#7e3b3b" stroke-width="3" opacity="0.7">
+      <line x1="260" y1="138" x2="260" y2="172"/><line x1="440" y1="150" x2="440" y2="184"/><line x1="600" y1="146" x2="600" y2="180"/>
+      <line x1="300" y1="218" x2="300" y2="252"/><line x1="500" y1="220" x2="500" y2="254"/>
+      <line x1="260" y1="298" x2="260" y2="332"/><line x1="440" y1="310" x2="440" y2="344"/><line x1="600" y1="306" x2="600" y2="340"/>
+      <line x1="300" y1="378" x2="300" y2="412"/><line x1="500" y1="380" x2="500" y2="414"/>
+    </g>
+    <!-- striations (faint cross-bands) -->
+    <g stroke="#fff" stroke-width="1" opacity="0.25">
+      <path d="M120,150 q160,-30 320,10 q160,40 320,-10" fill="none" stroke-dasharray="2 8"/>
+      <path d="M120,310 q160,-30 320,10 q160,40 320,-10" fill="none" stroke-dasharray="2 8"/>
+    </g>
+    <!-- cardiomyocyte nuclei (central, oval) -->
+    <g fill="#8a4a4a">
+      <ellipse cx="280" cy="160" rx="9" ry="5"/><ellipse cx="460" cy="172" rx="9" ry="5"/>
+      <ellipse cx="330" cy="240" rx="9" ry="5"/><ellipse cx="520" cy="238" rx="9" ry="5"/>
+      <ellipse cx="280" cy="320" rx="9" ry="5"/><ellipse cx="470" cy="330" rx="9" ry="5"/>
+      <ellipse cx="340" cy="400" rx="9" ry="5"/><ellipse cx="520" cy="398" rx="9" ry="5"/>
     </g>
   </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M272 178 C286 288 338 378 404 452 C465 381 520 292 532 180 M210 246 C294 250 350 292 400 356 C450 292 506 250 590 246"/>
-  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="myocardium" x="400" y="304" text-anchor="middle">Myocardium</text>
+    <text class="region-label" data-for="myocardium" x="400" y="555" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Myocardium — branching striated cardiomyocytes + intercalated discs</text>
   </g>
 </svg>

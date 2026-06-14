@@ -1,98 +1,63 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="skin-microanatomy-title skin-microanatomy-desc">
-  <title id="skin-microanatomy-title">Skin microanatomy</title>
-  <desc id="skin-microanatomy-desc">Keyboard-accessible microanatomy diagram for Skin with 3 clickable regions.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Skin microanatomy — epidermis, dermis, hypodermis">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Skin (Cutaneous Layers)</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M90 118 H710 V502 H90 Z"/>
-  <g class="regions-layer">
-    <g id="epidermis" class="microstructure-region" data-microstructure="epidermis" role="button" tabindex="0" aria-label="Epidermis">
-      <title>Epidermis</title>
-      <desc>The outermost layer of the skin, composed of stratified squamous epithelium.</desc>
-      <path class="region-path" d="M90 118 H710 V206 H90 Z" fill="#F5D5C8" fill-opacity="0.92"/>
+  <!-- Epidermis: top stratified layer -->
+  <g id="epidermis" class="microstructure-region" data-microstructure="epidermis"
+     role="button" tabindex="0" aria-label="Epidermis — click to view cell types">
+    <title>Epidermis</title>
+    <desc>Stratified squamous epithelium; outermost layer with keratinocyte strata and basal stem cells.</desc>
+    <rect class="region-path" x="120" y="70" width="560" height="110" fill="#F7E0D6" stroke="#b98a78" stroke-width="2"/>
+    <!-- stratified cell rows -->
+    <g fill="#e9b9a6" opacity="0.8">
+      <rect x="120" y="74" width="560" height="14"/>
+      <g>
+        <circle cx="150" cy="120" r="7"/><circle cx="190" cy="120" r="7"/><circle cx="230" cy="120" r="7"/><circle cx="270" cy="120" r="7"/><circle cx="310" cy="120" r="7"/><circle cx="350" cy="120" r="7"/><circle cx="390" cy="120" r="7"/><circle cx="430" cy="120" r="7"/><circle cx="470" cy="120" r="7"/><circle cx="510" cy="120" r="7"/><circle cx="550" cy="120" r="7"/><circle cx="590" cy="120" r="7"/><circle cx="630" cy="120" r="7"/>
+      </g>
     </g>
-    <g id="dermis" class="microstructure-region" data-microstructure="dermis" role="button" tabindex="0" aria-label="Dermis">
-      <title>Dermis</title>
-      <desc>The thick inner layer of skin containing connective tissue, blood vessels, and nerve endings.</desc>
-      <path class="region-path" d="M90 206 H710 V386 H90 Z" fill="#F5D5C8" fill-opacity="0.82"/>
-    </g>
-    <g id="hypodermis" class="microstructure-region" data-microstructure="hypodermis" role="button" tabindex="0" aria-label="Hypodermis (Subcutaneous Adipose)">
-      <title>Hypodermis (Subcutaneous Adipose)</title>
-      <desc>The deepest layer of skin composed primarily of adipose tissue.</desc>
-      <path class="region-path" d="M90 386 H710 V502 H90 Z" fill="#F5D5C8" fill-opacity="0.72"/>
+    <!-- basal layer (columnar stem cells) -->
+    <g fill="#cf9077">
+      <rect x="135" y="160" width="10" height="16"/><rect x="165" y="160" width="10" height="16"/><rect x="195" y="160" width="10" height="16"/><rect x="225" y="160" width="10" height="16"/><rect x="255" y="160" width="10" height="16"/><rect x="285" y="160" width="10" height="16"/><rect x="315" y="160" width="10" height="16"/><rect x="345" y="160" width="10" height="16"/><rect x="375" y="160" width="10" height="16"/><rect x="405" y="160" width="10" height="16"/><rect x="435" y="160" width="10" height="16"/><rect x="465" y="160" width="10" height="16"/><rect x="495" y="160" width="10" height="16"/><rect x="525" y="160" width="10" height="16"/><rect x="555" y="160" width="10" height="16"/><rect x="585" y="160" width="10" height="16"/><rect x="615" y="160" width="10" height="16"/>
     </g>
   </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M112 147 H690 M112 178 H690 M132 238 C206 217 280 246 354 226 C428 206 502 239 576 220 C622 208 662 213 690 225 M132 334 C214 314 286 344 370 326 C455 308 528 335 668 318 M120 444 C160 416 200 472 240 444 C280 416 320 472 360 444 C400 416 440 472 480 444 C520 416 560 472 600 444 C640 416 680 472 710 444"/>
+
+  <!-- Dermis: thick middle connective layer with follicle + vessel -->
+  <g id="dermis" class="microstructure-region" data-microstructure="dermis"
+     role="button" tabindex="0" aria-label="Dermis — click to view cell types">
+    <title>Dermis</title>
+    <desc>Dense connective tissue with collagen, fibroblasts, hair follicles, and dermal vasculature/immune cells.</desc>
+    <rect class="region-path" x="120" y="180" width="560" height="220" fill="#F5D5C8" stroke="#b98a78" stroke-width="2"/>
+    <!-- collagen fibres -->
+    <g stroke="#d8a88f" stroke-width="2" opacity="0.6">
+      <path d="M130,220 q120,30 240,0 t300,10" fill="none"/>
+      <path d="M130,270 q150,-25 300,5 t240,0" fill="none"/>
+      <path d="M130,330 q120,30 280,0 t260,5" fill="none"/>
+    </g>
+    <!-- hair follicle -->
+    <path d="M300,180 q-10,120 6,200" fill="none" stroke="#8a6a3f" stroke-width="8" opacity="0.7"/>
+    <circle cx="306" cy="388" r="14" fill="#c9a06a" opacity="0.8"/>
+    <!-- dermal blood vessel -->
+    <path d="M520,200 q30,90 -4,190" fill="none" stroke="#c0504d" stroke-width="5" opacity="0.6"/>
   </g>
+
+  <!-- Hypodermis: subcutaneous adipose -->
+  <g id="hypodermis" class="microstructure-region" data-microstructure="hypodermis"
+     role="button" tabindex="0" aria-label="Hypodermis (subcutaneous adipose) — click to view cell types">
+    <title>Hypodermis (Subcutaneous Adipose)</title>
+    <desc>Subcutaneous fat: large adipocytes with peripheral nuclei, plus adipose-derived stem cells.</desc>
+    <rect class="region-path" x="120" y="400" width="560" height="130" fill="#FBEFD9" stroke="#b98a78" stroke-width="2"/>
+    <!-- adipocytes -->
+    <g fill="#fff6e2" stroke="#d8b27a" stroke-width="2">
+      <circle cx="180" cy="450" r="26"/><circle cx="250" cy="478" r="28"/><circle cx="330" cy="452" r="25"/><circle cx="405" cy="482" r="27"/><circle cx="480" cy="452" r="26"/><circle cx="555" cy="480" r="28"/><circle cx="625" cy="452" r="24"/>
+    </g>
+    <g fill="#caa05a">
+      <circle cx="198" cy="438" r="3"/><circle cx="270" cy="466" r="3"/><circle cx="348" cy="440" r="3"/><circle cx="423" cy="470" r="3"/><circle cx="498" cy="440" r="3"/><circle cx="573" cy="468" r="3"/>
+    </g>
+  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="epidermis" x="390" y="166" text-anchor="middle">Epidermis</text>
-    <text class="region-label" data-for="dermis" x="390" y="302" text-anchor="middle">Dermis</text>
-    <text class="region-label label-small" data-for="hypodermis" x="390" y="455" text-anchor="middle">Hypodermis (Subcutaneous Adipose)</text>
+    <text class="region-label" data-for="epidermis" x="690" y="130" font-size="12" fill="var(--text-secondary)">Epidermis</text>
+    <text class="region-label" data-for="dermis" x="690" y="295" font-size="12" fill="var(--text-secondary)">Dermis</text>
+    <text class="region-label" data-for="hypodermis" x="690" y="470" font-size="12" fill="var(--text-secondary)">Hypodermis</text>
   </g>
 </svg>

@@ -1,86 +1,46 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="group" aria-labelledby="stomach-microanatomy-title stomach-microanatomy-desc">
-  <title id="stomach-microanatomy-title">Stomach microanatomy</title>
-  <desc id="stomach-microanatomy-desc">Keyboard-accessible microanatomy diagram for Stomach with 1 clickable region.</desc>
-  <style>
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="group" aria-label="Stomach microanatomy — gastric glands">
+  <rect class="bg" width="800" height="600" fill="var(--bg-primary)"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="var(--text-primary)">Gastric Glands (Mucosa)</text>
 
-    .organ-outline {
-      fill: var(--bg-secondary);
-      stroke: #000;
-      stroke-width: 2;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .microstructure-region {
-      cursor: pointer;
-      outline: none;
-    }
-
-    .region-path,
-    .detail-line {
-      stroke: #000;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
-    }
-
-    .region-path {
-      stroke-width: 1;
-    }
-
-    .detail-line {
-      fill: none;
-      stroke-width: 1;
-      opacity: 0.42;
-      pointer-events: none;
-    }
-
-    .microstructure-region:hover .region-path,
-    .microstructure-region:focus .region-path,
-    .microstructure-region:focus-visible .region-path {
-      filter: brightness(1.15) drop-shadow(var(--hover-glow));
-    }
-
-    .microstructure-region:focus-visible .region-path,
-    .microstructure-region.selected .region-path,
-    .microstructure-region[aria-pressed="true"] .region-path {
-      stroke: var(--accent-blue);
-      stroke-width: 2;
-    }
-
-    .region-label {
-      fill: var(--text-primary);
-      font-size: 11px;
-      font-weight: 600;
-      paint-order: stroke;
-      stroke: var(--bg-primary);
-      stroke-width: 3px;
-      stroke-linejoin: round;
-      pointer-events: none;
-    }
-
-    .label-small {
-      font-size: 10px;
-    }
-  </style>
-  <path class="organ-outline" d="M311 105 C459 61 600 137 614 276 C632 450 461 540 313 493 C180 451 151 314 238 246 C282 211 279 147 311 105 Z"/>
-  <g class="regions-layer">
-    <g id="gastric-glands" class="microstructure-region" data-microstructure="gastric-glands" role="button" tabindex="0" aria-label="Gastric Glands">
-      <title>Gastric Glands</title>
-      <desc>Glands in the stomach lining that produce acid, enzymes, and hormones.</desc>
-      <path class="region-path" d="M311 105 C459 61 600 137 614 276 C632 450 461 540 313 493 C180 451 151 314 238 246 C282 211 279 147 311 105 Z" fill="#D4A574" fill-opacity="0.92"/>
+  <!-- Gastric glands: tubular glands in the mucosa (single clickable region) -->
+  <g id="gastric-glands" class="microstructure-region" data-microstructure="gastric-glands"
+     role="button" tabindex="0" aria-label="Gastric Glands — click to view cell types">
+    <title>Gastric Glands</title>
+    <desc>Tubular glands of the gastric mucosa: surface mucous cells and gastric pits leading to parietal and chief cells.</desc>
+    <!-- mucosa block -->
+    <rect class="region-path" x="100" y="90" width="600" height="430" fill="#D4A574" stroke="#8a6a3f" stroke-width="2.5"/>
+    <!-- luminal surface with gastric pits (foveolae) -->
+    <path d="M100,120 h600" stroke="#8a6a3f" stroke-width="3" opacity="0.5"/>
+    <!-- five tubular glands descending from pits -->
+    <g>
+      <!-- gland template repeated -->
+      <g stroke="#b3884f" stroke-width="3" fill="#e3c39a" opacity="0.9">
+        <path d="M170,120 v60 q-14,150 0,300 q14,-150 0,-300 v-60" transform="translate(0,0)"/>
+      </g>
+    </g>
+    <!-- gland tubes (lumen channels) -->
+    <g fill="none" stroke="#9c7846" stroke-width="10" opacity="0.6" stroke-linecap="round">
+      <line x1="180" y1="125" x2="180" y2="480"/>
+      <line x1="300" y1="125" x2="300" y2="480"/>
+      <line x1="420" y1="125" x2="420" y2="480"/>
+      <line x1="540" y1="125" x2="540" y2="480"/>
+      <line x1="640" y1="125" x2="640" y2="480"/>
+    </g>
+    <!-- gastric pit openings (foveolae) -->
+    <g fill="#7a5a30">
+      <circle cx="180" cy="120" r="8"/><circle cx="300" cy="120" r="8"/><circle cx="420" cy="120" r="8"/><circle cx="540" cy="120" r="8"/><circle cx="640" cy="120" r="8"/>
+    </g>
+    <!-- parietal cells (large, pink, upper gland) -->
+    <g fill="#e79a9a" stroke="#b96a6a" stroke-width="1.5">
+      <circle cx="158" cy="210" r="11"/><circle cx="202" cy="240" r="11"/><circle cx="278" cy="220" r="11"/><circle cx="322" cy="250" r="11"/><circle cx="398" cy="215" r="11"/><circle cx="442" cy="245" r="11"/><circle cx="518" cy="222" r="11"/><circle cx="562" cy="248" r="11"/><circle cx="618" cy="215" r="11"/>
+    </g>
+    <!-- chief cells (basophilic, lower gland) -->
+    <g fill="#8a9bd0" stroke="#5a6ba0" stroke-width="1.5">
+      <circle cx="160" cy="400" r="9"/><circle cx="200" cy="430" r="9"/><circle cx="280" cy="405" r="9"/><circle cx="320" cy="435" r="9"/><circle cx="400" cy="402" r="9"/><circle cx="440" cy="432" r="9"/><circle cx="520" cy="405" r="9"/><circle cx="560" cy="435" r="9"/><circle cx="620" cy="402" r="9"/>
     </g>
   </g>
-  <g class="details-layer" aria-hidden="true">
-    <path class="detail-line" d="M280 190 C368 156 514 202 536 302 M244 278 C332 238 500 282 524 384 M270 386 C342 430 462 426 526 348"/>
-  </g>
+
   <g class="labels-layer">
-    <text class="region-label" data-for="gastric-glands" x="400" y="316" text-anchor="middle">Gastric Glands</text>
+    <text class="region-label" data-for="gastric-glands" x="400" y="555" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Gastric Glands — pits, parietal cells (pink), chief cells (blue)</text>
   </g>
 </svg>
