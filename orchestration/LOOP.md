@@ -39,8 +39,8 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 |------|------|-------------|--------|-------|--------|-----|
 | 19 | 20-marker-normalization | data normalize + normalize_markers.py + links.js + styles.css + cell-view.js | **accepted** | 0 | 31030b2 | task-19 |
 | 20 | 24-microstructure-id-reconcile | data (rm svg_region_id) + organ-view.js + SVG element renames | **accepted** | 0 | 3f1035c | task-20 |
-| 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data body_map_region | **queued (in inbox)** | 0 | — | — |
-| 22 | 26-microanatomy-batch-1 | 7 microanatomy SVGs (integ/nervous/cardio/resp) | pending | 0 | — | — |
+| 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data body_map_region | **accepted** | 0 | 2f2e363 | task-21 |
+| 22 | 26-microanatomy-batch-1 | 7 microanatomy SVGs (integ/nervous/cardio/resp) | **queued (in inbox)** | 0 | — | — |
 | 23 | 27-microanatomy-batch-2 | 5 microanatomy SVGs (digestive) | pending | 0 | — | — |
 | 24 | 28-microanatomy-batch-3 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) | pending | 0 | — | — |
 | 25 | 29-organ-icon-svgs | 27 organ icon SVGs | pending | 0 | — | — |
@@ -49,4 +49,4 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 | 28 | 23-loading-spinner | css/styles.css loading spinner | pending | 0 | — | — |
 | 29 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
 
-**v1.1.0 pointer:** `21` (body-map redraw queued). Milestone m7-data-normalize reached. SVG element ids renamed by redraw tasks 21-24.
+**v1.1.0 pointer:** `22` (microanatomy batch 1 queued). body-map redrawn (structure PASS, visual improved-but-not-textbook). spec 25 data-system->data-tissue-system reconciled.

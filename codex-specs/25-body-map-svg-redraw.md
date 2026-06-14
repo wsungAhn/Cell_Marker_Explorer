@@ -188,44 +188,44 @@ Each tissue system has a clickable region on the body map. Regions are `<g>` gro
   
   <!-- Clickable regions (ordered back-to-front for z-ordering) -->
   <!-- Layer 1: Deep structures (musculoskeletal, circulating immune) -->
-  <g id="limbs+trunk" class="body-region" data-system="musculoskeletal">
+  <g id="limbs+trunk" class="body-region" data-tissue-system="musculoskeletal">
     <!-- Skeleton elements -->
   </g>
-  <g id="blood" class="body-region" data-system="circulating-immune">
+  <g id="blood" class="body-region" data-tissue-system="circulating-immune">
     <!-- Vessel network -->
   </g>
   
   <!-- Layer 2: Internal organs -->
-  <g id="head+spine" class="body-region" data-system="nervous">
+  <g id="head+spine" class="body-region" data-tissue-system="nervous">
     <!-- Brain + spinal cord -->
   </g>
-  <g id="chest-left" class="body-region" data-system="cardiovascular">
+  <g id="chest-left" class="body-region" data-tissue-system="cardiovascular">
     <!-- Heart + great vessels -->
   </g>
-  <g id="chest-right" class="body-region" data-system="respiratory">
+  <g id="chest-right" class="body-region" data-tissue-system="respiratory">
     <!-- Lungs + trachea -->
   </g>
-  <g id="abdomen" class="body-region" data-system="digestive">
+  <g id="abdomen" class="body-region" data-tissue-system="digestive">
     <!-- GI organs -->
   </g>
-  <g id="lymph-nodes+spleen" class="body-region" data-system="lymphatic">
+  <g id="lymph-nodes+spleen" class="body-region" data-tissue-system="lymphatic">
     <!-- Spleen, thymus, lymph nodes -->
   </g>
-  <g id="neck+abdomen" class="body-region" data-system="endocrine">
+  <g id="neck+abdomen" class="body-region" data-tissue-system="endocrine">
     <!-- Thyroid, adrenals -->
   </g>
-  <g id="flank+pelvis" class="body-region" data-system="urinary">
+  <g id="flank+pelvis" class="body-region" data-tissue-system="urinary">
     <!-- Kidneys, ureters, bladder -->
   </g>
-  <g id="pelvis" class="body-region" data-system="reproductive">
+  <g id="pelvis" class="body-region" data-tissue-system="reproductive">
     <!-- Ovaries, uterus -->
   </g>
-  <g id="head" class="body-region" data-system="sensory">
+  <g id="head" class="body-region" data-tissue-system="sensory">
     <!-- Eyes -->
   </g>
   
   <!-- Layer 3: Surface (skin) — on top -->
-  <g id="skin" class="body-region" data-system="integumentary">
+  <g id="skin" class="body-region" data-tissue-system="integumentary">
     <!-- Body outline stroke -->
   </g>
 </svg>
@@ -274,7 +274,7 @@ The existing body map CSS (from spec 15) uses `.body-region` for hover states. V
 
 Add CSS for the skin region's pointer-events:
 ```css
-.body-region[data-system="integumentary"] {
+.body-region[data-tissue-system="integumentary"] {
   pointer-events: stroke; /* Only the outline stroke is clickable, not the fill */
   fill: none;
   stroke-width: 8;

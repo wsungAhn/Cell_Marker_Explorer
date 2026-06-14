@@ -994,7 +994,7 @@
     {
       "id": "cardiovascular",
       "name": "Cardiovascular System",
-      "body_map_region": "chest",
+      "body_map_region": "chest-left",
       "color": "#E8A0A0",
       "description": "The organ system that circulates blood throughout the body, comprising the heart and blood vessels.",
       "organs": [
@@ -1282,7 +1282,7 @@
     {
       "id": "respiratory",
       "name": "Respiratory System",
-      "body_map_region": "chest",
+      "body_map_region": "chest-right",
       "color": "#D5E8F0",
       "description": "The organ system responsible for gas exchange, comprising the lungs and airways.",
       "organs": [
