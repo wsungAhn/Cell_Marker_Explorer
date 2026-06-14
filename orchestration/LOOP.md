@@ -43,8 +43,8 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 | — | 24 §2 svg id rename | microanatomy region ids → canonical (15 files, 42/42) | **done** | 0 | d27714c | — |
 | 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data | **accepted** (codex; visual may be upgraded by asset track) | 0 | 2f2e363 | task-21 |
 | 22 | 21-citations-table | metadata.citations + datastore methods + cell-view + scraper (+ task-19 old-name search alias) | **accepted** | 0 | 60bd401 | task-22 |
-| 23 | 23-loading-spinner | css/styles.css loading spinner | **queued (in inbox)** | 0 | — | — |
-| 24 | 22-favicon | svg/icons/favicon.svg (simple decorative icon — codex OK) | pending | 0 | — | — |
+| 23 | 23-loading-spinner | css/styles.css loading spinner | **accepted** | 0 | d9651ac | task-23 |
+| 24 | 22-favicon | svg/icons/favicon.svg (simple decorative icon — codex OK) | **queued (in inbox)** | 0 | — | — |
 | 25 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
 
 ## Medical-asset track (DEFERRED — codex 외, free CC medical vector assets, manual region mapping)
@@ -56,4 +56,4 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 | 29 | 27 organ icon SVGs — textbook redraw | DEFERRED |
 | 25(visual) | body-map textbook upgrade (optional; codex version is functional) | OPTIONAL |
 
-**v1.1.0 pointer:** `23` (loading-spinner queued, codex). citations code infra done (DATA deferred to scraper track); task-19 old-name search gap closed.
+**v1.1.0 pointer:** `24` (favicon queued, codex). loading spinner CSS done.
