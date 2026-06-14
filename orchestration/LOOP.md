@@ -56,4 +56,4 @@ Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes 
 | 29 | 27 organ icon SVGs — textbook redraw | DEFERRED |
 | 25(visual) | body-map textbook upgrade (optional; codex version is functional) | OPTIONAL |
 
-**v1.1.0 pointer:** `24` (favicon queued, codex). loading spinner CSS done.
+**v1.1.0 pointer:** codex track COMPLETE (19-24 accepted; integration smoke PASS: favicon 200, expr badge, canonical-id organ mapping, citations fallback, 0 console errors). Task 25 (version bump) HELD pending version-policy decision. Asset track (SVG textbook redraws) + citation DATA still deferred.
