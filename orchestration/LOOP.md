@@ -28,3 +28,25 @@ Single human-readable record of loop progress. The supervisor (Claude) updates t
 **Milestone tags (annotated):** m1-data-layer · m2-assets · m3-shell · m4-views · m5-features · m6-pipeline · **app-v1.0.0** (final).
 
 **Current pointer:** ✅ COMPLETE — all 18 tasks accepted, app-v1.0.0 tagged, FINAL-REPORT.md published. Deferred (see FINAL-REPORT §5): task-09 references data gap; task-17 live scrape.
+
+---
+
+# Loop Ledger — v1.1.0 upgrade
+
+Fully autonomous (same policy). v1.1.0 MODIFIES existing files — Codex writes modified copies into outbox; supervisor audits + swaps into live tree. One atomic commit + `task-NN` tag per accepted task. SVG visual quality is human-glance (structure/id audited automatically). Milestones: `m7-data-normalize` (after id-reconcile), `m8-svg-redraw` (after icons), `m9-citations-ui`, `app-v1.1.0` (final).
+
+| task | spec | deliverable | status | fixes | commit | tag |
+|------|------|-------------|--------|-------|--------|-----|
+| 19 | 20-marker-normalization | data normalize + normalize_markers.py + links.js + styles.css + cell-view.js | **accepted** | 0 | 31030b2 | task-19 |
+| 20 | 24-microstructure-id-reconcile | data (rm svg_region_id) + organ-view.js + SVG element renames | **queued (in inbox)** | 0 | — | — |
+| 21 | 25-body-map-svg-redraw | svg/body-map.svg (redraw + chest split) + data body_map_region | pending | 0 | — | — |
+| 22 | 26-microanatomy-batch-1 | 7 microanatomy SVGs (integ/nervous/cardio/resp) | pending | 0 | — | — |
+| 23 | 27-microanatomy-batch-2 | 5 microanatomy SVGs (digestive) | pending | 0 | — | — |
+| 24 | 28-microanatomy-batch-3 | 13 microanatomy SVGs (lymph/endo/musc/repro/urin/sensory) | pending | 0 | — | — |
+| 25 | 29-organ-icon-svgs | 27 organ icon SVGs | pending | 0 | — | — |
+| 26 | 21-citations-table | metadata.citations + datastore methods + cell-view + scraper | pending | 0 | — | — |
+| 27 | 22-favicon | svg/icons/favicon.svg | pending | 0 | — | — |
+| 28 | 23-loading-spinner | css/styles.css loading spinner | pending | 0 | — | — |
+| 29 | version-bump (supervisor) | metadata.version 1.1.0 + changelog.json 1.1.0 entry | pending | 0 | — | — |
+
+**v1.1.0 pointer:** `20` (microstructure id-reconcile queued). Scope-gap noted (task-19): datastore old-name search alias -> fold into task 26.

@@ -296,12 +296,12 @@
         return panel;
       }
 
-      panel.appendChild(this.renderMarkerGroup('Positive', markers.positive, species, 'positive'));
-      panel.appendChild(this.renderMarkerGroup('Negative', markers.negative, species, 'negative'));
+      panel.appendChild(this.renderMarkerGroup('Positive', markers.positive, species, 'positive', markers.expression_levels));
+      panel.appendChild(this.renderMarkerGroup('Negative', markers.negative, species, 'negative', markers.expression_levels));
       return panel;
     }
 
-    renderMarkerGroup(label, markers, species, type) {
+    renderMarkerGroup(label, markers, species, type, expressionLevels) {
       var group = this.createElement('div', 'marker-group marker-group-' + type);
       group.appendChild(this.createElement('h5', null, label));
 
@@ -313,9 +313,13 @@
       var grid = this.createElement('div', 'marker-grid');
       markers.forEach((marker) => {
         var chip = this.createElement('button', 'marker-tag ' + type, marker);
+        var expressionLevel = expressionLevels && expressionLevels[marker];
         chip.type = 'button';
         chip.setAttribute('data-marker', marker);
         chip.setAttribute('data-species', species);
+        if (expressionLevel === 'high' || expressionLevel === 'low') {
+          chip.dataset.expressionLevel = expressionLevel;
+        }
         chip.title = 'Click to find other cell types expressing ' + marker;
         chip.addEventListener('click', () => {
           this.navigate('#/search/' + encodeURIComponent(marker));
@@ -491,14 +495,16 @@
     }
 
     getMarkers(cellType, species) {
-      var empty = { positive: [], negative: [] };
+      var empty = { positive: [], negative: [], expression_levels: {} };
       if (!cellType || !cellType.markers || !cellType.markers[species]) {
         return empty;
       }
 
+      var expressionLevels = cellType.markers[species].expression_levels;
       return {
         positive: Array.isArray(cellType.markers[species].positive) ? cellType.markers[species].positive : [],
-        negative: Array.isArray(cellType.markers[species].negative) ? cellType.markers[species].negative : []
+        negative: Array.isArray(cellType.markers[species].negative) ? cellType.markers[species].negative : [],
+        expression_levels: expressionLevels && typeof expressionLevels === 'object' ? expressionLevels : {}
       };
     }
 

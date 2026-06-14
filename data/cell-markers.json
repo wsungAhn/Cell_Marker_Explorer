@@ -205,7 +205,7 @@
                       "positive": [
                         "Vimentin",
                         "Fibronectin",
-                        "PDGFRalpha",
+                        "PDGFRA",
                         "FAP"
                       ],
                       "negative": []
@@ -626,7 +626,7 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "cGMP-dependent protein kinase",
+                        "PRKG1",
                         "Zebrin I",
                         "Zebrin II",
                         "CAR8",
@@ -637,7 +637,7 @@
                     },
                     "mouse": {
                       "positive": [
-                        "cGMP-dependent protein kinase",
+                        "PRKG1",
                         "Zebrin I",
                         "Zebrin II",
                         "Car8",
@@ -784,7 +784,7 @@
                         "MBP",
                         "MOG",
                         "SOX10",
-                        "PDGFRalpha"
+                        "PDGFRA"
                       ],
                       "negative": []
                     },
@@ -1029,8 +1029,8 @@
                     "human": {
                       "positive": [
                         "PCM1",
-                        "cTnI/TNNI3",
-                        "cTnT/TNNT2",
+                        "TNNI3",
+                        "TNNT2",
                         "Connexin-43/GJA1",
                         "MF20/MYH"
                       ],
@@ -1224,8 +1224,8 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "Alpha-smooth muscle actin/ACTA2",
-                        "Integrin alpha 8/ITGA8"
+                        "ACTA2",
+                        "ITGA8"
                       ],
                       "negative": []
                     },
@@ -1734,7 +1734,7 @@
                         "TRPM5",
                         "Villin",
                         "Fimbrin",
-                        "Alpha-gustducin",
+                        "GNAT3",
                         "SOX9"
                       ],
                       "negative": []
@@ -1983,7 +1983,7 @@
                       "positive": [
                         "GFAP",
                         "Desmin",
-                        "Alpha-SMA/ACTA2",
+                        "ACTA2",
                         "PDGFRB",
                         "Vimentin"
                       ],
@@ -2186,11 +2186,10 @@
                     "human": {
                       "positive": [
                         "CD34",
-                        "CD38low",
+                        "CD38",
                         "CD59",
                         "Thy1/CD90",
                         "c-Kit/CD117",
-                        "Lin-",
                         "CD93",
                         "CD105",
                         "CD110",
@@ -2205,15 +2204,20 @@
                         "CD309/VEGFR2",
                         "CD338"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Lin"
+                      ],
+                      "expression_levels": {
+                        "CD38": "low",
+                        "Lin": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd34low",
+                        "Cd34",
                         "Cd38",
                         "Thy1/Cd90",
                         "c-Kit/Cd117",
-                        "Lin-",
                         "Sca-1/Ly6a",
                         "Cd111",
                         "Cd135",
@@ -2225,7 +2229,13 @@
                         "Cd309",
                         "Cd338"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Lin"
+                      ],
+                      "expression_levels": {
+                        "Cd34": "low",
+                        "Lin": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -2351,24 +2361,32 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD14++",
-                        "CD16-",
+                        "CD14",
                         "CCR2",
                         "CD36",
                         "HLA-DR",
                         "CD11c"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD16"
+                      ],
+                      "expression_levels": {
+                        "CD14": "high",
+                        "CD16": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
                         "Cd14",
-                        "Ly6chi",
+                        "Ly6c",
                         "Cd11b",
                         "Cx3cr1",
                         "Cd115"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "Ly6c": "high"
+                      }
                     }
                   },
                   "aliases": [
@@ -2390,21 +2408,29 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD14dim",
-                        "CD16++",
+                        "CD14",
+                        "CD16",
                         "CX3CR1",
                         "LFA-1"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "CD14": "low",
+                        "CD16": "high"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd14dim",
-                        "Ly6clo",
+                        "Cd14",
+                        "Ly6c",
                         "Cx3cr1",
                         "Cd11b"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "Cd14": "low",
+                        "Ly6c": "low"
+                      }
                     }
                   },
                   "aliases": [
@@ -2527,7 +2553,7 @@
                       "positive": [
                         "CD4",
                         "CD8",
-                        "TCRalpha/beta"
+                        "TRAC/TRBC1"
                       ],
                       "negative": []
                     },
@@ -4020,23 +4046,33 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD45RBlow",
-                        "CD27-",
+                        "CD45RB",
                         "CRTH2/PTGDR2",
                         "CD161",
                         "CD49d"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD27"
+                      ],
+                      "expression_levels": {
+                        "CD45RB": "low",
+                        "CD27": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd45rblow",
-                        "Cd27-",
+                        "Cd45rb",
                         "Crth2",
                         "Cd161",
                         "Cd49d"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Cd27"
+                      ],
+                      "expression_levels": {
+                        "Cd45rb": "low",
+                        "Cd27": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -4129,20 +4165,29 @@
                       "positive": [
                         "CD3",
                         "CD4",
-                        "CD45RO",
-                        "CD27-",
-                        "CCR7-"
+                        "CD45RO"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD27",
+                        "CCR7"
+                      ],
+                      "expression_levels": {
+                        "CD27": "negative",
+                        "CCR7": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
                         "Cd3",
                         "Cd4",
-                        "Cd45ro",
-                        "CCR7-"
+                        "Cd45ro"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CCR7"
+                      ],
+                      "expression_levels": {
+                        "CCR7": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -4164,23 +4209,33 @@
                       "positive": [
                         "CD3",
                         "CD8",
-                        "CD45RA-",
-                        "CCR7-",
                         "CD95",
                         "CD44"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD45RA",
+                        "CCR7"
+                      ],
+                      "expression_levels": {
+                        "CD45RA": "negative",
+                        "CCR7": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
                         "Cd3",
                         "Cd8",
-                        "Cd45ra-",
-                        "Ccr7-",
                         "Cd95",
                         "Cd44"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Cd45ra",
+                        "Ccr7"
+                      ],
+                      "expression_levels": {
+                        "Cd45ra": "negative",
+                        "Ccr7": "negative"
+                      }
                     }
                   },
                   "aliases": [],
@@ -4275,7 +4330,7 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "TCRbeta",
+                        "TRBC1",
                         "MR1",
                         "CD8",
                         "CD161",
@@ -4353,21 +4408,29 @@
                       "positive": [
                         "CD19",
                         "CD21",
-                        "CD23-",
                         "CD24",
                         "IgM"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD23"
+                      ],
+                      "expression_levels": {
+                        "CD23": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
                         "Cd19",
                         "Cd21",
-                        "Cd23-",
                         "Cd24",
                         "Igm"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Cd23"
+                      ],
+                      "expression_levels": {
+                        "Cd23": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -4429,27 +4492,37 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "IgD+",
-                        "IgM+",
-                        "CD27+",
+                        "IgD",
+                        "IgM",
+                        "CD27",
                         "CD19",
                         "CD1c",
                         "CD21",
                         "CD24"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "IgD": "positive",
+                        "IgM": "positive",
+                        "CD27": "positive"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Igd+",
-                        "Igm+",
-                        "Cd27+",
+                        "Igd",
+                        "Igm",
+                        "Cd27",
                         "Cd19",
                         "Cd1c",
                         "Cd21",
                         "Cd24"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "Igd": "positive",
+                        "Igm": "positive",
+                        "Cd27": "positive"
+                      }
                     }
                   },
                   "aliases": [],
@@ -4467,31 +4540,47 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "IgM-",
-                        "IgD-",
-                        "CD27+",
-                        "IgG+",
-                        "IgA+",
+                        "CD27",
+                        "IgG",
+                        "IgA",
                         "CD21",
                         "CD24",
                         "CD95",
                         "CXCR3"
                       ],
-                      "negative": []
+                      "negative": [
+                        "IgM",
+                        "IgD"
+                      ],
+                      "expression_levels": {
+                        "IgM": "negative",
+                        "IgD": "negative",
+                        "CD27": "positive",
+                        "IgG": "positive",
+                        "IgA": "positive"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Igm-",
-                        "Igd-",
-                        "Cd27+",
-                        "IgG+",
-                        "IgA+",
+                        "Cd27",
+                        "IgG",
+                        "IgA",
                         "Cd21",
                         "Cd24",
                         "Cd95",
                         "Cxcr3"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Igm",
+                        "Igd"
+                      ],
+                      "expression_levels": {
+                        "Igm": "negative",
+                        "Igd": "negative",
+                        "Cd27": "positive",
+                        "IgG": "positive",
+                        "IgA": "positive"
+                      }
                     }
                   },
                   "aliases": [],
@@ -4511,25 +4600,39 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "IgD-",
-                        "CD27high",
-                        "CD38high",
-                        "CD138-",
+                        "CD27",
+                        "CD38",
                         "CD20",
                         "HLA-DR"
                       ],
-                      "negative": []
+                      "negative": [
+                        "IgD",
+                        "CD138"
+                      ],
+                      "expression_levels": {
+                        "IgD": "negative",
+                        "CD27": "high",
+                        "CD38": "high",
+                        "CD138": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Igd-",
-                        "Cd27high",
-                        "Cd38high",
-                        "Cd138-",
+                        "Cd27",
+                        "Cd38",
                         "Cd20",
                         "Hla-dr"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Igd",
+                        "Cd138"
+                      ],
+                      "expression_levels": {
+                        "Igd": "negative",
+                        "Cd27": "high",
+                        "Cd38": "high",
+                        "Cd138": "negative"
+                      }
                     }
                   },
                   "aliases": [],
@@ -4547,29 +4650,45 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "IgD-",
-                        "CD27high",
-                        "CD38high",
+                        "CD27",
+                        "CD38",
                         "CD138/SDC1",
-                        "CD20-",
-                        "CD24-",
                         "BLIMP1/PRDM1",
                         "XBP1"
                       ],
-                      "negative": []
+                      "negative": [
+                        "IgD",
+                        "CD20",
+                        "CD24"
+                      ],
+                      "expression_levels": {
+                        "IgD": "negative",
+                        "CD27": "high",
+                        "CD38": "high",
+                        "CD20": "negative",
+                        "CD24": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Igd-",
-                        "Cd27high",
-                        "Cd38high",
+                        "Cd27",
+                        "Cd38",
                         "Cd138",
-                        "Cd20-",
-                        "Cd24-",
                         "Prdm1",
                         "Xbp1"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Igd",
+                        "Cd20",
+                        "Cd24"
+                      ],
+                      "expression_levels": {
+                        "Igd": "negative",
+                        "Cd27": "high",
+                        "Cd38": "high",
+                        "Cd20": "negative",
+                        "Cd24": "negative"
+                      }
                     }
                   },
                   "aliases": [],
@@ -4651,9 +4770,8 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD3-",
-                        "CD56dim",
-                        "CD16high",
+                        "CD56",
+                        "CD16",
                         "NKp46/NCR1",
                         "KIR",
                         "CD57",
@@ -4661,11 +4779,17 @@
                         "CD69",
                         "NKG2D"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD3"
+                      ],
+                      "expression_levels": {
+                        "CD3": "negative",
+                        "CD56": "low",
+                        "CD16": "high"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd3-",
                         "Cd49b/Dx5",
                         "NKp46",
                         "Ly49",
@@ -4673,7 +4797,12 @@
                         "Cd69",
                         "Nkg2d"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Cd3"
+                      ],
+                      "expression_levels": {
+                        "Cd3": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -4707,25 +4836,35 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD3-",
                         "CD56bright",
-                        "CD16-",
                         "CD94",
                         "NKp46",
                         "CD117"
                       ],
-                      "negative": []
+                      "negative": [
+                        "CD3",
+                        "CD16"
+                      ],
+                      "expression_levels": {
+                        "CD3": "negative",
+                        "CD16": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd3-",
                         "Cd56bright",
-                        "Cd16-",
                         "Cd94",
                         "NKp46",
                         "Cd117"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Cd3",
+                        "Cd16"
+                      ],
+                      "expression_levels": {
+                        "Cd3": "negative",
+                        "Cd16": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -4857,7 +4996,7 @@
                         "IL-10",
                         "IL-6",
                         "IL-1",
-                        "TNF-alpha",
+                        "TNF",
                         "CCL1"
                       ],
                       "negative": []
@@ -4896,7 +5035,7 @@
                         "TLR1",
                         "TLR8",
                         "IL-10",
-                        "TGF-beta",
+                        "TGFB1",
                         "CCR2"
                       ],
                       "negative": []
@@ -4933,8 +5072,8 @@
                         "VEGF",
                         "IL-10",
                         "IL-12",
-                        "TNF-alpha",
-                        "TGF-beta",
+                        "TNF",
+                        "TGFB1",
                         "CCL5",
                         "CXCL10",
                         "CXCL16"
@@ -4973,25 +5112,37 @@
                   "markers": {
                     "human": {
                       "positive": [
-                        "CD8+",
+                        "CD8",
                         "CD205/DEC-205",
-                        "SIRPa-",
-                        "CD11b-",
                         "CD11chi",
                         "MHC-II"
                       ],
-                      "negative": []
+                      "negative": [
+                        "SIRPA",
+                        "CD11b"
+                      ],
+                      "expression_levels": {
+                        "CD8": "positive",
+                        "SIRPA": "negative",
+                        "CD11b": "negative"
+                      }
                     },
                     "mouse": {
                       "positive": [
-                        "Cd8+",
+                        "Cd8",
                         "Cd205",
-                        "Sirpa-",
-                        "Cd11b-",
                         "Cd11chi",
                         "Mhc2"
                       ],
-                      "negative": []
+                      "negative": [
+                        "Sirpa",
+                        "Cd11b"
+                      ],
+                      "expression_levels": {
+                        "Cd8": "positive",
+                        "Sirpa": "negative",
+                        "Cd11b": "negative"
+                      }
                     }
                   },
                   "aliases": [
@@ -5014,18 +5165,24 @@
                         "CD11c",
                         "MHC-II",
                         "CD11b",
-                        "SIRPa+"
+                        "SIRPA"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "SIRPA": "positive"
+                      }
                     },
                     "mouse": {
                       "positive": [
                         "Cd11c",
                         "Mhc2",
                         "Cd11b",
-                        "Sirpa+"
+                        "Sirpa"
                       ],
-                      "negative": []
+                      "negative": [],
+                      "expression_levels": {
+                        "Sirpa": "positive"
+                      }
                     }
                   },
                   "aliases": [

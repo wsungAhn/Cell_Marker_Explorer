@@ -39,10 +39,20 @@
     'cTnI': 'TNNI3',
     'cTnT': 'TNNT2',
     'Alpha-SMA': 'ACTA2',
+    'Alpha-smooth muscle actin': 'ACTA2',
+    'Alpha-gustducin': 'GNAT3',
+    'Integrin alpha 8': 'ITGA8',
+    'PDGFRalpha': 'PDGFRA',
+    'TGF-beta': 'TGFB1',
+    'TNF-alpha': 'TNF',
+    'TCRalpha/beta': 'TRAC/TRBC1',
+    'TCRbeta': 'TRBC1',
+    'cGMP-dependent protein kinase': 'PRKG1',
     'Pro-SFTPC': 'SFTPC'
   };
 
   var NON_GENE_MARKERS = {
+    'Lin': true,
     'Lin-': true
   };
 
