@@ -11,8 +11,8 @@
 - **Architecture is fixed.** Vanilla ES5/ES2017 JS, **global classes** loaded via `<script defer>` in dependency order and wired by `js/app.js`. **No bundler, no framework, no `import`/`export`, no npm runtime deps for the web app.**
 - **Single source of truth for all data** = `data/cell-markers.json`. All IDs (tissue systems, organs, microstructures via `svg_region_id`, cell types, markers) come from there. Never invent IDs.
 - **Single stylesheet** = `css/styles.css` (no `@import`).
-- Full architecture: `MASTER-PLAN.md` (read §0 Reconciliation Notes first — those decisions override anything older).
-- Your task spec lives in `codex-specs/NN-*.md`. The spec for the current task is the contract. If the spec and an older part of the master plan disagree, **the spec + §0 reconciliation win** — and you flag it (see §6).
+- Full architecture: `MASTER-PLAN.md` (v4: §1 project structure, §4 data architecture, §7 technical architecture).
+- Your task spec lives in `codex-specs/NN-*.md`. The spec for the current task is the contract. If the spec and an older part of the master plan disagree, **the spec wins** — and you flag it (see §6).
 
 ---
 
@@ -58,7 +58,7 @@ The **supervisor** audits your drop and assembles accepted files into the real `
 - ❌ No network calls / live scraping while building the web app. (The scraper *code* you write in specs 16–17 makes network calls **when run by a human later** — but you never execute it against live sites during development.)
 - ❌ No adding dependencies, package managers, build tools, bundlers, transpilers, CSS frameworks, CDN `<script>`/`<link>` tags, web fonts that require a network fetch at runtime, or analytics/telemetry.
 - ❌ No frameworks (React/Vue/Svelte/jQuery/etc.) and no TypeScript for the web app — vanilla only.
-- ❌ No `import`/`export` ES-module syntax in web-app JS (global classes + `defer`, per R3).
+- ❌ No `import`/`export` ES-module syntax in web-app JS (global classes + `defer`; see `codex-specs/18-app-init.md`).
 - ❌ No inventing IDs, cell types, markers, organs, or microstructures not present in `data/cell-markers.json`.
 - ❌ No off-palette colors, no hard-coded hex outside the documented design tokens.
 - ❌ No silent scope creep, no TODO-and-move-on, no placeholder/stub output presented as finished.
@@ -71,7 +71,7 @@ The **supervisor** audits your drop and assembles accepted files into the real `
 
 For **every** task, follow this loop:
 
-1. **Read the contract.** Open the exact `codex-specs/NN-*.md` named in the task + the relevant parts of `data/cell-markers.json` it depends on. Re-read MASTER-PLAN §0.
+1. **Read the contract.** Open the exact `codex-specs/NN-*.md` named in the task + the relevant parts of `data/cell-markers.json` it depends on.
 2. **Confirm scope.** State, in one line, the single file(s) you will produce. If the task is ambiguous or seems to require touching a forbidden/out-of-scope file, STOP and ask (§6) — do not guess.
 3. **Implement faithfully.** Match the spec's API names, class names, IDs, data attributes, file paths, and behavior exactly. Where the spec gives an HTML/JSON skeleton, honor its structure and class/id names (downstream modules depend on them).
 4. **Self-verify against the spec's Test Criteria checklist** before declaring done. For data-bound output (SVG region ids, datastore queries), cross-check against `data/cell-markers.json`.
@@ -116,10 +116,7 @@ Surfacing a blocker is success, not failure. A wrong guess that the supervisor m
 
 ## 7. Execution order (supervisor drives this — for context only)
 
-Phase 1 data ✅ (already compiled). Supervisor handoff order (v3.1, auditability-first):
-`05 datastore.js → 02 body-map.svg → 03 microanatomy svgs (27) → 04 index.html → 15 styles.css → 06 router.js → 07 body-map.js → 08 organ-view.js → 09 cell-view.js → 10 search.js → 11 compare.js → 12 export.js → 13 species-toggle.js → 14 links.js → 19 update-badge.js → 18 app.js → 16 scraper → 17 merge/validate.`
-
-You will be handed **one** task at a time. Wait for it.
+Task order and status live in `MASTER-PLAN.md` §9 and `orchestration/LOOP.md`. You will be handed **one** task at a time. Wait for it.
 
 ---
 
@@ -133,4 +130,4 @@ You are driven by `orchestration/codex-runner.sh`, which watches `orchestration/
 4. Stop. The runner writes the `.done` sentinel and archives the prompt. Do **not** create `.done` yourself, do **not** touch the inbox, do **not** start the next task.
 5. If blocked (§6), still write `REPORT.md` with `FLAGS:` explaining the blocker instead of guessing — the supervisor will read it and re-issue.
 
-The supervisor audits your drop, assembles accepted files into the live tree, and drops the next task into the inbox. That is the loop. **First task queued: `orchestration/inbox/TASK-01-datastore.md`.**
+The supervisor audits your drop, assembles accepted files into the live tree, and drops the next task into the inbox. That is the loop.
